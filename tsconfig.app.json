@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* ⚡ Cambios recomendados */
+    "moduleResolution": "node",  // Cambia de "bundler" a "node"
+    "esModuleInterop": true,      // Permite compatibilidad con módulos ES6
+    "allowSyntheticDefaultImports": true, // Permite importar módulos sin `default`
+    "resolveJsonModule": true,    // Permite importar archivos JSON
+    "baseUrl": "./",              // Asegura que los imports relativos funcionen bien
+    "paths": {                    // Ayuda a resolver módulos si es necesario
+      "*": ["node_modules/*"]
+    },
+
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
+}
