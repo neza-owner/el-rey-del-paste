@@ -9,6 +9,7 @@ import Testimonials from "./components/testmonials";
 import KingsSection from "./components/reyes";
 import FAQSection from "./components/faq";
 import ParallaxSection from "./components/parallax";
+import Menu from "./components/menu";
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
       </section>
       <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
         <Combo />
+      </section>
+      <section >
+        <Menu />
       </section>
       <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
         Cupones
