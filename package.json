@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@fontsource/bebas-neue": "^5.1.1",
-    "@tabler/icons-react": "^3.29.0",
+    "@tabler/icons-react": "^3.30.0",
     "clsx": "^2.1.1",
     "motion": "^12.3.1",
     "next": "^15.1.6",

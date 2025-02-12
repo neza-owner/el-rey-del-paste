@@ -1,4 +1,6 @@
 import React from "react";
+import { IconBrandWhatsapp } from "@tabler/icons-react";
+
 
 const Pedidos = () => {
   const phoneNumber = "5537391771"; // Reemplaza con el número real
@@ -6,36 +8,40 @@ const Pedidos = () => {
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="max-w-lg mx-auto p-6 text-center">
-      <h2 className="text-3xl font-bold">
+    <div className="max-w-md mx-auto p-6 text-center">
+      {/* Título */}
+      <h2 className="text-4xl font-extrabold">
         ¿<span className="text-black">LISTO PARA</span>{" "}
         <span className="text-yellow-500">PEDIR</span>?
       </h2>
-      <p className="text-gray-600 my-2">
+      <p className="text-gray-600 text-lg my-3">
         Mándanos un mensaje y nosotros tomamos tu orden
       </p>
 
+      {/* Imagen */}
       <div className="flex justify-center">
         <img
-          src="/images/pastes.png" // Reemplaza con la ruta correcta de la imagen
+          src="/entrega.png" // Reemplaza con la ruta correcta de la imagen
           alt="Pastes"
-          className="w-full max-w-sm rounded-lg shadow-lg"
+          className="w-full max-w-md rounded-lg shadow-lg border border-gray-200"
         />
       </div>
 
+      <p className="text-slate-700 text-xs mt-4">
+        Contactanos
+      </p>
+
+      {/* Botón de WhatsApp */}
       <a
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-green-700 transition duration-300"
+        className="mt-6 inline-flex items-center justify-center bg-green-600 text-white font-semibold py-3 px-6 rounded-full text-lg shadow-md hover:bg-green-700 transition duration-300"
       >
-        <img src="/images/whatsapp-icon.png" alt="WhatsApp" className="w-5 h-5" />
-        Pedir por WhatsApp
+        <IconBrandWhatsapp size={24} />
       </a>
 
-      <p className="text-gray-500 text-sm mt-3">
-        ¡No olvides que en sucursal te daremos cuponera por tu compra!
-      </p>
+      
     </div>
   );
 };
