@@ -5,8 +5,8 @@ const pastes = [
   { id: 2, name: "Hawaiano", type: "Salados", image: "/pastes/01.jpg", isFavorite: true },
   { id: 3, name: "Frijol con chorizo", type: "Salados", image: "/pastes/06.jpg", isFavorite: true },
   { id: 4, name: "Mole verde", type: "Salados", image: "/pastes/02.jpg" },
-  { id: 5, name: "Chicharrón", type: "Salados", image: "/pastes/04.jpg"},
-  { id: 6, name: "Tinga de pollo", type: "Salados", image: "/pastes/05.jpg"}
+  { id: 5, name: "Chicharrón", type: "Salados", image: "/pastes/04.jpg" },
+  { id: 6, name: "Tinga de pollo", type: "Salados", image: "/pastes/05.jpg" }
 ];
 
 export default function Menu() {
@@ -16,7 +16,7 @@ export default function Menu() {
     filter === "Todos" ? pastes : pastes.filter((paste) => paste.type === filter);
 
   return (
-    <div className="max-w-4xl mx-auto text-center py-10">
+    <section id="menu" className="max-w-4xl mx-auto text-center py-10">
       <h1 className="text-4xl font-bold">
         PASTES DEL <span className="text-yellow-500">REY</span>
       </h1>
@@ -27,9 +27,8 @@ export default function Menu() {
           <button
             key={category}
             onClick={() => setFilter(category)}
-            className={`px-4 py-2 rounded-lg ${
-              filter === category ? "bg-yellow-500 text-white" : "bg-gray-200"
-            }`}
+            className={`px-4 py-2 rounded-lg ${filter === category ? "bg-yellow-500 text-white" : "bg-gray-200"
+              }`}
           >
             {category}
           </button>
@@ -44,6 +43,6 @@ export default function Menu() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

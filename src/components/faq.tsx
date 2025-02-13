@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const faqs = [
   { question: "¿Cuánto cuesta cada paste?", answer: "El precio varía según el sabor y tamaño, pero comienzan desde $35 MXN." },
@@ -16,7 +16,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto text-center p-6">
+    <section id="faq" className="max-w-3xl mx-auto text-center p-6">
       {/* Title */}
       <h2 className="text-3xl font-bold">
         ALGUNA <span className="text-yellow-500">PREGUNTA</span> PARA EL REY?
@@ -41,7 +41,7 @@ const FAQSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

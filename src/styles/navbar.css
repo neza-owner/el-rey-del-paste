@@ -1,0 +1,29 @@
+nav {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
+  border-bottom: 1px solid #eaeaea;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+
+  ul+a:last-of-type {
+    background-color: green;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    font-weight: 500;
+    margin-left: auto;
+  }
+}
