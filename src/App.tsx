@@ -1,16 +1,15 @@
-import "./App.css"; 
-import {Hero} from "./components/Hero";
-import Navbar from "./components/navbar";
-import {Combo} from "./components/combo";
-import Pedidos from "./components/pedidos";
+import "./App.css";
 import AvailableOn from "./components/availableon";
-import Location from "./components/location";
-import Testimonials from "./components/testmonials";
-import KingsSection from "./components/reyes";
+import { Combo } from "./components/combo";
 import FAQSection from "./components/faq";
-import ParallaxSection from "./components/parallax";
+import { Hero } from "./components/Hero";
+import Location from "./components/location";
 import Menu from "./components/menu";
-
+import Navbar from "./components/navbar";
+import ParallaxSection from "./components/parallax";
+import Pedidos from "./components/pedidos";
+import KingsSection from "./components/reyes";
+import Testimonials from "./components/testmonials";
 
 function App() {
   return (
@@ -38,18 +37,18 @@ function App() {
         <Location />
       </section>
       <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
-      <Testimonials />
+        <Testimonials />
       </section>
       <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
-      <KingsSection />
+        <KingsSection />
       </section>
       <section className="">
-      <ParallaxSection />
+        <ParallaxSection />
       </section>
       <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
         <FAQSection />
       </section>
-      
+
       <footer>
       </footer>
     </div>

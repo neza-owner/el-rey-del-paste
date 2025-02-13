@@ -1,5 +1,3 @@
-import React from "react";
-
 const platforms = [
   { name: "Clubers", image: "/clubers.png", link: "#" },
   { name: "Rappi", image: "/rappi.jpg", link: "#" },
@@ -9,7 +7,7 @@ const platforms = [
 
 const AvailableOn = () => {
   return (
-    <div className="max-w-4xl mx-auto text-center p-6">
+    <section className="max-w-4xl mx-auto text-center p-6">
       <h2 className="text-3xl font-bold">
         TAMBIÉN <span className="text-yellow-500">DISPONIBLES</span> EN
       </h2>
@@ -31,7 +29,7 @@ const AvailableOn = () => {
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

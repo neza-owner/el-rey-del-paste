@@ -24,9 +24,9 @@ export function Hero() {
         <button className="bg-orange-400 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-orange-500">
           Contactanos
         </button>
-        <button className="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-700">
+        <a className="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-700" href="#menu">
           Ver Menú
-        </button>
+        </a>
       </div>
 
       {/* Beneficios */}

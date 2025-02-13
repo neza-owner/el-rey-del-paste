@@ -1,7 +1,3 @@
-
-
-import React from "react";
-
 const kings = [
   {
     name: "Alan Jese Rivas",
@@ -17,7 +13,7 @@ const kings = [
 
 const KingsSection = () => {
   return (
-    <div className="max-w-4xl mx-auto text-center p-6">
+    <section id="about" className="max-w-4xl mx-auto text-center p-6">
       {/* Title */}
       <h2 className="text-3xl font-bold">
         CONOCE A <span className="text-yellow-500">LOS REYES</span> 👑
@@ -38,7 +34,7 @@ const KingsSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
