@@ -16,31 +16,33 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="max-w-3xl mx-auto text-center p-6">
-      {/* Title */}
-      <h2 className="text-3xl font-bold">
-        ALGUNA <span className="text-yellow-500">PREGUNTA</span> PARA EL REY?
-      </h2>
-      <p className="text-gray-600 mb-6">
-        Mira las preguntas más frecuentes que nos han hecho
-      </p>
+    <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
+      <section id="faq" className="max-w-3xl mx-auto text-center p-6">
+        {/* Title */}
+        <h2 className="text-3xl font-bold">
+          ALGUNA <span className="text-yellow-500">PREGUNTA</span> PARA EL REY?
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Mira las preguntas más frecuentes que nos han hecho
+        </p>
 
-      {/* FAQ List */}
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="border border-gray-300 rounded-lg p-4 text-left cursor-pointer"
-            onClick={() => toggleFAQ(index)}
-          >
-            <div className="flex justify-between items-center">
-              <span className="font-semibold">{faq.question}</span>
-              <span className="text-gray-500">{openIndex === index ? "−" : "+"}</span>
+        {/* FAQ List */}
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-300 rounded-lg p-4 text-left cursor-pointer"
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="flex justify-between items-center">
+                <span className="font-semibold">{faq.question}</span>
+                <span className="text-gray-500">{openIndex === index ? "−" : "+"}</span>
+              </div>
+              {openIndex === index && <p className="text-gray-600 mt-2">{faq.answer}</p>}
             </div>
-            {openIndex === index && <p className="text-gray-600 mt-2">{faq.answer}</p>}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
     </section>
   );
 };

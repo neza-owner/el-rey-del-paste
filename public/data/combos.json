@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "REAL",
+    "price": 79,
+    "description": "2 pastes y un refresco",
+    "image": "/combos/El_Rey_del_paste-4.jpg"
+  },
+  {
+    "id": 2,
+    "name": "CONQUISTADOR",
+    "price": 99,
+    "description": "3 pastes y un refresco",
+    "image": "/combos/El_Rey_del_paste-11.jpg"
+  },
+  {
+    "id": 3,
+    "name": "PRÍNCIPE",
+    "price": 119,
+    "description": "12 pastes",
+    "image": "/combos/El_Rey_del_paste-22.jpg"
+  },
+  {
+    "id": 4,
+    "name": "REY",
+    "price": 599,
+    "description": "24 pastes",
+    "image": "/combos/El_Rey_del_paste-24.jpg"
+  }
+]

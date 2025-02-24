@@ -31,7 +31,7 @@ export function ImageStack({ images }: ImageStackProps) {
             src={image}
             alt={`Stacked Image ${idx}`}
             className="rounded-lg object-cover flex-shrink-0
-              h-[6vh] w-[6vh] md:h-[10vh] md:w-[10vh] lg:h-[30vh] lg:w-[30vh]"
+              h-[6vh] w-[6vh] md:h-[10vh] md:w-[10vh] lg:h-[33vh] lg:w-[33vh]"
           />
         </motion.div>
       ))}

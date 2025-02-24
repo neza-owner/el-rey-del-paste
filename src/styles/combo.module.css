@@ -1,0 +1,70 @@
+section.combo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap;
+  justify-content: space-between; */
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+
+  height: 100vh;
+  width: 100%;
+  font-size: 2.25rem;
+
+  text-align: center;
+
+  h2.heading {
+    font-size: 1.5em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      color: var(--primary-color);
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  p.description {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  div.comboDetails {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  div.comboNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    button {
+      border: none;
+      font-size: 1.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+
+    span.name {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+}

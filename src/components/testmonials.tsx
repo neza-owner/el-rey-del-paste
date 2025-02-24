@@ -1,4 +1,3 @@
-import React from "react";
 
 const testimonials = [
   {
@@ -20,28 +19,30 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="max-w-5xl mx-auto text-center p-6">
-      <h2 className="text-3xl font-bold">
-        LO <span className="text-yellow-500">QUE DICEN</span> DEL REY
-      </h2>
-      <p className="text-gray-600 mb-6">Comentarios de nuestros más reales clientes</p>
+    <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
+      <div className="max-w-5xl mx-auto text-center p-6">
+        <h2 className="text-3xl font-bold">
+          LO <span className="text-yellow-500">QUE DICEN</span> DEL REY
+        </h2>
+        <p className="text-gray-600 mb-6">Comentarios de nuestros más reales clientes</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              className="w-24 h-24 object-cover rounded-full border-4 border-white shadow-lg"
-            />
-            <p className="text-green-700 font-semibold text-lg mt-4">
-              “{testimonial.text}”
-            </p>
-            <p className="text-yellow-500 font-medium mt-2">{testimonial.name}</p>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="w-24 h-24 object-cover rounded-full border-4 border-white shadow-lg"
+              />
+              <p className="text-green-700 font-semibold text-lg mt-4">
+                “{testimonial.text}”
+              </p>
+              <p className="text-yellow-500 font-medium mt-2">{testimonial.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

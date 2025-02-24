@@ -1,49 +1,49 @@
+import { Link } from "react-router-dom";
+import crown from "../assets/crown.svg";
 import "../styles/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/10 backdrop-blur-lg shadow-lg">
-      {/* Logo (Imagen) */}
-
+    <nav className="navbar">
       <ul>
         <li>
-          <a href="#home" className="text-white">
-            👑
+          <a href="#home">
+            <img src={crown} alt="Logo" />
           </a>
         </li>
         <li>
-          <a href="#menu" className="text-white">
+          <a href="#menu">
             Menu
           </a>
         </li>
         <li>
-          <a href="#franchises" className="text-white">
+          <a href="#franchises">
             Sucursales
           </a>
         </li>
         <li>
-          <a href="#about" className="text-white">
+          <a href="#about">
             Nosotros
           </a>
         </li>
         <li>
-          <a href="#deals" className="text-white">
+          <a href="#deals">
             Promos
           </a>
         </li>
         <li>
-          <a href="#invoicing" className="text-white">
+          <Link to="/Billing">
             Facturación
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#franchises" className="text-white">
+          <Link to="/Franchises">
             Franquicias
-          </a>
+          </Link>
         </li>
       </ul>
 
-      <a href="#contact" className="text-white">
+      <a href="#contact">
         Contacto
       </a>
     </nav>

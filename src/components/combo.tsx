@@ -1,29 +1,63 @@
-"use client";
-import {ImageStack} from "./imagestack";
-
-
-const images = [
-    "/combos/El_Rey_del_paste-4.jpg",
-    "/combos/El_Rey_del_paste-11.jpg",
-    "/combos/El_Rey_del_paste-22.jpg",
-    "/combos/El_Rey_del_paste-24.jpg",
-    "/combos/El_Rey_del_paste-26.jpg",
-  ];
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
+import crown from "../assets/crown.svg";
+import styles from "../styles/combo.module.css";
+import { ImageStack } from "./imagestack";
 
 export function Combo() {
-  return (
-    <section className="text-center py-12 px-4">
-      <h2 className="text-3xl text-black font-bold">
-        “COME COMO <span className="text-orange-400">REY</span>” 👑
-      </h2>
-      <p className="text-lg text-black mt-2">Conoce nuestros combos</p>
-      <br />
-      <ImageStack images={images} />
+  interface Combo {
+    id: number;
+    name: string;
+    price: number;
+    description: string;
+    image: string;
+  }
+  const [combos, setCombos] = useState<Combo[]>([]);
+  const [currentCombo, setCurrentCombo] = useState(0);
 
-      <div className="mt-6 text-lg font-semibold text-gray-800 flex items-center justify-center gap-2">
-        <span className="text-orange-400 text-xl">⬅</span>
-        Combo el Tuzo
-        <span className="text-orange-400 text-xl">➡</span>
+  useEffect(() => {
+    const fetchCombos = async () => {
+      try {
+        const response = await fetch("../data/combos.json");
+        const data = await response.json();
+        setCombos(data);
+      } catch (error) {
+        console.error("Error fetching combos", error);
+      }
+    };
+
+    fetchCombos();
+  }, []);
+
+  const handleNextCombo = () => {
+    setCurrentCombo((currentCombo + 1) % combos.length);
+  };
+
+  const handlePreviousCombo = () => {
+    setCurrentCombo((currentCombo - 1 + combos.length) % combos.length);
+  };
+
+  const combosImages = combos.length > 0 ? combos.map(combo => combo.image) : [];
+
+  return (
+    <section className={styles.combo}>
+      <h2 className={styles.heading}>
+        “COME COMO&nbsp;<span>REY</span>”&nbsp;<img src={crown} className="crown" alt="Logo" />
+      </h2>
+      <p className={styles.description}>Conoce nuestros combos</p>
+      <br />
+
+      <ImageStack images={combosImages} />
+
+      <div className={styles.comboDetails}>
+        {/* <span>${combos[currentCombo]?.price}MXN</span>
+        <span>{combos[currentCombo]?.description}</span> */}
+        <div className={styles.comboNav}>
+          <button onClick={handlePreviousCombo}><FontAwesomeIcon icon={faAngleLeft} /></button>
+          <span className={styles.name}>{combos[currentCombo]?.name}</span>
+          <button onClick={handleNextCombo}><FontAwesomeIcon icon={faAngleRight} /></button>
+        </div>
       </div>
     </section>
   );
