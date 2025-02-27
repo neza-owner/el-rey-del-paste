@@ -1,0 +1,50 @@
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { default as arrow, default as arrowright } from "../assets/arrow.svg";
+import styles from "../styles/order.module.css";
+
+const Order = () => {
+  const phoneNumber = "+528128678562";
+  const message = "¡Hola! Me gustaría hacer un pedido de pastes.";
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <section id="order" className={styles.order}>
+      {/* Título */}
+      <h2 className={styles.heading}>
+        ¿LISTO PARA <span>PEDIR</span>?
+      </h2>
+      <p className={styles.description}>
+        Mándanos un mensaje y nosotros tomamos tu orden
+      </p>
+
+      {/* image */}
+      <div className="flex justify-center">
+        <img
+          src="/entrega.png" // Reemplaza con la ruta correcta de la imagen
+          alt="Pastes"
+          className="w-full max-w-md rounded-lg shadow-lg border border-gray-200"
+        />
+      </div>
+
+      {/* whatsapp button */}
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.whatsappBtn}
+      >
+        Cont&aacute;ctanos por whatsapp &nbsp; <FontAwesomeIcon className={styles.icon} icon={faWhatsapp} />
+      </a>
+
+      <img src={arrow} className={styles.arrow} alt="arrow" />
+      <img
+        src={arrowright}
+        className={styles.arrowRight}
+        alt="arrow"
+      />
+    </section>
+  );
+};
+
+export default Order;

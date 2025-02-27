@@ -1,0 +1,81 @@
+section.order {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  /* max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  text-align: center; */
+  position: relative;
+
+  h2.heading {
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 100%;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  p.description {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  a.whatsappBtn {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    font-weight: 400;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #15803d;
+      font-weight: 600;
+    }
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  img.arrow {
+    background-image: url('../assets/arrow.svg');
+    mask-image: url('../assets/arrow.svg');
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    rotate: 20deg;
+  }
+
+  img.arrowRight {
+    background-image: url('../assets/arrow.svg');
+    mask-image: url('../assets/arrow.svg');
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0%;
+    right: 20%;
+    transform: scaleX(-1) rotate(20deg);
+  }
+}

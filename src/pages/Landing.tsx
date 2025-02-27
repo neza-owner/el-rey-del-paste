@@ -1,16 +1,19 @@
-import AvailableOn from "../components/availableon";
-import { Combo } from "../components/combo";
-import Coupons from "../components/coupons";
-import FAQSection from "../components/faq";
+import AvailableOn from "../components/AvailableOn";
+import { Combo } from "../components/Combo";
+import Contact from "../components/Contact";
+import Coupons from "../components/Coupons";
+import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 import { Hero } from "../components/Hero";
-import Location from "../components/location";
-import Menu from "../components/menu";
-import Navbar from "../components/navbar";
-import ParallaxSection from "../components/parallax";
-import Pedidos from "../components/pedidos";
-import KingsSection from "../components/reyes";
-import Testimonials from "../components/testmonials";
+import Kings from "../components/Kings";
+import Location from "../components/Location";
+import Menu from "../components/Menu";
+import Navbar from "../components/Navbar";
+import Order from "../components/Order";
+import Parallax from "../components/Parallax";
+import Social from "../components/Social";
+import Testimonials from "../components/Testmonials";
+import Franchises from "./Franchises";
 
 function Landing() {
   return (
@@ -20,13 +23,16 @@ function Landing() {
       <Combo />
       <Menu />
       <Coupons />
-      <Pedidos />
+      <Order />
       <AvailableOn />
+      <Franchises />
       <Location />
       <Testimonials />
-      <KingsSection />
-      <ParallaxSection />
-      <FAQSection />
+      <Kings />
+      <Parallax />
+      <Social />
+      <Contact />
+      <FAQ />
       <Footer />
     </div>
   );

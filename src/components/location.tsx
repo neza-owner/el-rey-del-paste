@@ -1,29 +1,74 @@
+import { faMap } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from "react";
+import styles from "../styles/Location.module.css";
+
 const Location = () => {
-  const googleMapSrc =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224.78924918251295!2d-100.29256640765202!3d25.650469563319877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bfd0c602af5b%3A0xf06498f3a8f2d823!2sEl%20Rey%20del%20Paste%20Mty!5e0!3m2!1ses-419!2smx!4v1738777012431!5m2!1ses-419!2smx";
+  interface Franchise {
+    id: number;
+    name: string;
+    legend: string;
+    images: string[];
+    location: string;
+    address: string;
+    phone: string;
+    schedule: string;
+    map: string;
+  }
+
+  const [franchises, setFranchises] = useState<Franchise[]>([]);
+
+  useEffect(() => {
+    const fetchFranchises = async () => {
+      try {
+        const response = await fetch("../data/franchises.json");
+        const data = await response.json();
+        setFranchises(data);
+      } catch (error) {
+        console.error("Error fetching franchises", error);
+      }
+    };
+
+    fetchFranchises();
+  }, []);
+
   return (
-    <section className="h-screen w-full bg-white flex items-center justify-center text-black text-4xl font-bold">
-      <section id="franchises" className="flex flex-col items-center p-6">
-        {/* Title */}
-        <h2 className="text-3xl font-bold">
-          <span className="text-yellow-500">DONDE</span> ESTAMOS
+    <section id="franchises" className={styles.location}>
+
+      <header>
+        <h2 className={styles.heading}>
+          <span>DONDE</span> ESTAMOS <FontAwesomeIcon icon={faMap} className={styles.icon} />
         </h2>
+        <h3 className={styles.subheading}>
+          Encuentra tu sucursal más cercana
+        </h3>
+      </header>
 
-        {/* Window Frame Container */}
-        <div className="relative bg-gray-100 w-full max-w-lg mt-6 rounded-lg shadow-lg border border-gray-300">
+      <div className={styles.locations}>
+        {
+          franchises.map((franchise) => (
+            <div className={styles.franchise} key={franchise.id}>
+              <h4>Sucursal {franchise.id}</h4>
+              {/* google maps iframe */}
+              <div className={`${styles.frameContainer} shadow-lg`}>
 
-          {/* Google Maps Iframe */}
-          <iframe
-            src={googleMapSrc}
-            className="w-full h-64 rounded-b-lg"
-            allowFullScreen
-            loading="lazy"
-            title="Google Maps"
-          ></iframe>
+                {/* window frame container */}
+                <iframe
+                  src={franchise.map}
+                  className={styles.map}
+                  allowFullScreen
+                  loading="lazy"
+                  title="Google Maps"
+                ></iframe>
+              </div>
+              <span>{franchise.name}</span>
+            </div>
+          ))
+        }
+      </div>
 
-
-          {/* Decorative Cactus Images */}
-          <img
+      {/* Decorative Cactus Images */}
+      {/* <img
             src="/images/cactus1.png"
             alt="Cactus Left"
             className="absolute left-0 bottom-0 w-20 -ml-6"
@@ -32,10 +77,8 @@ const Location = () => {
             src="/images/cactus2.png"
             alt="Cactus Right"
             className="absolute right-0 bottom-0 w-24 -mr-6"
-          />
-        </div>
-      </section>
-    </section>
+          /> */}
+    </section >
   );
 };
 

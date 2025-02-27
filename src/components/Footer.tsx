@@ -1,6 +1,6 @@
 import "../styles/footer.css";
 
-const footer = () => {
+const Footer = () => {
   return (
     <footer>
       <div className=" text-white">
@@ -29,4 +29,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

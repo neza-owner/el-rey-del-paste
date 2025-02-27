@@ -8,7 +8,7 @@ const faqs = [
   { question: "¿Horario de atención?", answer: "Nuestro horario es de 8:00 AM a 9:00 PM todos los días." },
 ];
 
-const FAQSection = () => {
+const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -47,4 +47,4 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection;
+export default FAQ;
