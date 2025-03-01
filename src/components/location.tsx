@@ -48,7 +48,7 @@ const Location = () => {
         {
           franchises.map((franchise) => (
             <div className={styles.franchise} key={franchise.id}>
-              <h4>Sucursal {franchise.id}</h4>
+              
               {/* google maps iframe */}
               <div className={`${styles.frameContainer} shadow-lg`}>
 
@@ -61,7 +61,7 @@ const Location = () => {
                   title="Google Maps"
                 ></iframe>
               </div>
-              <span>{franchise.name}</span>
+              <h4>Sucursal {franchise.name}</h4>
             </div>
           ))
         }
