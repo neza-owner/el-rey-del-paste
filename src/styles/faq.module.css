@@ -1,0 +1,140 @@
+section.faq {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  gap: 1rem;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+
+  header {
+    h2.heading {
+      font-size: 1.5em;
+      font-weight: 600;
+      width: 100%;
+
+      span {
+        color: var(--primary-color);
+      }
+    }
+
+    h3.subheading {
+      font-size: 0.7em;
+      font-weight: 400;
+    }
+  }
+
+  .icon {
+    color: var(--primary-color);
+  }
+
+  /* div.faqs {
+
+  } */
+
+
+  details {
+    border: 1px solid #d1d5db;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 38ch;
+    transition: background-color 0.3s ease;
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8em;
+      font-weight: 500;
+      list-style: none;
+      gap: 0.5rem;
+
+      &::after {
+        content: "+";
+        /* font-size: 1.5em; */
+        /* color: #4B5563; */
+        color: var(--primary-color);
+      }
+
+      &:focus,
+      &:hover {
+        color: var(--primary-color);
+
+        /* &::after {
+          color: var(--primary-color);
+        } */
+      }
+    }
+
+    p {
+      font-size: 0.6em;
+      font-weight: 400;
+      margin-top: 1rem;
+      color: #4B5563;
+      text-align: left;
+    }
+
+    &[open] {
+      /* background-color: var(--accent-color); */
+
+      summary {
+        color: var(--accent-color);
+        transition: color 0.3s ease;
+      }
+
+      summary::after {
+        content: "-";
+        color: var(--accent-color);
+      }
+    }
+
+    /* &[open] summary::after {
+      content: "-";
+    } */
+
+    /*tailwind*/
+    /* border-width: 1px;
+    border-color: #d1d5db;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer; */
+
+    /* font-weight: 600;
+    color: #6b7280;
+    color: #4b5563; */
+
+    /*width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    summary{
+      font-size: 1.25em;
+      font-weight: 600;
+      list-style: none;
+      outline: none;
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 400;
+      margin-top: 1rem;
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+    } */
+  }
+}

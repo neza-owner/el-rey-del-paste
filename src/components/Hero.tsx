@@ -2,7 +2,7 @@ import crown from "../assets/crown.svg";
 import styles from "../styles/hero.module.css";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
-export function Hero() {
+export default function Hero() {
   return (
     <section className={styles.hero}>
       {/* animated title */}

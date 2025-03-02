@@ -34,8 +34,7 @@ const ParallaxSection = () => {
             <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8 items-center my-20 px-4">
               {/* Primera columna: Título y texto */}
               <div className="text-right">
-                <h2 className="text-3xl font-bold">Y SU Historia</h2>
-
+                <h2 className="text-3xl font-bold">Y SU HISTORIA</h2>
               </div>
 
               {/* Segunda columna: Imagen o espacio vacío (puedes personalizarlo) */}

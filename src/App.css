@@ -1,19 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 #root {
   text-align: center;
 }
+
 .app-container {
-  background-color: black; /* Fondo negro global */
+  background-color: black;
+  /* Fondo negro global */
 }
 
 .full-section {
-  height: 100vh;  /* Cada sección ocupa todo el viewport */
+  height: 100vh;
+  /* Cada sección ocupa todo el viewport */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black !important; /* Forzar fondo negro */
-  color: white; /* Color del texto blanco */
+  background-color: black !important;
+  /* Forzar fondo negro */
+  color: white;
+  /* Color del texto blanco */
 }
 
 .bebas-neue-regular {
@@ -30,9 +41,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -42,6 +55,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

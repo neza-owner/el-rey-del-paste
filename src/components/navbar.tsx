@@ -1,51 +1,72 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import crown from "../assets/crown.svg";
 import "../styles/navbar.css";
 
 const Navbar = () => {
+  const [isActiveHashLink, setIsActiveHashLink] = useState('home');
+  const handleActiveHashLink = (e) => {
+    setIsActiveHashLink(e);
+  };
   return (
     <nav className="navbar">
       <ul>
         <li>
-          <a href="#home">
+          <HashLink to="/#home" onClick={() => handleActiveHashLink('home')}>
             <img src={crown} alt="Logo" />
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a href="#menu">
+          <HashLink to="/#menu" onClick={() => handleActiveHashLink('menu')} accessKey="m">
             Menu
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a href="#franchises">
+          <HashLink to="/#order" onClick={() => handleActiveHashLink('order')} accessKey="o">
+            Ordenar
+          </HashLink>
+        </li>
+        <li>
+          <HashLink to="/#stores" onClick={() => handleActiveHashLink('stores')} accessKey="s">
             Sucursales
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a href="#about">
+          <HashLink to="/#about" onClick={() => handleActiveHashLink('about')} accessKey="a">
             Nosotros
-          </a>
+          </HashLink>
         </li>
-        <li>
+        {/* <li>
+          <a href="#combos">
+            Combos
+          </a>
+        </li> */}
+        {/* <li>
           <a href="#deals">
             Promos
           </a>
-        </li>
+        </li> */}
         <li>
-          <Link to="/Billing">
+          <NavLink to="/billing" accessKey="b">
             Facturación
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/Franchises">
+          <NavLink to="/franchises" accessKey="f">
             Franquicias
-          </Link>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/jobs" accessKey="j">
+            Vacantes
+          </NavLink>
         </li>
       </ul>
 
-      <a href="#contact">
+      <HashLink to="/#contact" accessKey="c">
         Contacto
-      </a>
+      </HashLink>
     </nav>
   );
 };

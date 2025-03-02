@@ -5,7 +5,7 @@ import crown from "../assets/crown.svg";
 import styles from "../styles/combo.module.css";
 import { ImageStack } from "./imagestack";
 
-export function Combo() {
+export default function Combo() {
   interface Combo {
     id: number;
     name: string;
@@ -41,7 +41,7 @@ export function Combo() {
   const combosImages = combos.length > 0 ? combos.map(combo => combo.image) : [];
 
   return (
-    <section className={styles.combo}>
+    <section id="combos" className={styles.combo}>
       <h2 className={styles.heading}>
         “COME COMO&nbsp;<span>REY</span>”&nbsp;<img src={crown} className="crown" alt="Logo" />
       </h2>
