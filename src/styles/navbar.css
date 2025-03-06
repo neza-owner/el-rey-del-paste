@@ -23,7 +23,28 @@ nav.navbar {
     gap: 1em;
 
     li {
-      color: #333;
+      font-weight: 400;
+      font-size: 1em;
+
+      .link,
+      .activeLink,
+      .inactiveLink {
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+
+      .activeLink {
+        font-weight: 500;
+        font-size: 1.1em;
+        color: var(--accent-color);
+      }
+
+      .inactiveLink {
+        color: #4b5563;
+      }
 
       img {
         width: 2.2em;
