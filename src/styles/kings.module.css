@@ -20,6 +20,7 @@ section.kings {
       font-size: 1.5em;
       font-weight: 600;
       width: 100%;
+      display: flex;
 
       span {
         color: var(--primary-color);

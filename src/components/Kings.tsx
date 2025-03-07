@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import crown from "../assets/crown.svg";
 import styles from "../styles/kings.module.css";
 
 const Kings = () => {
@@ -30,7 +31,7 @@ const Kings = () => {
       <header>
         {/* title */}
         <h2 className={styles.heading}>
-          CONOCE A <span className="text-yellow-500">LOS REYES</span> 👑
+          CONOCE A <span>LOS REYES</span>&nbsp;<img src={crown} className="crown" alt="Logo" />
         </h2>
         <h3 className={styles.subheading}>Del reino de los pastes</h3>
       </header>

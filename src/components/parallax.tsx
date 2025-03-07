@@ -1,4 +1,5 @@
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import styles from '../styles/parallax.module.css';
 
 const images = [
   "/team.jpg", "/local1.jpg", "/paste.jpg"];
@@ -25,7 +26,12 @@ const positionspastes = [
 
 const ParallaxSection = () => {
   return (
-    <section className="">
+    <section className={styles.parallax}>
+      <header>
+        <h2 className={styles.heading}>
+          Y SU <span>HISTORIA</span>
+        </h2>
+      </header>
       <ParallaxProvider>
         <div className="relative w-full overflow-hidden h-[250vh]"> {/* Altura del viewport al 150% */}
 
@@ -33,9 +39,6 @@ const ParallaxSection = () => {
           <Parallax speed={-15}>
             <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8 items-center my-20 px-4">
               {/* Primera columna: Título y texto */}
-              <div className="text-right">
-                <h2 className="text-3xl font-bold">Y SU HISTORIA</h2>
-              </div>
 
               {/* Segunda columna: Imagen o espacio vacío (puedes personalizarlo) */}
               <div className="flex justify-center">

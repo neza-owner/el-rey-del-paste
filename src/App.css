@@ -6,6 +6,10 @@
   }
 }
 
+section {
+  scroll-margin-top: 8vh;
+}
+
 #root {
   text-align: center;
 }
