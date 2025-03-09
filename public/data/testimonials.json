@@ -1,19 +1,19 @@
 [
   {
     "username": "@tony_aquinoo",
-    "text": "No tenía idea de que eran los pastes, ahora es mi comida favorita",
+    "comment": "testimonials.comment1",
     "image": "/testimonials/testimonial1.png",
     "profilelink": "https://www.instagram.com/tony_aquinoo/"
   },
   {
     "username": "@elvisscochito",
-    "text": "Iba tarde a la escuela, pero gracias al Rey pude comer y llegar a tiempo",
+    "comment": "testimonials.comment2",
     "image": "/testimonials/testimonial2.png",
     "profilelink": "https://www.instagram.com/elvisscochito/"
   },
   {
     "username": "@joelconlentes",
-    "text": "Ya faltaba comida diferente en Monterrey",
+    "comment": "testimonials.comment3",
     "image": "/testimonials/testimonial3.png",
     "profilelink": "https://www.instagram.com/joelconlentes/"
   }

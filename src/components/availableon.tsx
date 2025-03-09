@@ -1,5 +1,6 @@
 import { faAppStoreIos } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
 import styles from "../styles/availableon.module.css";
 
 const platforms = [
@@ -10,14 +11,16 @@ const platforms = [
 ];
 
 const AvailableOn = () => {
+  const [t, i18n] = useTranslation("global");
+
   return (
     <section className={styles.availableOn}>
       <header>
         <h2 className={styles.heading}>
-          TAMBIÉN <span>DISPONIBLES</span> EN
+          {t("AvailableOn.heading.part1")} <span>{t("AvailableOn.heading.part2")}</span> {t("AvailableOn.heading.part3")}
         </h2>
         <h3 className={styles.subheading}>
-          ¡Pide a domicilio desde tu plataforma favorita!
+          {t("AvailableOn.subheading")}
         </h3>
       </header>
 
@@ -40,7 +43,7 @@ const AvailableOn = () => {
       </div>
 
       <div className={styles.app}>
-        <span>Pr&oacute;ximamente nuestra gran applicación</span>
+        <span>{t("AvailableOn.advice")}</span>
         <FontAwesomeIcon icon={faAppStoreIos} className={styles.icon} />
       </div>
     </section>

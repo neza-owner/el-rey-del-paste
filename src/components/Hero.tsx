@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import crown from "../assets/crown.svg";
 import styles from "../styles/hero.module.css";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export default function Hero() {
+  const [t, i18n] = useTranslation("global");
   return (
     <section className={styles.hero}>
       {/* animated title */}
@@ -18,15 +20,15 @@ export default function Hero() {
       </div>
 
       {/* subtitle */}
-      <h2 className={styles.heading}>“El rey llegó a Monterrey”</h2>
+      <h2 className={styles.heading}>“{t("Hero.heading")}”</h2>
 
       {/* cta buttons */}
       <div className={styles.ctaBtns}>
         <a className={`${styles.ctaBtn} ${styles.main} shadow-md`} href="#order">
-          ¡Quiero Pastes!
+          {t("Hero.ctaBtn")}
         </a>
         <a className={`${styles.ctaBtn} ${styles.secondary} shadow-md`} href="#menu">
-          Ver Menú
+          {t("Hero.auxCtaBtn")}
         </a>
       </div>
 
@@ -34,18 +36,18 @@ export default function Hero() {
       <div className={styles.benefits}>
         <div className={styles.benefitContainer}>
           <img src={crown} className={styles.crown} alt="Logo" />
-          <span className={styles.benefit}>Listo para llevar</span>
-          <p>Tu orden en 2 minutos</p>
+          <span className={styles.benefit}>{t("Hero.benefits.benefit1.title")}</span>
+          <p>{t("Hero.benefits.benefit1.legend")}</p>
         </div>
         <div className={styles.benefitContainer}>
           <img src={crown} className={styles.crown} alt="Logo" />
-          <span className={styles.benefit}>Diferentes sabores</span>
-          <p>Para cada gusto</p>
+          <span className={styles.benefit}>{t("Hero.benefits.benefit2.title")}</span>
+          <p>{t("Hero.benefits.benefit2.legend")}</p>
         </div>
         <div className={styles.benefitContainer}>
           <img src={crown} className={styles.crown} alt="Logo" />
-          <span className={styles.benefit}>Alimento tradicional</span>
-          <p>De Hidalgo a tu paladar</p>
+          <span className={styles.benefit}>{t("Hero.benefits.benefit3.title")}</span>
+          <p>{t("Hero.benefits.benefit3.legend")}</p>
         </div>
       </div>
     </section>

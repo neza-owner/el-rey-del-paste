@@ -1,14 +1,17 @@
+import { useTranslation } from 'react-i18next';
 import styles from "../styles/contact.module.css";
 import WhatsAppForm from "./WhatsAppForm";
 
 const Contact = () => {
+  const [t, i18n] = useTranslation("global");
+
   return (
     <section id="contact" className={styles.contact}>
       <header>
-        <h2 className={styles.heading}>¿QUIERES <span>DECIRLE</span> ALGO AL REY?</h2>
-        <h3 className={styles.subheading}>Tu mensaje ser&aacute; escuchado en el trono.</h3>
+        <h2 className={styles.heading}>{t("Contact.heading.part1")} <span>{t("Contact.heading.part2")}</span> {t("Contact.heading.part3")}?</h2>
+        <h3 className={styles.subheading}>{t("Contact.subheading")}</h3>
       </header>
-      <WhatsAppForm legend={"¡Manda un mensaje al número personal del rey!"} />
+      <WhatsAppForm legend={t("Components.WhatsAppForm.legendMessage")} />
     </section>
   );
 }

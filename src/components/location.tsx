@@ -1,6 +1,7 @@
 import { faMap } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import styles from "../styles/Location.module.css";
 
 const Location = () => {
@@ -16,6 +17,7 @@ const Location = () => {
     map: string;
   }
 
+  const [t, i18n] = useTranslation("global");
   const [franchises, setFranchises] = useState<Franchise[]>([]);
 
   useEffect(() => {
@@ -37,10 +39,10 @@ const Location = () => {
 
       <header>
         <h2 className={styles.heading}>
-          <span>DONDE</span> ESTAMOS <FontAwesomeIcon icon={faMap} className={styles.icon} />
+          <span>{t("Location.heading.part1")}</span> {t("Location.heading.part2")} <FontAwesomeIcon icon={faMap} className={styles.icon} />
         </h2>
         <h3 className={styles.subheading}>
-          Encuentra tu sucursal más cercana
+          {t("Location.subheading")}
         </h3>
       </header>
 
@@ -48,7 +50,7 @@ const Location = () => {
         {
           franchises.map((franchise) => (
             <div className={styles.franchise} key={franchise.id}>
-              
+
               {/* google maps iframe */}
               <div className={`${styles.frameContainer} shadow-lg`}>
 
@@ -61,7 +63,7 @@ const Location = () => {
                   title="Google Maps"
                 ></iframe>
               </div>
-              <h4>Sucursal {franchise.name}</h4>
+              <h4>{t("Location.franchise")} {franchise.name}</h4>
             </div>
           ))
         }

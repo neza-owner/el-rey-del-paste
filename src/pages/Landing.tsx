@@ -9,7 +9,7 @@ import Location from "../components/Location";
 import Menu from "../components/Menu";
 import Order from "../components/Order";
 import Parallax from "../components/Parallax";
-import Promos from "../components/Promos";
+/* import Promos from "../components/Promos"; */
 /* import Social from "../components/Social"; */
 import Franchises from "../components/Stores";
 import Testimonials from "../components/Testmonials";
@@ -22,7 +22,7 @@ function Landing() {
       <Combo />
       <Menu />
       <Coupons />
-      <Promos />
+      {/* <Promos /> */}
       <Order />
       <AvailableOn />
       <Franchises />

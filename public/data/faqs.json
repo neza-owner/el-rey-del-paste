@@ -1,22 +1,22 @@
 [
   {
-    "question": "¿Cuánto cuesta cada paste?",
-    "answer": "El precio varía según el sabor y tamaño, pero comienzan desde $35 MXN."
+    "question": "questions.question1.question",
+    "answer": "questions.question1.answer"
   },
   {
-    "question": "¿Dónde están ubicados?",
-    "answer": "Nos encontramos en MP25+62 Monterrey, Nuevo León."
+    "question": "questions.question2.question",
+    "answer": "questions.question2.answer"
   },
   {
-    "question": "¿Cómo puedo facturar?",
-    "answer": "Puedes solicitar tu factura enviándonos un mensaje por WhatsApp con tu ticket de compra."
+    "question": "questions.question3.question",
+    "answer": "questions.question3.answer"
   },
   {
-    "question": "¿Cuáles son los tipos y sabores que tienen?",
-    "answer": "Ofrecemos pastes salados como carne con papa, hawaiano y mole verde, además de opciones dulces."
+    "question": "questions.question4.question",
+    "answer": "questions.question4.answer"
   },
   {
-    "question": "¿Horario de atención?",
-    "answer": "Nuestro horario es de 8:00 AM a 9:00 PM todos los días."
+    "question": "questions.question5.question",
+    "answer": "questions.question5.question"
   }
 ]

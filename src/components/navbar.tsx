@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import crown from "../assets/crown.svg";
 import "../styles/navbar.css";
+import ToggleLanguage from "./ToggleLanguage";
 
 const Navbar = () => {
   const [isActiveHashLink, setIsActiveHashLink] = useState('home');
@@ -32,6 +33,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isScrolled]);
+
   return (
     <nav className="navbar">
       <ul>
@@ -90,6 +92,13 @@ const Navbar = () => {
       <HashLink to="/#contact" accessKey="c">
         Contacto
       </HashLink>
+
+      {/* <button className="langBtn" accessKey="l">
+        EN
+      </button> */}
+
+      {/* language toggle */}
+      <ToggleLanguage />
     </nav>
   );
 };

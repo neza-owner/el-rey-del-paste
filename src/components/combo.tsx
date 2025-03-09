@@ -1,6 +1,7 @@
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import crown from "../assets/crown.svg";
 import styles from "../styles/combo.module.css";
 import { ImageStack } from "./imagestack";
@@ -13,6 +14,7 @@ export default function Combo() {
     description: string;
     image: string;
   }
+  const [t, i18n] = useTranslation("global");
   const [combos, setCombos] = useState<Combo[]>([]);
   const [currentCombo, setCurrentCombo] = useState(0);
 
@@ -40,15 +42,24 @@ export default function Combo() {
 
   const combosImages = combos.length > 0 ? combos.map(combo => combo.image) : [];
 
+  const handleImageClick = (index: number) => {
+    setCurrentCombo(index);
+  };
+
   return (
     <section id="combos" className={styles.combo}>
-      <h2 className={styles.heading}>
-        “COME COMO&nbsp;<span>REY</span>”&nbsp;<img src={crown} className="crown" alt="Logo" />
-      </h2>
-      <p className={styles.description}>Conoce nuestros combos</p>
-      <br />
+      <header>
+        <h2 className={styles.heading}>
+          “{t("Combos.heading.part1")}&nbsp;<span>{t("Combos.heading.part2")}</span>”&nbsp;<img src={crown} className="crown" alt="Logo" />
+          <h3 className={styles.subheading}>{t("Combos.subheading")}</h3>
+        </h2>
+      </header>
 
-      <ImageStack images={combosImages} />
+      <ImageStack
+        images={combosImages}
+        selectedIndex={currentCombo}
+        onImageClick={handleImageClick}
+      />
 
       <div className={styles.comboDetails}>
         {/* <span>${combos[currentCombo]?.price}MXN</span>

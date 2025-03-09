@@ -24,14 +24,14 @@
     "id": 3,
     "name": "Philadelphia con Zarzamora",
     "type": "Dulces",
-    "image": "/pastes/05.jpg",
+    "image": "/pastes/07.jpg",
     "isFavorite": true
   },
   {
     "id": 4,
     "name": "Arroz Con Leche",
     "type": "Dulces",
-    "image": "/pastes/05.jpg",
+    "image": "/pastes/09.jpg",
     "isFavorite": true
   },
   {
@@ -63,7 +63,7 @@
     "id": 9,
     "name": "Piña",
     "type": "Dulces",
-    "image": "/pastes/05.jpg"
+    "image": "/pastes/08.jpg"
   },
   {
     "id": 10,

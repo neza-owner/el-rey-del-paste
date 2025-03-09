@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import crown from "../assets/crown.svg";
 import styles from "../styles/kings.module.css";
 
@@ -9,6 +10,7 @@ const Kings = () => {
     image: string;
   }
 
+  const [t, i18n] = useTranslation("global");
   const [kings, setKings] = useState<King[]>([]);
 
   useEffect(() => {
@@ -16,7 +18,11 @@ const Kings = () => {
       try {
         const response = await fetch("../data/kings.json");
         const data = await response.json();
-        setKings(data);
+        const translatedData = data.map((king: King) => ({
+          ...king,
+          title: t(`Kings.${king.title}`),
+        }));
+        setKings(translatedData);
       }
       catch (error) {
         console.error("Error fetching kings", error);
@@ -24,16 +30,16 @@ const Kings = () => {
     };
 
     fetchKings();
-  }, []);
+  }, [t]);
 
   return (
     <section id="about" className={styles.kings}>
       <header>
         {/* title */}
         <h2 className={styles.heading}>
-          CONOCE A <span>LOS REYES</span>&nbsp;<img src={crown} className="crown" alt="Logo" />
+          {t("Kings.heading.part1")} <span>{t("Kings.heading.part2")}</span>&nbsp;<img src={crown} className="crown" alt="Logo" />
         </h2>
-        <h3 className={styles.subheading}>Del reino de los pastes</h3>
+        <h3 className={styles.subheading}>{t("Testimonials.subheading")}</h3>
       </header>
 
       {/* Kings List */}

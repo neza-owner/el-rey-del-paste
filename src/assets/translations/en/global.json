@@ -1,0 +1,33 @@
+{
+  "Hero": {
+    "heading": "The king just arrive to Monterrey",
+    "ctaBtn": "I Wanna Pastes!",
+    "auxCtaBtn": "See Menu"
+  },
+  "Menu": {
+    "heading": {
+      "part1": "PASTES OF THE",
+      "part2": "KING"
+    },
+    "subheading": "Meet the complete royalty menu",
+    "pastes": {
+      "names": {
+        "Papas con carne": "Potatoes with meat",
+        "Hawaiano": "Hawaiian",
+        "Frijol con chorizo": "Beans with chorizo",
+        "Philadelphia con Zarzamora": "Philadelphia with blackberry",
+        "Arroz Con Leche": "Rice pudding",
+        "Chicharrón": "Pork cracklings",
+        "Tinga de pollo": "Chicken tinga",
+        "Rajas Queso C/ Champiñon": "Rajas Cheese & Mushroom",
+        "Piña": "Pineapple",
+        "Mole verde": "Green mole"
+      },
+      "types": {
+        "savory": "Savory",
+        "sweet": "Sweet"
+      }
+    },
+    "ctaBtn": "¡Quiero ordenar ya!"
+  }
+}

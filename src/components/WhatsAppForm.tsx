@@ -1,6 +1,7 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import styles from "../styles/whatsappform.module.css";
 
 interface WhatsAppFormProps {
@@ -8,6 +9,8 @@ interface WhatsAppFormProps {
 }
 
 const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
+  const [t, i18n] = useTranslation("global");
+
   const [formData, setFormData] = useState({
     name: "",
     message: "",
@@ -40,7 +43,7 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
         <input
           type="text"
           name="name"
-          placeholder="Tu nombre"
+          placeholder={t("Components.WhatsAppForm.placeholderName")}
           value={formData.name}
           onChange={handleChange}
           className={styles.input}
@@ -48,7 +51,7 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
         />
         <textarea
           name="message"
-          placeholder="Escribe tu mensaje..."
+          placeholder={t("Components.WhatsAppForm.placeholderMessage")}
           value={formData.message}
           onChange={handleChange}
           className={styles.textarea}
@@ -59,7 +62,7 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
         type="submit"
         className={styles.btn}
       >
-        Enviar WhatsApp <FontAwesomeIcon icon={faWhatsapp} />
+        {t("Components.WhatsAppForm.ctaBtn")} <FontAwesomeIcon icon={faWhatsapp} />
       </button>
     </form>
   );

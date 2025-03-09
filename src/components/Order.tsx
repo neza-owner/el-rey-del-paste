@@ -1,9 +1,11 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
 import { default as arrow, default as arrowright } from "../assets/arrow.svg";
 import styles from "../styles/order.module.css";
 
 const Order = () => {
+  const [t, i18n] = useTranslation("global");
   const phoneNumber = "+528128678562";
   const message = "¡Hola! Me gustaría hacer un pedido de pastes.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -12,10 +14,10 @@ const Order = () => {
     <section id="order" className={styles.order}>
       {/* Título */}
       <h2 className={styles.heading}>
-        ¿LISTO PARA <span>PEDIR</span>?
+        {t("Order.heading.part1")} <span>{t("Order.heading.part2")}</span>?
       </h2>
       <p className={styles.description}>
-        Mándanos un mensaje y nosotros tomamos tu orden
+        {t("Order.subheading")}
       </p>
 
       {/* image */}
@@ -34,7 +36,7 @@ const Order = () => {
         rel="noopener noreferrer"
         className={styles.whatsappBtn}
       >
-        Cont&aacute;ctanos por whatsapp &nbsp; <FontAwesomeIcon className={styles.icon} icon={faWhatsapp} />
+        {t("Order.ctaBtn")} &nbsp; <FontAwesomeIcon className={styles.icon} icon={faWhatsapp} />
       </a>
 
       <img src={arrow} className={styles.arrow} alt="arrow" />

@@ -1,0 +1,168 @@
+{
+  "Hero": {
+    "heading": "El rey llegó a Monterrey",
+    "ctaBtn": "¡Quiero Pastes!",
+    "auxCtaBtn": "Ver Menú",
+    "benefits": {
+      "benefit1": {
+        "title": "Listo para llevar",
+        "legend": "Tu orden en 2 minutos"
+      },
+      "benefit2": {
+        "title": "Diferentes sabores",
+        "legend": "Para cada gusto"
+      },
+      "benefit3": {
+        "title": "Alimento tradicional",
+        "legend": "De Hidalgo a tu paladar"
+      }
+    }
+  },
+  "Combos": {
+    "heading": {
+      "part1": "COME COMO",
+      "part2": "REY"
+    },
+    "subheading": "Conoce nuestros combos"
+  },
+  "Menu": {
+    "heading": {
+      "part1": "PASTES DEL",
+      "part2": "REY"
+    },
+    "subheading": "Conoce el menú completo de la realeza",
+    "pastes": {
+      "names": {
+        "Papas con carne": "Papas con carne",
+        "Hawaiano": "Hawaiano",
+        "Frijol con chorizo": "Frijol con chorizo",
+        "Philadelphia con Zarzamora": "Philadelphia con Zarzamora",
+        "Arroz Con Leche": "Arroz Con Leche",
+        "Chicharrón": "Chicharrón",
+        "Tinga de pollo": "Tinga de pollo",
+        "Rajas Queso C/ Champiñon": "Rajas Queso C/ Champiñon",
+        "Piña": "Piña",
+        "Mole verde": "Mole verde"
+      },
+      "types": {
+        "savory": "Salados",
+        "sweet": "Dulces"
+      }
+    },
+    "ctaBtn": "¡Quiero ordenar ya!"
+  },
+  "Coupons": {
+    "heading": {
+      "part1": "CUPONES DE",
+      "part2": "LEALTAD"
+    },
+    "subheading": "¡Llénalo y nosotros te damos una sorpresa!",
+    "coupon": {
+      "title": "CUPONERA",
+      "description": "Llena la mitad (6 estampas) o toda la cuponera (12 estampas) y llévate tu correspondiente recompensa GRATIS, ¡tú decides!"
+    },
+    "rewards": {
+      "half": {
+        "title": "1 PASTE A ELEGIR",
+        "description": "Elige el paste dulce o salado de tu elección"
+      },
+      "full": {
+        "title": "COMBO CONQUISTADOR",
+        "description": "1 combo completo: incluye 3 pastes y 1 refresco de tu elección"
+      }
+    },
+    "disclaimer": "*Valido únicamente en sucursales con cuponera física en la compra de minima de $50MXN*"
+  },
+  "Order": {
+    "heading": {
+      "part1": "¿LISTO PARA",
+      "part2": "PEDIR"
+    },
+    "subheading": "Mándanos un mensaje y nosotros tomamos tu orden",
+    "ctaBtn": "Contáctanos por whatsapp"
+  },
+  "AvailableOn": {
+    "heading": {
+      "part1": "TAMBIÉN",
+      "part2": "DISPONIBLES",
+      "part3": "EN"
+    },
+    "subheading": "¡Pide a domicilio desde tu plataforma favorita!",
+    "advice": "Próximamente nuestra gran applicación"
+  },
+  "Location": {
+    "heading": {
+      "part1": "DONDE",
+      "part2": "ESTAMOS"
+    },
+    "subheading": "Encuentra tu sucursal más cercana",
+    "franchise": "Sucursal"
+  },
+  "Testimonials": {
+    "heading": {
+      "part1": "LO",
+      "part2": "QUE DICEN",
+      "part3": "DEL REY"
+    },
+    "subheading": "Comentarios de nuestros más reales clientes",
+    "testimonials": {
+      "comment1": "No tenía idea de que eran los pastes, ahora es mi comida favorita",
+      "comment2": "Iba tarde a la escuela, pero gracias al Rey pude comer y llegar a tiempo",
+      "comment3": "Ya faltaba comida diferente en Monterrey"
+    }
+  },
+  "Kings": {
+    "heading": {
+      "part1": "CONOCE A",
+      "part2": "LOS REYES"
+    },
+    "subheading": "Del reino de los pastes",
+    "title": "El rey del paste"
+  },
+  "Contact": {
+    "heading": {
+      "part1": "¿QUIERES",
+      "part2": "DECIRLE",
+      "part3": "ALGO AL REY"
+    },
+    "subheading": "Tu mensaje será escuchado en el trono."
+  },
+  "FAQ": {
+    "heading": {
+      "part1": "¿ALGUNA",
+      "part2": "PREGUNTA",
+      "part3": "PARA EL REY"
+    },
+    "subheading": "Mira las preguntas más frecuentes que nos han hecho",
+    "questions": {
+      "question1": {
+        "question": "¿Cuánto cuesta cada paste?",
+        "answer": "El precio varía según el sabor y tamaño, pero comienzan desde $35 MXN."
+      },
+      "question2": {
+        "question": "¿Dónde están ubicados?",
+        "answer": "Nos encontramos en MP25+62 Monterrey, Nuevo León."
+      },
+      "question3": {
+        "question": "¿Cómo puedo facturar?",
+        "answer": "Puedes solicitar tu factura enviándonos un mensaje por WhatsApp con tu ticket de compra."
+      },
+      "question4": {
+        "question": "¿Cuáles son los tipos y sabores que tienen?",
+        "answer": "Ofrecemos pastes salados como carne con papa, hawaiano y mole verde, además de opciones dulces."
+      },
+      "question5": {
+        "question": "¿Horario de atención?",
+        "answer": "Nuestro horario es de 8:00 AM a 9:00 PM todos los días."
+      }
+    }
+  },
+  "Components": {
+    "WhatsAppForm": {
+      "legendMessage": "¡Manda un mensaje al número personal del rey!",
+      "placeholderName": "Tu nombre",
+      "placeholderMessage": "Escribe tu mensaje...",
+      "ctaBtn": "Enviar WhatsApp"
+    }
+  }
+}
