@@ -1,37 +1,31 @@
 section.stores {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
-  /* max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding: 1.5rem; */
 
-  h2.heading {
-    font-size: 1.5em;
-    font-weight: 600;
-    width: 100%;
+  header {
+    h2.heading {
+      font-size: 1.5em;
+      font-weight: 600;
+      width: 100%;
 
-    span {
-      color: var(--primary-color);
+      span,
+      svg.icon {
+        color: var(--primary-color);
+      }
+    }
+
+    h3.subheading {
+      font-size: 1.2rem;
+      font-weight: 400;
+
     }
   }
 
-  .icon {
-    color: var(--primary-color);
-  }
-
-  h3.subheading {
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-
-  div.franchise {
+  div.stores {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,11 +45,11 @@ section.stores {
       transform: translate(-50%, -50%); */
       font-size: 1.8rem;
       font-weight: 600;
-
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      flex-wrap: wrap;
+      min-width: 90%;
     }
 
     h4+h5 {
@@ -65,12 +59,14 @@ section.stores {
 
     div.gallery {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       gap: 1rem;
 
       img.imgGallery {
-        width: 15rem;
+        width: 7rem;
         object-fit: cover;
         border-radius: 0.5rem;
         aspect-ratio: 9/16;
@@ -86,9 +82,11 @@ section.stores {
 
       span,
       a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 500;
         color: #4B5563;
+        width: 32ch;
+        text-wrap: pretty;
 
         .icon {
           color: var(--accent-color);
@@ -97,6 +95,30 @@ section.stores {
 
       a {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.stores {
+    div.stores {
+
+      div.gallery {
+        img.imgGallery {
+          width: 15rem;
+        }
+      }
+
+      div.info {
+
+        span,
+        a {
+          font-size: 1.2rem;
+          width: fit-content;
+        }
       }
     }
   }

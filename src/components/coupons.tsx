@@ -1,8 +1,7 @@
 import { faTicketSimple } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
-import arrowleft from "../assets/arrow-left.svg";
-import arrowright from "../assets/arrow-right.svg";
+import { default as arrowleft, default as arrowright } from "../assets/arrow-deco.svg";
 import equal from '../assets/equal.svg';
 import styles from '../styles/Coupons.module.css';
 
@@ -16,11 +15,6 @@ const Coupons = () => {
         <h3 className={styles.subheading}>{t("Coupons.subheading")}</h3>
       </header>
       <div className={styles.couponsContainer}>
-        <img
-          src={arrowleft}
-          className={styles.arrowleft}
-          alt="arrow"
-        />
         <figure className={styles.coupon}>
           <img src="/coupons/coupon-holder-back.jpg" alt="Coupon 1" className={styles.couponImage} />
           <figcaption className={styles.couponDescription}>
@@ -29,6 +23,11 @@ const Coupons = () => {
             {/* <p className={styles.couponExpiration}>Vigencia: 31 de diciembre de 2021</p> */}
           </figcaption>
         </figure>
+        <img
+          src={arrowleft}
+          className={styles.arrowLeft}
+          alt="arrow"
+        />
         <img src={equal} alt="equal" className={styles.equal} />
         <img
           src={arrowright}

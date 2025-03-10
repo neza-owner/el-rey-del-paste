@@ -37,9 +37,9 @@ const Kings = () => {
       <header>
         {/* title */}
         <h2 className={styles.heading}>
-          {t("Kings.heading.part1")} <span>{t("Kings.heading.part2")}</span>&nbsp;<img src={crown} className="crown" alt="Logo" />
+          {t("Kings.heading.part1")}&nbsp;<span>{t("Kings.heading.part2")}</span>&nbsp;<img src={crown} className="crown" alt="Logo" />
         </h2>
-        <h3 className={styles.subheading}>{t("Testimonials.subheading")}</h3>
+        <h3 className={styles.subheading}>{t("Kings.subheading")}</h3>
       </header>
 
       {/* Kings List */}

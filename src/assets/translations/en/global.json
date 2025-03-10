@@ -2,7 +2,28 @@
   "Hero": {
     "heading": "The king just arrive to Monterrey",
     "ctaBtn": "I Wanna Pastes!",
-    "auxCtaBtn": "See Menu"
+    "auxCtaBtn": "See Menu",
+    "benefits": {
+      "benefit1": {
+        "title": "Ready to go",
+        "legend": "Your order in 2 minutes"
+      },
+      "benefit2": {
+        "title": "Different flavors",
+        "legend": "For every taste"
+      },
+      "benefit3": {
+        "title": "Traditional food",
+        "legend": "From Hidalgo to your mouth"
+      }
+    }
+  },
+  "Combos": {
+    "heading": {
+      "part1": "EAT LIKE A",
+      "part2": "KING"
+    },
+    "subheading": "Get to know our combos"
   },
   "Menu": {
     "heading": {
@@ -28,6 +49,178 @@
         "sweet": "Sweet"
       }
     },
-    "ctaBtn": "¡Quiero ordenar ya!"
+    "all": "All",
+    "ctaBtn": "I want to order now!"
+  },
+  "Coupons": {
+    "heading": {
+      "part1": "LOYALTY",
+      "part2": "COUPONS"
+    },
+    "subheading": "Fill it up and we'll give you a surprise!",
+    "coupon": {
+      "title": "COUPON BOOK",
+      "description": "Fill half (6 stamps) or the whole coupon book (12 stamps) and get your corresponding reward just for FREE, it's up to you!"
+    },
+    "rewards": {
+      "half": {
+        "title": "1 PASTE TO PICK",
+        "description": "Choose a sweet or savory paste of your choice"
+      },
+      "full": {
+        "title": "'CONQUISTADOR' COMBO",
+        "description": "1 full combo: includes 3 pastes and 1 drink of your choice"
+      }
+    },
+    "disclaimer": "*Valid only at stores with a physical coupon book on a minimum purchase of $50MXN*"
+  },
+  "Order": {
+    "heading": {
+      "part1": "READY TO",
+      "part2": "ORDER"
+    },
+    "subheading": "Send us a message and we'll take your order",
+    "ctaBtn": "Contact us via WhatsApp"
+  },
+  "AvailableOn": {
+    "heading": {
+      "part1": "ALSO",
+      "part2": "AVAILABLE",
+      "part3": "ON"
+    },
+    "subheading": "Order from your favorite delivery platform!",
+    "advice": "Our own app is coming soon"
+  },
+  "Stores": {
+    "heading": {
+      "part1": "THE KING, FROM PACHUCA TO",
+      "part2": "MONTERREY"
+    },
+    "subheading": "From the city of Pachuca to the mountains of Monterrey",
+    "store": "Store",
+    "store1": {
+      "legend": "The First Kingdom",
+      "schedule": "Monday to Friday from 7:00 AM to 9:00 PM. Saturdays from 8:00 AM to 2:00 PM."
+    },
+    "store2": {
+      "legend": "The Second Kingdom",
+      "schedule": "Monday to Friday from 7:00 AM to 9:00 PM. Saturdays from 8:00 AM to 2:00 PM."
+    }
+  },
+  "Location": {
+    "heading": {
+      "part1": "WHERE",
+      "part2": "WE ARE"
+    },
+    "subheading": "Find your nearest store",
+    "franchise": "Store"
+  },
+  "Testimonials": {
+    "heading": {
+      "part1": "WHAT",
+      "part2": "THEY SAY",
+      "part3": "ABOUT THE KING"
+    },
+    "subheading": "Comments from our most royal customers",
+    "testimonials": {
+      "comment1": "I had no idea what pastes were, now it's my favorite food",
+      "comment2": "I was late for school, but thanks to the King I could eat and arrive just on time",
+      "comment3": "Definitely, pastes are a food you must try in Monterrey"
+    }
+  },
+  "Kings": {
+    "heading": {
+      "part1": "MEET THE",
+      "part2": "KINGS"
+    },
+    "subheading": "From the kingdom of pastes",
+    "title": "The king of pastes"
+  },
+  "Contact": {
+    "heading": {
+      "part1": "THE KING WANNA",
+      "part2": "HEAR",
+      "part3": "YOU"
+    },
+    "subheading": "Your message will be heard on the throne"
+  },
+  "FAQ": {
+    "heading": {
+      "part1": "ANY",
+      "part2": "QUESTIONS",
+      "part3": "FOR THE KING?"
+    },
+    "subheading": "Check out the most frequently asked questions",
+    "questions": {
+      "question1": {
+        "question": "How much does each paste cost?",
+        "answer": "The price depends on the flavor and size, but they start from $35 MXN."
+      },
+      "question2": {
+        "question": "Where are you located?",
+        "answer": "We are located at MP25+62 Monterrey, Nuevo León."
+      },
+      "question3": {
+        "question": "How can I get a billing invoice?",
+        "answer": "You can request your invoice by sending us a message on WhatsApp with your purchase receipt."
+      },
+      "question4": {
+        "question": "What types and flavors do you have?",
+        "answer": "We offer savory pastes like meat with potatoes, Hawaiian, and green mole, as well as sweet options."
+      },
+      "question5": {
+        "question": "What are your business hours?",
+        "answer": "Our business hours are from 8:00 AM to 9:00 PM every day."
+      }
+    }
+  },
+  "Components": {
+    "WhatsAppForm": {
+      "legendMessage": "Send a message to the king's personal number!",
+      "placeholderName": "Your name",
+      "placeholderMessage": "Write your message...",
+      "ctaBtn": "Send WhatsApp"
+    },
+    "Navbar": {
+      "menu": "Menu",
+      "order": "Order",
+      "stores": "Stores",
+      "aboutus": "About us",
+      "billing": "Billing",
+      "franchises": "Franchises",
+      "jobs": "Jobs",
+      "contact": "Contact"
+    }
+  },
+  "Billing": {
+    "heading": {
+      "part1": "GET YOUR",
+      "part2": "INVOICE HERE"
+    },
+    "subheading": "Request it and we will send it to you",
+    "form": {
+      "legend": "Billing information",
+      "placeholderName": "Full name",
+      "placeholderEmail": "Email",
+      "placeholderPhone": "Phone",
+      "placeholderRFC": "RFC",
+      "placeholderAddress": "Address",
+      "ctaBtn": "Submit request"
+    }
+  },
+  "Franchises": {
+    "heading": {
+      "part1": "WANNA",
+      "part2": "OPEN YOUR OWN KINGDOM?"
+    },
+    "subheading": "Expand the kingdom with your own franchise, we will help you!"
+  },
+  "Jobs": {
+    "heading": {
+      "part1": "WANNA",
+      "part2": "JOIN",
+      "part3": "OUR KINGDOM?"
+    },
+    "subheading": "The kingdom is growing and you can be part of it"
   }
 }

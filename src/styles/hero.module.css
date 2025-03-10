@@ -1,15 +1,12 @@
 section.hero {
-  height: 100vh;
-  width: 100%;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
-  text-align: center;
-  padding: 4rem 0;
-  padding: 0 1rem;
+  gap: 1rem;
 
   h1.heading {
     font-size: 2.25rem;
@@ -18,22 +15,23 @@ section.hero {
 
   h2.heading {
     font-size: 1.2rem;
-    margin-top: 1rem;
     font-weight: 600;
   }
 
   div.ctaBtns {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
 
     a.ctaBtn {
       font-weight: 600;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
       color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
 
       /*margin-top: 1rem;
       padding: 0.5rem 1rem;
@@ -48,7 +46,7 @@ section.hero {
       */
     }
 
-    a.ctaBtn.main {
+    a.main {
       background-color: var(--primary-color);
 
       &:hover {
@@ -56,7 +54,7 @@ section.hero {
       }
     }
 
-    a.ctaBtn.secondary {
+    a.secondary {
       background-color: var(--accent-color);
 
       &:hover {
@@ -69,7 +67,6 @@ section.hero {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1.5rem;
-    margin-top: 2.5rem;
 
     div.benefitContainer {
       display: flex;
@@ -84,6 +81,7 @@ section.hero {
 
       span.benefit {
         font-weight: 700;
+        font-size: 2.25rem;
       }
 
       span+p {
@@ -93,10 +91,22 @@ section.hero {
       }
     }
   }
+}
 
-  @media (min-width: 768px) {
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.hero {
     div.benefits {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    div.ctaBtns {
+      flex-direction: row;
+
+      a.ctaBtn {
+        font-size: 2.25rem;
+      }
     }
   }
 }

@@ -44,7 +44,7 @@ const FAQ = () => {
 
       <header>
         <h2 className={styles.heading}>
-          {t("FAQ.heading.part1")} <span>{t("FAQ.heading.part2")}</span> {t("FAQ.heading.part3")}? <FontAwesomeIcon icon={faCircleQuestion} className={styles.icon} />
+          {t("FAQ.heading.part1")} <span>{t("FAQ.heading.part2")}</span> {t("FAQ.heading.part3")} <FontAwesomeIcon icon={faCircleQuestion} className={styles.icon} />
         </h2>
         <h3 className={styles.subheading}>
           {t("FAQ.subheading")}

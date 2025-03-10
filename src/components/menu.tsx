@@ -22,15 +22,7 @@ export default function Menu() {
       try {
         const response = await fetch("../data/pastes.json");
         const data = await response.json();
-
-        const translatedData = data.map((paste: Paste) => ({
-          ...paste,
-          name: t(`Menu.pastes.names.${paste.name}`, { defaultValue: paste.name }),
-          types: t(`Menu.pastes.types.${paste.type}`)
-        }));
-
-        console.log(translatedData);
-        setPastes(translatedData);
+        setPastes(data);
       } catch (error) {
         console.error("Error fetching pastes", error);
       }
@@ -39,8 +31,16 @@ export default function Menu() {
     fetchPastes();
   }, [t]);
 
+  const translatedData = pastes.map((paste: Paste) => ({
+    ...paste,
+    name: t(`Menu.pastes.names.${paste.name}`, { defaultValue: paste.name }),
+    type: t(`Menu.pastes.types.${paste.type}`)
+  }));
+
+  const translatedFilter = filter === "Todos" ? t("Menu.all") : t(`Menu.pastes.types.${filter.toLowerCase()}`);
+
   const filteredPastes =
-    filter === "Todos" ? pastes : pastes.filter((paste) => paste.type === filter);
+    filter === "Todos" ? translatedData : translatedData.filter((paste) => paste.type === translatedFilter);
 
   return (
     <section id="menu" className={styles.menu}>
@@ -52,13 +52,13 @@ export default function Menu() {
       </header>
 
       <div className={styles.switcher}>
-        {["Todos", t("Menu.pastes.types.savory"), t("Menu.pastes.types.sweet")].map((category) => (
+        {["Todos", "Savory", "Sweet"].map((category) => (
           <button
             key={category}
             onClick={() => setFilter(category)}
             className={`${styles.switchBtn} ${filter === category ? styles['switchBtn:active'] : styles['switchBtn:inactive']}`}
           >
-            {category}
+            {category === "Todos" ? t("Menu.all") : t(`Menu.pastes.types.${category.toLowerCase()}`)}
           </button>
         ))}
       </div>

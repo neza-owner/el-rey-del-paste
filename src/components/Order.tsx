@@ -1,7 +1,7 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
-import { default as arrow, default as arrowright } from "../assets/arrow.svg";
+import { default as arrow, default as arrowright } from "../assets/arrow-deco.svg";
 import styles from "../styles/order.module.css";
 
 const Order = () => {
@@ -13,12 +13,15 @@ const Order = () => {
   return (
     <section id="order" className={styles.order}>
       {/* Título */}
-      <h2 className={styles.heading}>
-        {t("Order.heading.part1")} <span>{t("Order.heading.part2")}</span>?
-      </h2>
-      <p className={styles.description}>
-        {t("Order.subheading")}
-      </p>
+
+      <header>
+        <h2 className={styles.heading}>
+          {t("Order.heading.part1")} <span>{t("Order.heading.part2")}</span>?
+        </h2>
+        <h3 className={styles.subheading}>
+          {t("Order.subheading")}
+        </h3>
+      </header>
 
       {/* image */}
       <div className="flex justify-center">
@@ -39,7 +42,7 @@ const Order = () => {
         {t("Order.ctaBtn")} &nbsp; <FontAwesomeIcon className={styles.icon} icon={faWhatsapp} />
       </a>
 
-      <img src={arrow} className={styles.arrow} alt="arrow" />
+      <img src={arrow} className={styles.arrowLeft} alt="arrow" />
       <img
         src={arrowright}
         className={styles.arrowRight}

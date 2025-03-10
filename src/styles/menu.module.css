@@ -5,30 +5,32 @@ section.menu {
   align-items: center;
   font-size: 2.25rem;
   font-weight: 700;
-  padding-bottom: 1.5rem;
   /* padding: 1.5rem;
   gap: 1.5rem; */
 
-  h2.heading {
-    font-size: 1.5em;
-    font-weight: 600;
+  header {
+    h2.heading {
+      font-size: 1.5em;
+      font-weight: 600;
 
-    span {
-      color: var(--primary-color);
+      span {
+        color: var(--primary-color);
+      }
+    }
+
+    h3.subheading {
+      font-size: 1.2rem;
+      font-weight: 400;
     }
   }
 
-  h3.subheading {
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
 
   div.switcher {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 1.5rem 0rem;
+    margin-top: 1rem;
 
     button.switchBtn {
       display: flex;
@@ -127,8 +129,12 @@ section.menu {
       ;
     }
   }
+}
 
-  @media (min-width: 768px) {
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.menu {
     div.pastesCardsContainer {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }

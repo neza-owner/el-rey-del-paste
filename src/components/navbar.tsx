@@ -1,4 +1,5 @@
 import { useLayoutEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import crown from "../assets/crown.svg";
@@ -11,6 +12,7 @@ const Navbar = () => {
     setIsActiveHashLink(e);
   };
 
+  const [t, i18n] = useTranslation("global");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useLayoutEffect(() => {
@@ -44,22 +46,22 @@ const Navbar = () => {
         </li>
         <li>
           <HashLink to="/#menu" className={isActiveHashLink === 'menu' ? 'activeLink' : 'inactiveLink'} onClick={() => handleActiveHashLink('menu')} accessKey="m">
-            Menu
+            {t("Components.Navbar.menu")}
           </HashLink>
         </li>
         <li>
           <HashLink to="/#order" className={isActiveHashLink === 'order' ? 'activeLink' : 'inactiveLink'} onClick={() => handleActiveHashLink('order')} accessKey="o">
-            Ordenar
+            {t("Components.Navbar.order")}
           </HashLink>
         </li>
         <li>
           <HashLink to="/#stores" className={isActiveHashLink === 'stores' ? 'activeLink' : 'inactiveLink'} onClick={() => handleActiveHashLink('stores')} accessKey="s">
-            Sucursales
+            {t("Components.Navbar.stores")}
           </HashLink>
         </li>
         <li>
           <HashLink to="/#about" className={isActiveHashLink === 'about' ? 'activeLink' : 'inactiveLink'} onClick={() => handleActiveHashLink('about')} accessKey="a">
-            Nosotros
+            {t("Components.Navbar.aboutus")}
           </HashLink>
         </li>
         {/* <li>
@@ -74,23 +76,23 @@ const Navbar = () => {
         </li> */}
         <li>
           <NavLink to="/billing" className={({ isActive }) => isActive ? 'activeLink' : 'inactiveLink'} accessKey="b" onClick={() => handleActiveHashLink('billing')}>
-            Facturación
+            {t("Components.Navbar.billing")}
           </NavLink>
         </li>
         <li>
           <NavLink to="/franchises" className={({ isActive }) => isActive ? 'activeLink' : 'inactiveLink'} accessKey="f" onClick={() => handleActiveHashLink('franchises')}>
-            Franquicias
+            {t("Components.Navbar.franchises")}
           </NavLink>
         </li>
         <li>
           <NavLink to="/jobs" className={({ isActive }) => isActive ? 'activeLink' : 'inactiveLink'} accessKey="j" onClick={() => handleActiveHashLink('franchises')}>
-            Vacantes
+            {t("Components.Navbar.jobs")}
           </NavLink>
         </li>
       </ul>
 
       <HashLink to="/#contact" accessKey="c">
-        Contacto
+        {t("Components.Navbar.contact")}
       </HashLink>
 
       {/* <button className="langBtn" accessKey="l">

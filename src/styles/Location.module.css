@@ -1,5 +1,5 @@
 section.location {
-  height: 100vh;
+  /*  height: 100vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,9 +18,9 @@ section.location {
     h2.heading {
       font-size: 1.5em;
       font-weight: 600;
-      width: 100%;
 
-      span {
+      span,
+      svg.icon {
         color: var(--primary-color);
       }
     }
@@ -31,18 +31,13 @@ section.location {
     }
   }
 
-  .icon {
-    color: var(--primary-color);
-  }
-
-
   div.locations {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 90%;
+    width: 80%;
 
     div.franchise {
       display: flex;
@@ -53,7 +48,7 @@ section.location {
       gap: 1rem;
 
       h4 {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         font-weight: 600;
       }
 
@@ -77,6 +72,24 @@ section.location {
         font-size: 1.2rem;
         font-weight: 500;
         color: #4B5563;
+      }
+    }
+  }
+}
+
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.location {
+    div.locations {
+      flex-direction: row;
+      width: 90%;
+
+      div.franchise {
+
+        h4 {
+          font-size: 1.8rem;
+        }
       }
     }
   }

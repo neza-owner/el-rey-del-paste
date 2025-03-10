@@ -11,13 +11,14 @@ import Order from "../components/Order";
 import Parallax from "../components/Parallax";
 /* import Promos from "../components/Promos"; */
 /* import Social from "../components/Social"; */
-import Franchises from "../components/Stores";
+import Stores from "../components/Stores";
 import Testimonials from "../components/Testmonials";
 /* import Jobs from "./Jobs"; */
+import styles from "../styles/landing.module.css";
 
 function Landing() {
   return (
-    <div className="flex flex-col">
+    <div className={styles.landing}>
       <Hero />
       <Combo />
       <Menu />
@@ -25,7 +26,7 @@ function Landing() {
       {/* <Promos /> */}
       <Order />
       <AvailableOn />
-      <Franchises />
+      <Stores />
       <Location />
       <Testimonials />
       <Kings />

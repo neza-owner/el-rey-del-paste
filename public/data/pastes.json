@@ -2,73 +2,73 @@
   {
     "id": 0,
     "name": "Papas con carne",
-    "type": "Salados",
+    "type": "savory",
     "image": "/pastes/03.jpg",
     "isFavorite": true
   },
   {
     "id": 1,
     "name": "Hawaiano",
-    "type": "Salados",
+    "type": "savory",
     "image": "/pastes/01.jpg",
     "isFavorite": true
   },
   {
     "id": 2,
     "name": "Frijol con chorizo",
-    "type": "Salados",
+    "type": "savory",
     "image": "/pastes/06.jpg",
     "isFavorite": true
   },
   {
     "id": 3,
     "name": "Philadelphia con Zarzamora",
-    "type": "Dulces",
+    "type": "sweet",
     "image": "/pastes/07.jpg",
     "isFavorite": true
   },
   {
     "id": 4,
     "name": "Arroz Con Leche",
-    "type": "Dulces",
+    "type": "sweet",
     "image": "/pastes/09.jpg",
     "isFavorite": true
   },
   {
     "id": 5,
     "name": "Nutella",
-    "type": "Dulces",
+    "type": "sweet",
     "image": "/pastes/05.jpg",
     "isFavorite": true
   },
   {
     "id": 6,
     "name": "Chicharrón",
-    "type": "Salados",
+    "type": "savory",
     "image": "/pastes/04.jpg"
   },
   {
     "id": 7,
     "name": "Tinga de pollo",
-    "type": "Salados",
+    "type": "savory",
     "image": "/pastes/05.jpg"
   },
   {
     "id": 8,
     "name": "Rajas Queso C/ Champiñon",
-    "type": "Salados",
+    "type": "savory",
     "image": "/pastes/05.jpg"
   },
   {
     "id": 9,
     "name": "Piña",
-    "type": "Dulces",
+    "type": "sweet",
     "image": "/pastes/08.jpg"
   },
   {
     "id": 10,
     "name": "Mole verde",
-    "type": "Salados",
+    "type": "savory",
     "image": "/pastes/02.jpg"
   }
 ]

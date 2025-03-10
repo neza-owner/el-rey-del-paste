@@ -23,7 +23,7 @@ const Location = () => {
   useEffect(() => {
     const fetchFranchises = async () => {
       try {
-        const response = await fetch("../data/franchises.json");
+        const response = await fetch("../data/stores.json");
         const data = await response.json();
         setFranchises(data);
       } catch (error) {

@@ -1,5 +1,5 @@
 section.order {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,26 +7,23 @@ section.order {
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
-  /* max-width: 28rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.5rem;
-  text-align: center; */
   position: relative;
 
-  h2.heading {
-    font-size: 1.5em;
-    font-weight: 600;
-    width: 100%;
+  header {
+    h2.heading {
+      font-size: 1.5em;
+      font-weight: 600;
+      width: 100%;
 
-    span {
-      color: var(--primary-color);
+      span {
+        color: var(--primary-color);
+      }
     }
-  }
 
-  p.description {
-    font-size: 1.2rem;
-    font-weight: 400;
+    h3.subheading {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
   }
 
   a.whatsappBtn {
@@ -43,39 +40,64 @@ section.order {
     text-decoration: none;
     transition: all 0.3s ease;
 
+    svg.icon {
+      font-size: 2.5rem;
+    }
+
     &:hover {
       background-color: var(--accent-color);
       font-weight: 600;
+
     }
   }
 
-  .icon {
-    font-size: 2.5rem;
-  }
 
-  img.arrow {
-    background-image: url('../assets/arrow.svg');
-    mask-image: url('../assets/arrow.svg');
+  img.arrowLeft {
+    /* background-image: url('../assets/arrow-deco.svg');
+    mask-image: url('arrow-deco.svg');
     mask-size: cover;
     mask-repeat: no-repeat;
     mask-position: center;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); */
     position: absolute;
-    bottom: 0%;
-    left: 20%;
+    top: 100%;
+    left: 15%;
     rotate: 20deg;
+    width: 3rem;
   }
 
   img.arrowRight {
-    background-image: url('../assets/arrow.svg');
-    mask-image: url('../assets/arrow.svg');
+    /* background-image: url('arrow-deco.svg');
+    mask-image: url('arrow-deco.svg');
     mask-size: cover;
     mask-repeat: no-repeat;
     mask-position: center;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); */
     position: absolute;
-    bottom: 0%;
-    right: 20%;
+    top: 100%;
+    right: 15%;
     transform: scaleX(-1) rotate(20deg);
+    width: 3rem;
+  }
+}
+
+
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.order {
+    img.arrowLeft {
+      top: 70%;
+      left: 30%;
+      rotate: 100deg;
+      width: 4rem;
+    }
+
+    img.arrowRight {
+      top: 70%;
+      right: 30%;
+      transform: scaleX(-1) rotate(100deg);
+      width: 4rem;
+    }
   }
 }

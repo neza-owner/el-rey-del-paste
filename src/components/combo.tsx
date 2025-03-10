@@ -50,9 +50,9 @@ export default function Combo() {
     <section id="combos" className={styles.combo}>
       <header>
         <h2 className={styles.heading}>
-          “{t("Combos.heading.part1")}&nbsp;<span>{t("Combos.heading.part2")}</span>”&nbsp;<img src={crown} className="crown" alt="Logo" />
-          <h3 className={styles.subheading}>{t("Combos.subheading")}</h3>
+          “{t("Combos.heading.part1")}&nbsp;<span>{t("Combos.heading.part2")}”</span>&nbsp;<img src={crown} className="crown" alt="Logo" />
         </h2>
+        <h3 className={styles.subheading}>{t("Combos.subheading")}</h3>
       </header>
 
       <ImageStack

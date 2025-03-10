@@ -49,6 +49,7 @@
         "sweet": "Dulces"
       }
     },
+    "all": "Todos",
     "ctaBtn": "¡Quiero ordenar ya!"
   },
   "Coupons": {
@@ -89,6 +90,22 @@
     },
     "subheading": "¡Pide a domicilio desde tu plataforma favorita!",
     "advice": "Próximamente nuestra gran applicación"
+  },
+  "Stores": {
+    "heading": {
+      "part1": "EL REY, DE PACHUCA PARA",
+      "part2": "MONTERREY"
+    },
+    "subheading": "De la ciudad de Pachuca para todo Monterrey",
+    "store": "Sucursal",
+    "store1": {
+      "legend": "El Primer Reino",
+      "schedule": "Lunes a Viernes de 7:00 a 21:00 hrs. Sábados de 8:00 a 14:00 hrs."
+    },
+    "store2": {
+      "legend": "El Segundo Reino",
+      "schedule": "Lunes a Viernes de 7:00 a 21:00 hrs. Sábados de 8:00 a 14:00 hrs."
+    }
   },
   "Location": {
     "heading": {
@@ -131,7 +148,7 @@
     "heading": {
       "part1": "¿ALGUNA",
       "part2": "PREGUNTA",
-      "part3": "PARA EL REY"
+      "part3": "PARA EL REY?"
     },
     "subheading": "Mira las preguntas más frecuentes que nos han hecho",
     "questions": {
@@ -163,6 +180,47 @@
       "placeholderName": "Tu nombre",
       "placeholderMessage": "Escribe tu mensaje...",
       "ctaBtn": "Enviar WhatsApp"
+    },
+    "Navbar": {
+      "menu": "Menú",
+      "order": "Pedir",
+      "stores": "Sucursales",
+      "aboutus": "Nosotros",
+      "billing": "Facturación",
+      "franchises": "Franquicias",
+      "jobs": "Vacantes",
+      "contact": "Contacto"
     }
+  },
+  "Billing": {
+    "heading": {
+      "part1": "OBTEN TU",
+      "part2": "FACTURA AQUÍ"
+    },
+    "subheading": "Solicítala y nosotros te la mandamos",
+    "form": {
+      "legend": "Datos de facturación",
+      "placeholderName": "Nombre completo",
+      "placeholderEmail": "Correo electrónico",
+      "placeholderPhone": "Teléfono",
+      "placeholderRFC": "RFC",
+      "placeholderAddress": "Dirección",
+      "ctaBtn": "Enviar solicitud"
+    }
+  },
+  "Franchises": {
+    "heading": {
+      "part1": "¿QUIERES",
+      "part2": "ABRIR TU PROPIO REYNO?"
+    },
+    "subheading": "Expande el reino con tu propia sucursal, ¡nosotros te ayudamos!"
+  },
+  "Jobs": {
+    "heading": {
+      "part1": "¿QUIERES",
+      "part2": "UNIRTE",
+      "part3": "A NUESTRO REYNO?"
+    },
+    "subheading": "El reino crece y tú puedes ser parte de él"
   }
 }
