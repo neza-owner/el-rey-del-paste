@@ -1,3 +1,32 @@
+@keyframes appear {
+  from {
+    opacity: 0.75;
+    /* scale: 0.5; */
+    transform: scale(0.75);
+    /* clip-path: inset (100% 100% 0 0); */
+    /* transform: translate(-100px); */
+    filter: brightness(150%);
+  }
+
+  to {
+    opacity: 1;
+    /* scale: 1; */
+    transform: scale(1);
+    /*clip-path: inset (0 0 0 0);*/
+    /* transform: translateX(0px); */
+    filter: brightness(100%);
+  }
+}
+
+section.combo {
+  animation: appear 3s linear;
+  /* animation: appear 5s linear; */
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+  /*animation-range: entry 0% cover 40%;
+  */
+}
+
 section.combo {
   /* height: 100vh; */
   display: flex;
