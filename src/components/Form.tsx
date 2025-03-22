@@ -1,74 +1,58 @@
-import { useState } from 'react';
 import styles from '../styles/form.module.css';
 
 interface FormProps {
-  /* legend: string; */
   showRFC?: boolean;
 }
 
-const Form = ({ showRFC = false/* , legend */ }: FormProps) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [rfc, setRFC] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(`Name: ${name}, Email: ${email}`)
-  };
-
+const Form = ({ showRFC = true }: FormProps) => {
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      {/* <legend className={styles.legend}>{legend}</legend> */}
+    <form
+      action="https://formsubmit.co/neza505050@gmail.com"
+      method="POST"
+      className={styles.form}
+    >
       <input
         type="text"
+        name="name"
         placeholder="Full Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        autoComplete="name"
         required
-        maxLength="32"
+        maxLength={32}
+        autoComplete="name"
       />
       <input
         type="email"
+        name="email"
         placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        autoComplete="email"
         required
-        pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+        autoComplete="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
       />
       <input
         type="tel"
+        name="phone"
         placeholder="Phone"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        autoComplete="tel"
         required
+        autoComplete="tel"
       />
-      {
-        showRFC && (
-          <input
-            type="text"
-            placeholder="RFC"
-            value={rfc}
-            onChange={(e) => setRFC(e.target.value)}
-          />
-        )
-      }
+      {showRFC && (
+        <input
+          type="text"
+          name="rfc"
+          placeholder="RFC"
+        />
+      )}
       <textarea
+        name="message"
         placeholder="Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
       />
-      {/* <label>
-        <input type="checkbox" />
-        I agree to the terms and conditions
-      </label> */}
+      
+      {/* Opcional: evitar el correo de confirmación y redirigir a una página personalizada */}
+      <input type="hidden" name="_captcha" value="false" />
+      {/* <input type="hidden" name="_next" value="https://tusitio.com/gracias" /> */}
+
       <button type="submit">Submit</button>
     </form>
   );
-}
+};
 
 export default Form;
