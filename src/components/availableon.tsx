@@ -11,7 +11,7 @@ const platforms = [
 ];
 
 const AvailableOn = () => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   return (
     <section className={styles.availableOn}>

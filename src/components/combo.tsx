@@ -14,7 +14,7 @@ export default function Combo() {
     description: string;
     image: string;
   }
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [combos, setCombos] = useState<Combo[]>([]);
   const [currentCombo, setCurrentCombo] = useState(0);
 

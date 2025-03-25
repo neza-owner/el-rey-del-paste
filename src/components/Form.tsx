@@ -4,10 +4,10 @@ interface FormProps {
   showRFC?: boolean;
 }
 
-const Form = ({ showRFC = true }: FormProps) => {
+const Form = ({ showRFC = false }: FormProps) => {
   return (
     <form
-      action="https://formsubmit.co/neza505050@gmail.com"
+      action="https://formsubmit.co/dezimo_94@hotmail.com"
       method="POST"
       className={styles.form}
     >

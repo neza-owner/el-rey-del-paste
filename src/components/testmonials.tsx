@@ -10,7 +10,7 @@ const Testimonials = () => {
     profilelink: string;
   }
 
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
   useEffect(() => {

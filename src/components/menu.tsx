@@ -13,7 +13,7 @@ export default function Menu() {
     isFavorite: boolean;
   }
 
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [pastes, setPastes] = useState<Paste[]>([]);
   const [filter, setFilter] = useState("Todos");
 

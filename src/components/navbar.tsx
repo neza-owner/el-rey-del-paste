@@ -7,13 +7,14 @@ import "../styles/navbar.css";
 import ToggleLanguage from "./ToggleLanguage";
 
 const Navbar = () => {
-  const [isActiveHashLink, setIsActiveHashLink] = useState('home');
-  const handleActiveHashLink = (e) => {
+  const [isActiveHashLink, setIsActiveHashLink] = useState<string>('home');
+
+  const handleActiveHashLink = (e: string) => {
     setIsActiveHashLink(e);
   };
 
-  const [t, i18n] = useTranslation("global");
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [t] = useTranslation("global");
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -22,16 +23,26 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+
       const sections = document.querySelectorAll('section[id]');
       const scroll = window.scrollY + 66;
+
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scroll >= sectionTop && scroll <= sectionTop + sectionHeight) {
-          setIsActiveHashLink(section.getAttribute('id'));
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = (section as HTMLElement).clientHeight;
+
+        if (
+          scroll >= sectionTop &&
+          scroll <= sectionTop + sectionHeight
+        ) {
+          const id = section.getAttribute('id');
+          if (id) {
+            setIsActiveHashLink(id);
+          }
         }
       });
-    }
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isScrolled]);
@@ -64,16 +75,6 @@ const Navbar = () => {
             {t("Components.Navbar.aboutus")}
           </HashLink>
         </li>
-        {/* <li>
-          <a href="#combos">
-            Combos
-          </a>
-        </li> */}
-        {/* <li>
-          <a href="#deals">
-            Promos
-          </a>
-        </li> */}
         <li>
           <NavLink to="/billing" className={({ isActive }) => isActive ? 'activeLink' : 'inactiveLink'} accessKey="b" onClick={() => handleActiveHashLink('billing')}>
             {t("Components.Navbar.billing")}
@@ -94,10 +95,6 @@ const Navbar = () => {
       <HashLink to="/#contact" accessKey="c">
         {t("Components.Navbar.contact")}
       </HashLink>
-
-      {/* <button className="langBtn" accessKey="l">
-        EN
-      </button> */}
 
       {/* language toggle */}
       <ToggleLanguage />

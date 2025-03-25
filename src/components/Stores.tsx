@@ -17,7 +17,7 @@ function Stores() {
     phone: string;
   }
 
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [stores, setFranchises] = useState<Stores[]>([]);
 
   useEffect(() => {

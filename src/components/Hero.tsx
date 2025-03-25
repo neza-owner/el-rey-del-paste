@@ -4,7 +4,7 @@ import styles from "../styles/hero.module.css";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export default function Hero() {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   return (
     <section className={styles.hero}>
       {/* animated title */}

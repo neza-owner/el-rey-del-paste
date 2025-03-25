@@ -6,7 +6,7 @@ import equal from '../assets/equal.svg';
 import styles from '../styles/Coupons.module.css';
 
 const Coupons = () => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   return (
     <section className={styles.coupons}>

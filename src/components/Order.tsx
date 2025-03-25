@@ -5,7 +5,7 @@ import { default as arrow, default as arrowright } from "../assets/arrow-deco.sv
 import styles from "../styles/order.module.css";
 
 const Order = () => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const phoneNumber = "+528128678562";
   const message = "¡Hola! Me gustaría hacer un pedido de pastes.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

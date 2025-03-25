@@ -9,7 +9,7 @@ interface WhatsAppFormProps {
 }
 
 const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -17,11 +17,11 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
     phone: "+528128678562",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const { name, message, phone } = formData;
@@ -58,10 +58,7 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
           required
         />
       </fieldset>
-      <button
-        type="submit"
-        className={styles.btn}
-      >
+      <button type="submit" className={styles.btn}>
         {t("Components.WhatsAppForm.ctaBtn")} <FontAwesomeIcon icon={faWhatsapp} />
       </button>
     </form>

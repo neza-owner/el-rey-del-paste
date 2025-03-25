@@ -3,7 +3,7 @@ import Form from "../components/Form";
 import styles from "../styles/jobs.module.css";
 
 const Jobs = () => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   return (
     <section className={styles.jobs}>

@@ -5,7 +5,7 @@ import Form from "../components/Form";
 import styles from "../styles/billing.module.css";
 
 function Billing() {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   return (
     <section className={styles.billing}>

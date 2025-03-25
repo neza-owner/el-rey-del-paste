@@ -17,7 +17,7 @@ const Location = () => {
     map: string;
   }
 
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [franchises, setFranchises] = useState<Franchise[]>([]);
 
   useEffect(() => {

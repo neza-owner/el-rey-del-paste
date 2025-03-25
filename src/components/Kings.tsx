@@ -10,7 +10,7 @@ const Kings = () => {
     image: string;
   }
 
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
   const [kings, setKings] = useState<King[]>([]);
 
   useEffect(() => {

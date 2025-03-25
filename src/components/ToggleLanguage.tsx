@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 /* import styles from '../styles/ToggleLanguage.module.css'; */
 
 const ToggleLanguage = () => {
-  const [t, i18n] = useTranslation("global");
+  const [, i18n] = useTranslation("global");
   const [isToggle, setIsToggle] = useState(false);
   const currentLanguage = i18n.language;
 

@@ -3,7 +3,7 @@ import styles from "../styles/contact.module.css";
 import WhatsAppForm from "./WhatsAppForm";
 
 const Contact = () => {
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   return (
     <section id="contact" className={styles.contact}>
