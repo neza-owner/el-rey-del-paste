@@ -25,6 +25,10 @@ section.menu {
   align-items: center;
   font-size: 2.25rem;
   font-weight: 700;
+  background-color: rgb(255, 255, 255);
+  border-radius: 14px;
+  padding-bottom: 30px;
+
   /* padding: 1.5rem;
   gap: 1.5rem; */
 
