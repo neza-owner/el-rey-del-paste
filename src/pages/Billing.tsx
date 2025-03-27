@@ -14,7 +14,7 @@ function Billing() {
         <h3 className={styles.subheading}>{t("Billing.subheading")}</h3>
       </header>
       <div className={styles.billingContainer}>
-        <Form /* legend={t("Billing.form.legend")} */ showRFC={true} />
+        <Form /* legend={t("Billing.form.legend")} */ showRFC={true} message={'Requiero facturar mi compra'} />
         <figure>
           <img src="/visual1.jpg" alt="Coupon 1" className={styles.couponImage} />
           <figcaption className={styles.couponDescription}>

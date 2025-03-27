@@ -3,9 +3,10 @@ import styles from '../styles/form.module.css';
 
 interface FormProps {
   showRFC?: boolean;
+  message?: string;
 }
 
-const Form = ({ showRFC = false }: FormProps) => {
+const Form = ({ showRFC = false, message }: FormProps) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -85,6 +86,22 @@ const Form = ({ showRFC = false }: FormProps) => {
       {showRFC && (
         <>
           <fieldset>
+            <label htmlFor="order">No. Orden</label>
+            <input
+              type="text"
+              id='order'
+              name="order"
+              placeholder="Ej. ABCD1234"
+              title='Enter your RFC'
+              pattern="^[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$"
+              /* onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Por favor, ingrese aquí un RFC válido.')} */
+              minLength={13}
+              maxLength={13}
+              autoCapitalize='characters'
+              required
+            />
+          </fieldset>
+          <fieldset>
             <label htmlFor="rfc">RFC</label>
             <input
               type="text"
@@ -110,7 +127,7 @@ const Form = ({ showRFC = false }: FormProps) => {
           name="message"
           placeholder="Message"
           title='Enter your message'
-          defaultValue={'Quiero más información sobre...'}
+          defaultValue={message}
           contentEditable
           minLength={10}
           maxLength={256}

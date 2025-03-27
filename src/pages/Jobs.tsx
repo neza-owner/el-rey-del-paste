@@ -12,7 +12,7 @@ const Jobs = () => {
         <h3 className={styles.subheading}>{t("Jobs.subheading")}</h3>
       </header>
       <div className={styles.jobsContainer}>
-        <Form /* legend={t("Billing.form.legend")} */ />
+        <Form /* legend={t("Billing.form.legend")} */ message={'Quiero más información sobre las vacantes'} />
         <figure>
           <img src="/team.jpg" alt="Coupon 1" className={styles.couponImage} />
           <figcaption className={styles.couponDescription}>

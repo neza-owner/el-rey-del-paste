@@ -14,7 +14,7 @@ function Franchises() {
         <h3 className={styles.subheading}>{t("Franchises.subheading")}</h3>
       </header>
       <div className={styles.franchisesContainer}>
-        <Form /* legend={t("Billing.form.legend")} */ />
+        <Form /* legend={t("Billing.form.legend")} */ message={'Quiero más información sobre las franquicias'} />
         <figure>
           <img src="/local1.jpg" alt="Coupon 1" className={styles.couponImage} />
           <figcaption className={styles.couponDescription}>
