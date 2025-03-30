@@ -150,6 +150,10 @@ form.form {
   fieldset:has(input:is(:not(:placeholder-shown):invalid), textarea:is(:not(:placeholder-shown):invalid))>label {
     color: #f87171;
   }
+
+  fieldset:has(input:hover, textarea:hover)>label {
+    color: var(--primary-color);
+  }
 }
 
 /* input:is(:not(:placeholder-shown):valid) {

@@ -10,9 +10,38 @@ const Form = ({ showRFC = false, message }: FormProps) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const formRef = useRef<HTMLFormElement>(null);
 
-  /* const capitalizeInput = (input: HTMLInputElement) => {
+  /* allow only letters (with accents) and whitespaces */
+  const allowOnlyLetters = (input: HTMLInputElement) => {
+    input.value = input.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '');
+  };
+
+  const allowOnlyNumbers = (input: HTMLInputElement) => {
+    input.value = input.value.replace(/[^0-9]/g, '');
+  };
+
+  /* auto capitalize first letter of each word */
+  const autoCapitalizeWord = (input: HTMLInputElement) => {
     input.value = input.value.replace(/\b\w/g, char => char.toUpperCase());
-  }; */
+  };
+
+  /* auto capitalize all letters (uppercase) */
+  const autoCapitalizeCharacters = (input: HTMLInputElement) => {
+    input.value = input.value.toUpperCase();
+  };
+
+  /* auto lowercase all letters (lowercase) */
+  const autoLowercaseCharacters = (input: HTMLInputElement) => {
+    input.value = input.value.toLowerCase();
+  };
+
+  /* auto capitalize first letter of each sentence */
+  const autoCapitalizeSentences = (input: HTMLInputElement) => {
+    input.value = input.value.replace(/(^\s*\w|[.!?]\s*\w)/g, char => char.toUpperCase());
+  };
+
+  const removeWhitespaces = (input: HTMLInputElement) => {
+    input.value = input.value.replace(/\s/g, '');
+  };
 
   return (
     <form
@@ -36,10 +65,10 @@ const Form = ({ showRFC = false, message }: FormProps) => {
           title='Enter your full name'
           onInput={(e) => {
             const input = e.target as HTMLInputElement;
-            input.value = input.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
-            /* capitalizeInput(input); */
+            allowOnlyLetters(input);
+            autoCapitalizeWord(input);
           }}
-          pattern="^[A-Z][a-z]+(\s[A-Z][a-z]+)?$"
+          pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?: [A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$"
           /* onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Por favor, ingrese aquí el o los nombres suyos que sean válidos.')} */
           minLength={3}
           maxLength={32}
@@ -48,7 +77,7 @@ const Form = ({ showRFC = false, message }: FormProps) => {
           autoFocus
           required
         />
-        <span className={styles.inputError}>Solo letras (no números) y estar separados por un espacio en blanco</span>
+        <span className={styles.inputError}>Solo letras (con acentos) separados por un espacio están permitidos</span>
       </fieldset>
 
       <fieldset>
@@ -59,6 +88,9 @@ const Form = ({ showRFC = false, message }: FormProps) => {
           name="email"
           placeholder="Ej. youremail@domainexample.com"
           title='Enter your email address'
+          onInput={(e) => {
+            autoLowercaseCharacters(e.target as HTMLInputElement);
+          }}
           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           /* onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Por favor, ingrese aquí un correo electrónico válido.')} */
           autoComplete="email"
@@ -73,8 +105,11 @@ const Form = ({ showRFC = false, message }: FormProps) => {
           type="tel"
           id='phone'
           name="phone"
-          placeholder="Ej. 5555555555"
+          placeholder="Ej. 8128678562"
           title='Enter your phone number'
+          onInput={(e) => {
+            allowOnlyNumbers(e.target as HTMLInputElement);
+          }}
           pattern="^\+?[0-9]{10,}$"
           /* onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Por favor, ingrese aquí un número de teléfono válido.')} */
           maxLength={10}
@@ -91,10 +126,14 @@ const Form = ({ showRFC = false, message }: FormProps) => {
               type="text"
               id='order'
               name="order"
-              placeholder="Ej. ABCD1234"
-              title='Enter your RFC'
+              placeholder="Ej. ABCD123456A1B"
+              title='Enter your order number'
+              onInput={(e) => {
+                const input = e.target as HTMLInputElement;
+                autoCapitalizeCharacters(input);
+                removeWhitespaces(input);
+              }}
               pattern="^[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$"
-              /* onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Por favor, ingrese aquí un RFC válido.')} */
               minLength={13}
               maxLength={13}
               autoCapitalize='characters'
@@ -109,6 +148,11 @@ const Form = ({ showRFC = false, message }: FormProps) => {
               name="rfc"
               placeholder="Ej. GOPA850912KL3"
               title='Enter your RFC'
+              onInput={(e) => {
+                const input = e.target as HTMLInputElement;
+                autoCapitalizeCharacters(e.target as HTMLInputElement);
+                removeWhitespaces(input);
+              }}
               pattern="^[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$"
               /* onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Por favor, ingrese aquí un RFC válido.')} */
               minLength={13}
@@ -127,6 +171,9 @@ const Form = ({ showRFC = false, message }: FormProps) => {
           name="message"
           placeholder="Message"
           title='Enter your message'
+          onInput={(e) => {
+            autoCapitalizeSentences(e.target as HTMLInputElement);
+          }}
           defaultValue={message}
           contentEditable
           minLength={10}
