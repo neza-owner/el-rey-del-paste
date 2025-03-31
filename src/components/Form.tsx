@@ -56,7 +56,7 @@ const Form = ({ showRFC = false, message }: FormProps) => {
       <span className={styles.requiredFields}>Todos los campos son obligatorios *</span>
       {/*  </header> */}
       <fieldset>
-        <label htmlFor="fullName">Full Name</label>
+        <label className={styles.formLabel} htmlFor="fullName">Full Name</label>
         <input
           type="text"
           id='fullName'
@@ -81,7 +81,7 @@ const Form = ({ showRFC = false, message }: FormProps) => {
       </fieldset>
 
       <fieldset>
-        <label htmlFor="email">Email</label>
+        <label className={styles.formLabel} htmlFor="email">Email</label>
         <input
           type="email"
           id='email'
@@ -100,7 +100,7 @@ const Form = ({ showRFC = false, message }: FormProps) => {
       </fieldset>
 
       <fieldset>
-        <label htmlFor="phone">Phone</label>
+        <label className={styles.formLabel} htmlFor="phone">Phone</label>
         <input
           type="tel"
           id='phone'
@@ -121,7 +121,7 @@ const Form = ({ showRFC = false, message }: FormProps) => {
       {showRFC && (
         <>
           <fieldset>
-            <label htmlFor="order">No. Orden</label>
+            <label className={styles.formLabel} htmlFor="order">No. Orden</label>
             <input
               type="text"
               id='order'
@@ -141,7 +141,7 @@ const Form = ({ showRFC = false, message }: FormProps) => {
             />
           </fieldset>
           <fieldset>
-            <label htmlFor="rfc">RFC</label>
+            <label className={styles.formLabel} htmlFor="rfc">RFC</label>
             <input
               type="text"
               id='rfc'
@@ -165,7 +165,7 @@ const Form = ({ showRFC = false, message }: FormProps) => {
       )}
 
       <fieldset>
-        <label htmlFor="message">Mensaje</label>
+        <label className={styles.formLabel} htmlFor="message">Mensaje</label>
         <textarea
           id='message'
           name="message"
@@ -175,7 +175,6 @@ const Form = ({ showRFC = false, message }: FormProps) => {
             autoCapitalizeSentences(e.target as HTMLInputElement);
           }}
           defaultValue={message}
-          contentEditable
           minLength={10}
           maxLength={256}
           required
@@ -187,6 +186,14 @@ const Form = ({ showRFC = false, message }: FormProps) => {
       {/* Opcional: evitar el correo de confirmación y redirigir a una página personalizada */}
       <input type="hidden" name="_captcha" value="false" />
       {/* <input type="hidden" name="_next" value="https://tusitio.com/gracias" /> */}
+
+      <div className={styles.checkboxContainer}>
+        <div className={styles.checkboxWrapper}>
+          <input type='checkbox' name='checkbox' id='checkbox' required defaultChecked />
+          <label className={styles.checkboxLabel} htmlFor='checkbox'>Acepto los términos y condiciones</label>
+        </div>
+        <span className={styles.inputError}>Debes aceptar los términos y condiciones</span>
+      </div>
 
       <button type="submit" disabled={isButtonDisabled}>Submit</button>
     </form>

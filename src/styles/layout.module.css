@@ -2,5 +2,5 @@ div.layout {
   display: grid;
   grid-template-rows: auto 1fr auto;
   /* place-items: center; */
-  min-height: 100vh;
+  min-height: 100dvh;
 }

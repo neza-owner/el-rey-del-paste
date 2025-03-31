@@ -1,3 +1,5 @@
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { NavLink } from "react-router-dom";
@@ -91,6 +93,9 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+
+      {/* hamburger menu */}
+      <FontAwesomeIcon icon={faBars} />
 
       <HashLink to="/#contact" accessKey="c">
         {t("Components.Navbar.contact")}
