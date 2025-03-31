@@ -106,6 +106,10 @@ footer.footer {
     ul {
       display: none;
     }
+
+    ul~a.footerHashLink {
+      display: inline-block;
+    }
   }
 }
 

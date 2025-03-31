@@ -1,0 +1,6 @@
+button.toggleLanguage {
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+}

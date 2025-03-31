@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-/* import styles from '../styles/ToggleLanguage.module.css'; */
+import styles from '../styles/ToggleLanguage.module.css';
 
 const ToggleLanguage = () => {
   const [, i18n] = useTranslation("global");
@@ -22,13 +22,14 @@ const ToggleLanguage = () => {
     setIsToggle(false);
   }
 
+  {/* <div className={styles.switch}> */ }
+  {/* </div> */ }
+
   return (
-    <div /* className={styles.switch} */>
-      <button onClick={handleToggleLanguage} /* className={styles.toggleLanguage} */>
-        {/* {language} */}
-        {i18n.language === "en" ? "Es" : "En"}
-      </button>
-    </div>
+    <button onClick={handleToggleLanguage} className={styles.toggleLanguage}>
+      {/* {language} */}
+      {i18n.language === "en" ? "Es" : "En"}
+    </button>
   );
 }
 

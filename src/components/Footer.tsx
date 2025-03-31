@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import crown from "../assets/crown.svg";
+import crown2 from "../assets/crown2.svg";
 import styles from "../styles/footer.module.css";
 
 const Footer = () => {
@@ -13,7 +14,7 @@ const Footer = () => {
           <li>
             <HashLink to="/#home" className={styles.footerHashLink}>
               <span>Inicio</span>
-              <img src={crown} alt="Logo" />
+              <img src={crown2} alt="Logo" />
             </HashLink>
           </li>
           <li>

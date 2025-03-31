@@ -16,10 +16,10 @@ function Billing() {
       <div className={styles.billingContainer}>
         <Form /* legend={t("Billing.form.legend")} */ showRFC={true} message={'Requiero facturar mi compra'} />
         <figure>
-          <img src="/facturai.png" alt="Coupon 1" className={styles.couponImage} />
-          <figcaption className={styles.couponDescription}>
-            <h4 className={styles.couponTitle}>Obten tu factura</h4>
-            <p>dentro de este mes fiscal</p>
+          <img src="/facturai.png" alt="Voucher" className={styles.voucherImage} />
+          <figcaption className={styles.voucherDescription}>
+            <h4 className={styles.voucherTitle}>Obten tu factura</h4>
+            <p>Dentro de este mes fiscal</p>
           </figcaption>
         </figure>
       </div>

@@ -9,7 +9,6 @@ function Franchises() {
 
   return (
     <section className={styles.franchises}>
-
       <img src="/papel3.png" alt="Papel Picado" className={styles.fullWidthImage} />
       <header>
         <h2 className={styles.heading}>{t("Franchises.heading.part1")} <span>{t("Franchises.heading.part2")}</span> <FontAwesomeIcon icon={faStore} className={styles.icon} /></h2>

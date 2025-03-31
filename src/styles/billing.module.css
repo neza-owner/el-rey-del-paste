@@ -33,7 +33,7 @@ section.billing {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2.5rem;
     padding: 0 2rem;
 
     figure {
@@ -47,6 +47,7 @@ section.billing {
       img {
         width: 100%;
         aspect-ratio: 16/9;
+        object-fit: cover;
         border-radius: 2.5rem;
         transition: transform 0.3s ease-in-out;
 
