@@ -5,3 +5,13 @@ div.landing {
   justify-content: center; */
   gap: 2.5rem;
 }
+
+.hideOnMobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+}

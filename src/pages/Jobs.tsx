@@ -14,7 +14,7 @@ const Jobs = () => {
       <div className={styles.jobsContainer}>
         <Form /* legend={t("Billing.form.legend")} */ message={'Quiero más información sobre las vacantes'} />
         <figure>
-          <img src="/team.jpg" alt="Coupon 1" className={styles.couponImage} />
+          <img src="/team.png" alt="Coupon 1" className={styles.couponImage} />
           <figcaption className={styles.couponDescription}>
             <h4 className={styles.couponTitle}>&Uacute;nete al equipo</h4>
             <p>Y forma parte del reino</p>

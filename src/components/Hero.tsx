@@ -9,8 +9,17 @@ export default function Hero() {
     <section className={styles.hero}>
       {/* animated title */}
       <h1 className={styles.heading}>
-        <TextGenerateEffect words="EL REY DEL PASTE" />
+        <div className={styles.titleWrapper}>
+          <img src="./PastePersonaje.png" alt="Logo" className={styles.titleLogo} />
+          <TextGenerateEffect words="EL REY DEL PASTE" />
+        </div>
       </h1>
+
+
+
+
+
+
 
       {/* hero image */}
       <div className="mt-8 flex justify-center">

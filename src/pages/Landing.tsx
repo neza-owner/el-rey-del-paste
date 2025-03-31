@@ -23,14 +23,15 @@ function Landing() {
       <Combo />
       <Menu />
       <Coupons />
-      {/* <Promos /> */}
       <Order />
       <AvailableOn />
       <Stores />
       <Location />
       <Testimonials />
       <Kings />
+      <div className={styles.hideOnMobile}>
       <Parallax />
+      </div>
       {/* <Social /> */}
       <Contact />
       {/* <Jobs /> */}
