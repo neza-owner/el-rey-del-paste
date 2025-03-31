@@ -153,26 +153,31 @@
     "subheading": "Mira las preguntas más frecuentes que nos han hecho",
     "questions": {
       "question1": {
-        "question": "¿Cuánto cuesta cada paste?",
-        "answer": "El precio varía según el sabor y tamaño, pero comienzan desde $35 MXN."
+        "question": "¿Qué es un paste?",
+        "answer": "El paste llegó a México en el siglo XIX con mineros ingleses en Hidalgo. Gastronómicamente, es una preparación horneada de masa de trigo, rellena tradicionalmente de papa con carne. Con el tiempo, se mexicanizó con ingredientes como frijol o mole. Hoy es símbolo culinario de Hidalgo."
       },
       "question2": {
-        "question": "¿Dónde están ubicados?",
-        "answer": "Nos encontramos en MP25+62 Monterrey, Nuevo León."
+        "question": "¿Cómo puedo facturar?",
+        "answer": "Puedes solicitar tu factura enviándonos un mensaje por WhatsApp con tu ticket de compra o hacerlo mediante la página."
       },
       "question3": {
-        "question": "¿Cómo puedo facturar?",
-        "answer": "Puedes solicitar tu factura enviándonos un mensaje por WhatsApp con tu ticket de compra."
+        "question": "¿Cuáles son los tipos y sabores que tienen?",
+        "answer": "Ofrecemos pastes salados como carne con papa y mole verde, además de opciones dulces."
       },
       "question4": {
-        "question": "¿Cuáles son los tipos y sabores que tienen?",
-        "answer": "Ofrecemos pastes salados como carne con papa, hawaiano y mole verde, además de opciones dulces."
-      },
-      "question5": {
         "question": "¿Horario de atención?",
         "answer": "Nuestro horario es de 8:00 AM a 9:00 PM todos los días."
+      },
+      "question5": {
+        "question": "¿Dónde están ubicados?",
+        "answer": "Nos encontramos en Pasillo Tec, Tecnológico, 64700 Monterrey, N.L."
+      },
+      "question6": {
+        "question": "¿Cómo me hago distribuidor de El Rey del Paste?",
+        "answer": "Contáctanos por WhatsApp o redes sociales para conocer los requisitos y beneficios de ser distribuidor."
       }
-    }
+}
+
   },
   "Components": {
     "WhatsAppForm": {
