@@ -1,30 +1,37 @@
 [
   {
     "id": 1,
-    "name": "REAL",
+    "name": "Combo Real",
     "price": 79,
-    "description": "2 pastes y un refresco",
-    "image": "/combos/El_Rey_del_paste-4.jpg"
+    "description": "4 pastes",
+    "image": "/combos/cuatro.JPG"
   },
   {
     "id": 2,
-    "name": "CONQUISTADOR",
-    "price": 99,
-    "description": "3 pastes y un refresco",
-    "image": "/combos/El_Rey_del_paste-11.jpg"
+    "name": "Combo Emperador",
+    "price": 599,
+    "description": "2 pastes y un refresco",
+    "image": "/combos/unaydos.jpg"
   },
   {
     "id": 3,
-    "name": "PRÍNCIPE",
+    "name": "Combo Príncipe",
     "price": 119,
-    "description": "12 pastes",
-    "image": "/combos/El_Rey_del_paste-22.jpg"
+    "description": "3 pastes",
+    "image": "/combos/tres.JPG"
   },
   {
     "id": 4,
-    "name": "REY",
+    "name": "Combo Monarca",
     "price": 599,
-    "description": "24 pastes",
-    "image": "/combos/El_Rey_del_paste-24.jpg"
+    "description": "3 pastes y un refresco",
+    "image": "/combos/unaytres.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Combo Noble",
+    "price": 599,
+    "description": "2 pastes y un frappé",
+    "image": "/combos/unfrap.JPG"
   }
 ]

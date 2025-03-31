@@ -14,9 +14,7 @@ export default function Hero() {
 
       {/* hero image */}
       <div className="mt-8 flex justify-center">
-        <div className="w-40 h-40 bg-gray-200 rounded-lg flex items-center justify-center">
-          <span className="text-gray-400">Imagen aquí</span>
-        </div>
+          <img src="./Uber_cover.jpg" className="w-120 h-80 bg-gray-200 rounded-lg flex items-center justify-center object-cover" />
       </div>
 
       {/* subtitle */}
