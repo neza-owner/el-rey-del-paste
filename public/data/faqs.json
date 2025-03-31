@@ -18,5 +18,9 @@
   {
     "question": "questions.question5.question",
     "answer": "questions.question5.answer"
+  },
+  {
+    "question": "questions.question6.question",
+    "answer": "questions.question6.answer"
   }
 ]

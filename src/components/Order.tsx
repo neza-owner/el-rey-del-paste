@@ -12,7 +12,9 @@ const Order = () => {
 
   return (
     <section id="order" className={styles.order}>
-      {/* Título */}
+
+      <div className={styles.footerCard}></div>
+     
 
       <header>
         <h2 className={styles.heading}>
@@ -48,6 +50,9 @@ const Order = () => {
         className={styles.arrowRight}
         alt="arrow"
       />
+
+      
+
     </section>
   );
 };
