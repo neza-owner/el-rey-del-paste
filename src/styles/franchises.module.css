@@ -1,3 +1,29 @@
+section.franchises::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 200%;
+  height: 100vh;
+  background-image:
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position:
+    0px 0px,
+    75px 75px,
+    150px 0px,
+    225px 75px;
+  opacity: 0.03;
+  transform: scale(1.2); 
+  transform-origin: center;
+  z-index: -3;
+  pointer-events: none;
+}
+
 section.franchises {
   display: flex;
   flex-direction: column;
@@ -6,6 +32,8 @@ section.franchises {
   font-size: 2.25rem;
   font-weight: 700;
   gap: 1.5rem;
+
+  
 
   img.fullWidthImage {
     width: 100vw;

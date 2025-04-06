@@ -15,12 +15,6 @@ export default function Hero() {
         </div>
       </h1>
 
-
-
-
-
-
-
       {/* hero image */}
       <div className="mt-8 flex justify-center">
           <img src="./Uber_cover.jpg" className="w-120 h-80 bg-gray-200 rounded-lg flex items-center justify-center object-cover" />

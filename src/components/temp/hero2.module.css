@@ -1,0 +1,161 @@
+section.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2.25rem;
+  font-weight: 700;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* espacio entre logo y texto */
+  flex-wrap: nowrap;
+}
+
+.titleLogo {
+  width: 6rem; /* tamaño responsivo, puedes usar también 5vw o 10% si prefieres */
+  height: 5rem; /* tamaño responsivo, puedes usar también 5vw o 10% si prefieres */
+  object-fit: contain;
+  margin-top: 2rem; /* espacio superior */
+}
+
+section.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image:
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position:
+    0px 0px,
+    75px 75px,
+    150px 0px,
+    225px 75px;
+  opacity: 0.07;
+  transform: rotate(-12deg) scale(1.2); /* ligera inclinación */
+  transform-origin: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+section.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 60%,
+    rgb(247, 241, 218) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+section.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+section.hero h1.heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+section.hero h2.heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+section.hero div.ctaBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+section.hero div.ctaBtns a.ctaBtn {
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+section.hero div.ctaBtns a.main {
+  background-color: var(--primary-color);
+}
+
+section.hero div.ctaBtns a.main:hover {
+  background-color: #f97316;
+}
+
+section.hero div.ctaBtns a.secondary {
+  background-color: var(--accent-color);
+}
+
+section.hero div.ctaBtns a.secondary:hover {
+  background-color: #15803d;
+}
+
+section.hero div.benefits {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+section.hero div.benefits div.benefitContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.hero div.benefits div.benefitContainer img.crown {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+section.hero div.benefits div.benefitContainer span.benefit {
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+section.hero div.benefits div.benefitContainer span + p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #4b5563;
+}
+
+/* Responsive design (mobile first) */
+@media only screen and (min-width: 768px) {
+  section.hero div.benefits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  section.hero div.ctaBtns {
+    flex-direction: row;
+  }
+
+  section.hero div.ctaBtns a.ctaBtn {
+    font-size: 2.25rem;
+  }
+}

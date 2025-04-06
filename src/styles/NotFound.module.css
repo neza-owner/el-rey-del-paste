@@ -1,0 +1,35 @@
+.heading {
+    margin: 1rem;
+    font-size: 4rem;
+    font-weight: 600;
+    width: 100%;
+  }
+  
+  .heading span,
+  .heading svg.icon {
+    color: var(--primary-color);
+  }
+  
+  .subheading {
+    font-size: 0.7em;
+    font-weight: 400;
+  }
+  .button{
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+  }
+  .Image{
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+  }
+  

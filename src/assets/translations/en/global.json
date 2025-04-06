@@ -220,6 +220,10 @@
     },
     "subheading": "Expand the kingdom with your own franchise, we will help you!"
   },
+  "NotFound": {
+    "heading": "We're sorry, there are no pastes here",
+    "button": "Go back to the Kingdom"
+  },
   "Jobs": {
     "heading": {
       "part1": "WANNA",

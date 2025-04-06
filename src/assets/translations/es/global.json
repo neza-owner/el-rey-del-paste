@@ -220,6 +220,10 @@
     },
     "subheading": "Expande el reino con tu propia sucursal, ¡nosotros te ayudamos!"
   },
+  "NotFound": {
+    "heading": "Lo sentimos, no hay pastes aqui",
+    "button": "Regresar al Reino"
+  },
   "Jobs": {
     "heading": {
       "part1": "¿QUIERES",
