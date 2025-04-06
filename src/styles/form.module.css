@@ -160,6 +160,7 @@ form.form {
         font-size: 0.8rem;
         font-weight: 500;
         color: #4b5563;
+        text-align: left;
       }
 
       :is(input[type='checkbox'], label):hover {

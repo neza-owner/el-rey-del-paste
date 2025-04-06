@@ -175,9 +175,10 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
+        <div className={styles.overlay} onClick={toggleSidebar}>
+        </div>
       </nav>
-      <div className={styles.overlay} onClick={toggleSidebar}>
-      </div>
+
     </>
   );
 };
