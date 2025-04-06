@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import crown from "../assets/crown.svg";
-import styles from "../styles/hero.module.css";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
+import crown from "../../assets/crown.svg";
+import styles from "./hero2.module.css";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 
-export default function Hero() {
+export default function Hero2() {
   const [t] = useTranslation("global");
   return (
     <section className={styles.hero}>

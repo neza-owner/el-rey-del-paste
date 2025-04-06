@@ -1,3 +1,29 @@
+section.billing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position:
+    0px 0px,
+    75px 75px,
+    150px 0px,
+    225px 75px;
+  opacity: 0.03;
+  transform: scale(1.2); 
+  transform-origin: center;
+  z-index: -1000;
+  pointer-events: none;
+}
+
 section.billing {
   /* height: 100%; */
   /* min-height: calc(100vh - 20vh); */

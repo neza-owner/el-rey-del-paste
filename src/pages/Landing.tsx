@@ -3,8 +3,8 @@ import Combo from "../components/combo";
 import Contact from "../components/Contact";
 import Coupons from "../components/coupons";
 import FAQ from "../components/faq";
-import Hero from "../components/Hero";
-import Kings from "../components/Kings";
+import Hero2 from "../components/temp/Hero2";
+import Kings2 from "../components/temp/Kings2";
 import Location from "../components/location";
 import Menu from "../components/menu";
 import Order from "../components/Order";
@@ -19,7 +19,7 @@ import styles from "../styles/landing.module.css";
 function Landing() {
   return (
     <div className={styles.landing}>
-      <Hero />
+      <Hero2 />
       <Combo />
       <Menu />
       <Coupons />
@@ -28,7 +28,7 @@ function Landing() {
       <Stores />
       <Location />
       <Testimonials />
-      <Kings />
+      <Kings2 />
       <div className={styles.hideOnMobile}>
       <Parallax />
       </div>
