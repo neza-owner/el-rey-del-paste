@@ -26,7 +26,7 @@ const ToggleLanguage = () => {
   {/* </div> */ }
 
   return (
-    <button onClick={handleToggleLanguage} className={styles.toggleLanguage}>
+    <button onClick={handleToggleLanguage} className={styles.langBtn}>
       {/* {language} */}
       {i18n.language === "en" ? "Es" : "En"}
     </button>

@@ -1,0 +1,227 @@
+nav.nav {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #e4e4e7;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 10dvh;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    gap: 1em;
+    width: 100%;
+
+    li {
+      font-weight: 400;
+      font-size: 1em;
+
+      .activeLink,
+      .inactiveLink {
+        transition: all 0.3s ease;
+      }
+
+      .activeLink {
+        font-weight: 500;
+        color: var(--accent-color);
+      }
+
+      .inactiveLink {
+        color: #4b5563;
+      }
+    }
+
+    button {
+      width: 2.6rem;
+      height: 2.6rem;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  ul.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      &:is(:not(:first-child, :last-child)) {
+        display: none;
+      }
+
+      &:has(hr.separator) {
+        width: 1.5px;
+
+        hr.separator {
+          border: none;
+          height: 1em;
+          background-color: var(--accent-color);
+        }
+      }
+
+      &:last-child {
+        position: absolute;
+        /* top: 1em; */
+        right: 1em;
+      }
+    }
+  }
+
+  &:has(ul.sidebar.active) ul.navbar li:last-child {
+    display: none;
+  }
+
+  ul.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-left: 1px solid #e4e4e7;
+    background-color: hsl(0, 0%, 100%);
+    width: min(15em, 100%);
+    height: 100vh;
+    padding: 1.5rem;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out
+      /* , display ease-in-out 0.3s allow-discrete */
+    ;
+
+    li {
+      font-size: 2em;
+
+      &:has(hr.separator) {
+        width: 100%;
+
+        hr.separator {
+          border: none;
+          outline: thin solid var(--accent-color);
+        }
+      }
+
+      /* &:first-child {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+      } */
+
+      &:nth-last-child(3) {
+        margin-top: auto;
+      }
+
+      &:last-child a {
+        display: inline;
+        background-color: var(--accent-color);
+        color: hsl(0, 0%, 100%);
+        padding: 0.25em 0.5em;
+        border-radius: 0.25em;
+        font-weight: 500;
+      }
+    }
+
+    &.active {
+      transform: translateX(0%);
+    }
+
+    &.inactive {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out
+        /* , display ease-in-out 0.3s allow-discrete */
+      ;
+    }
+  }
+}
+
+body:has(nav.nav ul.sidebar.active) div.overlay {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: hsla(0, 0%, 0%, 0.3);
+  }
+}
+
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+
+  nav.nav {
+
+    ul.navbar {
+
+      li {
+        display: list-item !important;
+        font-weight: 400;
+        font-size: 1em;
+
+        .activeLink,
+        .inactiveLink {
+          &:hover {
+            color: var(--accent-color);
+          }
+        }
+
+        &:nth-last-child(4) {
+          margin-left: auto !important;
+        }
+
+        &:nth-last-child(4) button {
+          width: 1em;
+          height: 1em;
+        }
+
+        &:nth-last-child(2) a {
+          display: inline;
+          background-color: var(--accent-color);
+          color: hsl(0, 0%, 100%);
+          padding: 0.5em;
+          border-radius: 0.25em;
+          font-weight: 500;
+        }
+
+        &:last-child {
+          display: none !important;
+        }
+      }
+
+      img {
+        width: 2.2em;
+        height: 2.2em;
+      }
+    }
+
+    ul.sidebar {
+      display: none;
+    }
+  }
+}
