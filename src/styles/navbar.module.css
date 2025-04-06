@@ -101,13 +101,11 @@ nav.nav {
     border-left: 1px solid #e4e4e7;
     background-color: hsl(0, 0%, 100%);
     width: min(15em, 100%);
-    height: 100vh;
+    height: 100dvh;
     padding: 1.5rem;
 
     transform: translateX(100%);
-    transition: transform 0.3s ease-in-out
-      /* , display ease-in-out 0.3s allow-discrete */
-    ;
+    transition: transform 0.3s ease-in-out, display ease-in-out 0.3s allow-discrete;
 
     li {
       font-size: 2em;
@@ -146,28 +144,31 @@ nav.nav {
     }
 
     &.inactive {
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out
-        /* , display ease-in-out 0.3s allow-discrete */
-      ;
+
+      @starting-style {
+        transform: translateX(100%);
+      }
     }
   }
 }
 
-body:has(nav.nav ul.sidebar.active) div.overlay {
+div.overlay {
+  /* state 2 (close) */
   position: fixed;
   z-index: 999;
   inset: 0;
-  animation: fadeIn 0.3s ease-in-out forwards;
+  pointer-events: none;
+  transition: background-color 0.3s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-    background-color: transparent;
-  }
+body:has(nav.nav ul.sidebar.active) div.overlay {
+  /* state 1 (open) */
+  pointer-events: auto;
+  background-color: hsla(0, 0%, 0%, 0.3);
 
-  to {
-    background-color: hsla(0, 0%, 0%, 0.3);
+  /* state 0 (init) */
+  @starting-style {
+    background-color: transparent;
   }
 }
 
