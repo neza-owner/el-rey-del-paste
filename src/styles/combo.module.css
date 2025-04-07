@@ -38,6 +38,7 @@ section.combo {
   font-size: 2.25rem;
   font-weight: 700;
   gap: 2rem;
+  padding: 1rem;
 
   header {
     h2.heading {

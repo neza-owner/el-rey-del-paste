@@ -1,23 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import crown from "../../assets/crown.svg";
+/* import { TextGenerateEffect } from "../ui/text-generate-effect"; */
 import styles from "./hero2.module.css";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function Hero2() {
   const [t] = useTranslation("global");
   return (
     <section className={styles.hero}>
       {/* animated title */}
-      <h1 className={styles.heading}>
-        <div className={styles.titleWrapper}>
-          <img src="./PastePersonaje.png" alt="Logo" className={styles.titleLogo} />
+      <header className={styles.header}>
+        <img src="./PastePersonaje.png" alt="Logo" className={styles.titleLogo} />
+        <img src="./font.svg" alt="Logo" className={styles.fontTitle} />
+        {/* <h1 className={styles.heading}>
           <TextGenerateEffect words="EL REY DEL PASTE" />
-        </div>
-      </h1>
+        </h1> */}
+      </header>
 
       {/* hero image */}
-      <div className="mt-8 flex justify-center">
-          <img src="./Uber_cover.jpg" className="w-120 h-80 bg-gray-200 rounded-lg flex items-center justify-center object-cover" />
+      <div className={styles.visual}>
+        <img src="./Uber_cover.jpg" className={styles.heroImg} />
       </div>
 
       {/* subtitle */}

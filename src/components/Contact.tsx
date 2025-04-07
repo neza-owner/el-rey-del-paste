@@ -6,7 +6,7 @@ const Contact = () => {
   const [t] = useTranslation("global");
 
   return (
-    <section id="contact" className={`${styles.contact} relative overflow-hidden`}>
+    <section id="contact" className={styles.contact}>
       <header>
         <h2 className={styles.heading}>
           {t("Contact.heading.part1")} <span>{t("Contact.heading.part2")}</span> {t("Contact.heading.part3")}
@@ -16,8 +16,8 @@ const Contact = () => {
 
       <WhatsAppForm legend={t("Components.WhatsAppForm.legendMessage")} />
 
-      <img src="trompeta.png" alt="Mi imagen" className={`${styles.trumpet} ${styles.variantA}`}/>
-      <img src="trompeta.png" alt="M" className={`${styles.trumpet} ${styles.variantB}`}/>
+      <img src="trompeta.png" alt="Mi imagen" className={`${styles.trumpet} ${styles.variantA}`} />
+      <img src="trompeta.png" alt="M" className={`${styles.trumpet} ${styles.variantB}`} />
 
     </section>
   );

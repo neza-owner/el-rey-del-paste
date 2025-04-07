@@ -32,12 +32,13 @@ section.contact {
   margin-right: auto;
   margin-bottom: 5rem;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   gap: 1.5rem;
 
-  header {
+  overflow: hidden;
+  position: relative;
 
-  
+  header {
     h2.heading {
       font-size: 1.5em;
       font-weight: 600;
@@ -47,8 +48,6 @@ section.contact {
         color: var(--primary-color);
       }
     }
-
-    
 
     h3.subheading {
 
@@ -67,17 +66,15 @@ section.contact {
     width: 23%;
     rotate: -45deg;
   }
-  
-  /* Trompeta izquierda (normal) */
+
   .variantA {
     left: 0;
   }
-  
-  /* Trompeta derecha (espejeada) */
+
   .variantB {
     right: 0;
     rotate: 45deg;
     transform: scaleX(-1);
   }
-  
+
 }
