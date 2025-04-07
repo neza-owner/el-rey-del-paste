@@ -6,9 +6,12 @@ import styles from "../styles/franchises.module.css";
 
 function Franchises() {
   const [t] = useTranslation("global");
+  const title = `El Rey del Paste - ${t("Franchises.meta.title")}`;
 
   return (
     <section className={styles.franchises}>
+      <title>{`${title}`}</title>
+      <meta name="description" content={t("Franchises.meta.description")} />
       <header>
         <h2 className={styles.heading}>{t("Franchises.heading.part1")} <span>{t("Franchises.heading.part2")}</span> <FontAwesomeIcon icon={faStore} className={styles.icon} /></h2>
         <h3 className={styles.subheading}>{t("Franchises.subheading")}</h3>

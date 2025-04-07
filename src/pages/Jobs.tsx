@@ -4,9 +4,12 @@ import styles from "../styles/jobs.module.css";
 
 const Jobs = () => {
   const [t] = useTranslation("global");
+  const title = `El Rey del Paste - ${t("Jobs.meta.title")}`;
 
   return (
     <section className={styles.jobs}>
+      <title>{`${title}`}</title>
+      <meta name="description" content={t("Jobs.meta.description")} />
       <header>
         <h2 className={styles.heading}>{t("Jobs.heading.part1")} <span>{t("Jobs.heading.part2")}</span> {t("Jobs.heading.part3")}</h2>
         <h3 className={styles.subheading}>{t("Jobs.subheading")}</h3>

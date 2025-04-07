@@ -176,8 +176,7 @@
         "question": "¿Cómo me hago distribuidor de El Rey del Paste?",
         "answer": "Contáctanos por WhatsApp o redes sociales para conocer los requisitos y beneficios de ser distribuidor."
       }
-}
-
+    }
   },
   "Components": {
     "WhatsAppForm": {
@@ -198,6 +197,11 @@
     }
   },
   "Billing": {
+    "meta": {
+      "title": "Facturación",
+      "description": "Solicita tu factura de compra del Rey del Paste aquí",
+      "keywords": "factura, facturación, factura del rey del paste, facturación del rey del paste, rey del paste factura, rey del paste facturación"
+    },
     "heading": {
       "part1": "OBTEN TU",
       "part2": "FACTURA AQUÍ"
@@ -214,6 +218,11 @@
     }
   },
   "Franchises": {
+    "meta": {
+      "title": "Franquicias",
+      "description": "Conviértete en franquiciado del Rey del Paste abriendo tu propia sucursal",
+      "keywords": "franquicias, franquicia, abrir franquicia, abrir franquicia del rey del paste, franquicia del rey del paste"
+    },
     "heading": {
       "part1": "¿QUIERES",
       "part2": "ABRIR TU PROPIO REINO?"
@@ -225,6 +234,11 @@
     "button": "Regresar al Reino"
   },
   "Jobs": {
+    "meta": {
+      "title": "Vacantes",
+      "description": "Únete al equipo del Rey del Paste y trabaja con nosotros",
+      "keywords": "trabajo, vacantes, empleo, trabajar en el rey del paste, vacantes del rey del paste"
+    },
     "heading": {
       "part1": "¿QUIERES",
       "part2": "UNIRTE",

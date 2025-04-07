@@ -2,16 +2,19 @@ import { faFileInvoice } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import Form from "../components/Form";
-import { useTabTitle } from '../custom-hooks/useTabTitle';
 import styles from "../styles/billing.module.css";
 
 function Billing() {
   const [t] = useTranslation("global");
-  useTabTitle("Billing");
+  const title = `El Rey del Paste - ${t("Billing.meta.title")}`;
 
   return (
     <section className={styles.billing}>
-      <title>Billing</title>
+      <title>{`${title}`}</title>
+      <meta name="description" content={t("Billing.meta.description")} />
+      {/* <meta name="keywords" content={t("Billing.meta.keywords")} /> */}
+
+      {/* factura, el rey del paste, Monterrey, Hidalgo, pastes, comida mexicana, comida típica, comida tradicional, comida de Monterrey, comida de Hidalgo, comida de la región */}
       <header>
         <h2 className={styles.heading}>{t("Billing.heading.part1")} <span>{t("Billing.heading.part2")}</span> <FontAwesomeIcon icon={faFileInvoice} className={styles.icon} /></h2>
         <h3 className={styles.subheading}>{t("Billing.subheading")}</h3>

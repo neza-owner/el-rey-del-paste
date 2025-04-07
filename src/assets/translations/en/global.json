@@ -152,32 +152,31 @@
     },
     "subheading": "Check out the most frequently asked questions",
     "questions": {
-  "question1": {
-    "question": "What is a paste?",
-    "answer": "Paste arrived in Mexico in the 19th century with English miners in Hidalgo. Gastronomically, it is a baked preparation of wheat dough, traditionally filled with potato and meat. Over time, it was Mexicanized with ingredients such as beans or mole. Today it is a culinary symbol of Hidalgo."
-  },
-  "question2": {
-    "question": "How can I get an invoice?",
-    "answer": "You can request your invoice by sending us a WhatsApp message with your purchase receipt or through our website."
-  },
-  "question3": {
-    "question": "What types and flavors do you offer?",
-    "answer": "We offer savory pastes such as potato with meat and green mole, as well as sweet options."
-  },
-  "question4": {
-    "question": "What are your business hours?",
-    "answer": "We are open from 8:00 AM to 9:00 PM every day."
-  },
-  "question5": {
-    "question": "Where are you located?",
-    "answer": "We are located at Pasillo Tec, Tecnológico, 64700 Monterrey, N.L."
-  },
-  "question6": {
-    "question": "How can I become a distributor of El Rey del Paste?",
-    "answer": "Contact us via WhatsApp or social media to learn about the requirements and benefits of becoming a distributor."
-  }
-  }
-
+      "question1": {
+        "question": "What is a paste?",
+        "answer": "Paste arrived in Mexico in the 19th century with English miners in Hidalgo. Gastronomically, it is a baked preparation of wheat dough, traditionally filled with potato and meat. Over time, it was Mexicanized with ingredients such as beans or mole. Today it is a culinary symbol of Hidalgo."
+      },
+      "question2": {
+        "question": "How can I get an invoice?",
+        "answer": "You can request your invoice by sending us a WhatsApp message with your purchase receipt or through our website."
+      },
+      "question3": {
+        "question": "What types and flavors do you offer?",
+        "answer": "We offer savory pastes such as potato with meat and green mole, as well as sweet options."
+      },
+      "question4": {
+        "question": "What are your business hours?",
+        "answer": "We are open from 8:00 AM to 9:00 PM every day."
+      },
+      "question5": {
+        "question": "Where are you located?",
+        "answer": "We are located at Pasillo Tec, Tecnológico, 64700 Monterrey, N.L."
+      },
+      "question6": {
+        "question": "How can I become a distributor of El Rey del Paste?",
+        "answer": "Contact us via WhatsApp or social media to learn about the requirements and benefits of becoming a distributor."
+      }
+    }
   },
   "Components": {
     "WhatsAppForm": {
@@ -198,6 +197,10 @@
     }
   },
   "Billing": {
+    "meta": {
+      "title": "Billing",
+      "description": "Request your invoice of purchase from El Rey del Paste here"
+    },
     "heading": {
       "part1": "GET YOUR",
       "part2": "INVOICE HERE"
@@ -214,6 +217,11 @@
     }
   },
   "Franchises": {
+    "meta": {
+      "title": "Franchises",
+      "description": "Become a franchisee of El Rey del Paste by opening your own branch",
+      "keywords": "franchises, franchise, open franchise, open El Rey del Paste franchise, El Rey del Paste franchise"
+    },
     "heading": {
       "part1": "WANNA",
       "part2": "OPEN YOUR OWN KINGDOM?"
@@ -225,6 +233,11 @@
     "button": "Go back to the Kingdom"
   },
   "Jobs": {
+    "meta": {
+      "title": "Jobs",
+      "description": "Join the team of El Rey del Paste and work with us",
+      "keywords": "job, vacancies, employment, work at El Rey del Paste, El Rey del Paste jobs"
+    },
     "heading": {
       "part1": "WANNA",
       "part2": "JOIN",
