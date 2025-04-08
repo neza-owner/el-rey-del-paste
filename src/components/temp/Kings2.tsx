@@ -43,7 +43,7 @@ const Kings2 = () => {
       </header>
 
       {/* Kings List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className={styles.kingsList}>
         {kings.map((king, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             <img
