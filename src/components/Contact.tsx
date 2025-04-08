@@ -18,7 +18,6 @@ const Contact = () => {
 
       <img src="trompeta.png" alt="Mi imagen" className={`${styles.trumpet} ${styles.variantA}`} />
       <img src="trompeta.png" alt="M" className={`${styles.trumpet} ${styles.variantB}`} />
-
     </section>
   );
 }
