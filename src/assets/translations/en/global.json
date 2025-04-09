@@ -91,6 +91,10 @@
     "subheading": "Order from your favorite delivery platform!",
     "advice": "Our own app is coming soon"
   },
+  "Palallax": {
+      "part1": "We are 2 brothers who moved to Monterrey, and miss so much...",
+      "part2": "The pastes, full of tradition, nostalgia, and Hidalgo pride."
+  },
   "Stores": {
     "heading": {
       "part1": "THE KING, FROM PACHUCA TO",
@@ -166,7 +170,7 @@
       },
       "question4": {
         "question": "What are your business hours?",
-        "answer": "We are open from 8:00 AM to 9:00 PM every day."
+        "answer": "We are available Monday through Friday from 11:00 a.m. to 8:00 p.m. and weekends from 11:00 a.m. to 7:30 p.m. We look forward to seeing you!"
       },
       "question5": {
         "question": "Where are you located?",

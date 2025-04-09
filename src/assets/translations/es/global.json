@@ -91,6 +91,10 @@
     "subheading": "¡Pide a domicilio desde tu plataforma favorita!",
     "advice": "Próximamente nuestra gran applicación"
   },
+  "Palallax": {
+      "part1": "Somos 2 hermanos, que al mudarnos a Monterrey, extrañamos mucho...",
+      "part2": "Los pastes, llenos de tradición, nostalgia y orgullo hidalguense."
+  },
   "Stores": {
     "heading": {
       "part1": "EL REY, DE PACHUCA PARA",
@@ -166,7 +170,7 @@
       },
       "question4": {
         "question": "¿Horario de atención?",
-        "answer": "Nuestro horario es de 8:00 AM a 9:00 PM todos los días."
+        "answer": "Estamos disponibles de lunes a viernes de 11:00 a.m. a 8:00 p.m. y los fines de semana de 11:00 a.m. a 7:30 p.m. ¡Te esperamos!"
       },
       "question5": {
         "question": "¿Dónde están ubicados?",

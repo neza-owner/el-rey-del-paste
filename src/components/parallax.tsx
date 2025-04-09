@@ -1,5 +1,7 @@
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import styles from '../styles/parallax.module.css';
+import { useTranslation } from 'react-i18next';
+
 
 const images = [
   "/team.jpg", "/local1.jpg", "/paste.jpg"];
@@ -25,15 +27,11 @@ const positionspastes = [
 ];
 
 const ParallaxSection = () => {
+  const [t] = useTranslation("global");
   return (
     <section className={styles.parallax}>
-      <header>
-        <h2 className={styles.heading}>
-          Y SU <span>HISTORIA</span>
-        </h2>
-      </header>
       <ParallaxProvider>
-        <div className="relative w-full overflow-hidden h-[250vh]"> {/* Altura del viewport al 150% */}
+        <div className="relative w-full overflow-hidden pb-[10rem]"> {/* Altura del viewport al 150% */}
 
           {/* Primer párrafo con efecto Parallax */}
           <Parallax speed={-15}>
@@ -42,8 +40,9 @@ const ParallaxSection = () => {
 
               {/* Segunda columna: Imagen o espacio vacío (puedes personalizarlo) */}
               <div className="flex justify-center">
-                <p className="text-lg text-gray-700 mt-4 line-clamp-3">
-                  Somos dos hermanos de Pachuca que, al mudarnos a Monterrey, extrañamos tanto nuestra tierra que decidimos compartir su esencia.
+                <p className=" w-full  text-eg text-gray-700 mt-4 line-clamp-3 text-center">
+                  {t("Palallax.part1")}
+                  
                 </p>
               </div>
             </div>
@@ -51,7 +50,7 @@ const ParallaxSection = () => {
 
 
           {/* Sección Parallax con imágenes */}
-          <div className="relative w-full h-[200vh]"> {/* Contenedor relative */}
+          <div className="relative w-full h-[130vh]"> {/* Contenedor relative */}
 
 
 
@@ -104,7 +103,7 @@ const ParallaxSection = () => {
 
           {/* Segundo párrafo con efecto Parallax */}
           <Parallax speed={10}>
-            <div className="relative flex justify-center mt-[-25rem]">
+            <div className="relative flex justify-center mt-[-10rem]">
               <img
                 src={"/paste3.png"}
                 alt={`Paste3`}
@@ -117,9 +116,9 @@ const ParallaxSection = () => {
 
           {/* Texto con un efecto Parallax más lento */}
           <Parallax speed={3}>
-            <div className="max-w-3xl text-center mt-[10rem] px-4 relative z-10">
-              <p className="text-lg text-gray-700 mt-2 p-4">
-                Los pastes. Sabores llenos de tradición, nostalgia y orgullo hidalguense.
+            <div className="max-w-3xl text-center mt-[6rem] px-4 relative z-10">
+              <p className="text-eg text-gray-700 mt-2 p-4">
+                {t("Palallax.part2")}
               </p>
             </div>
           </Parallax>
