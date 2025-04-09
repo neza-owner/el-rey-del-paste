@@ -1,31 +1,6 @@
-section.jobs::before {
-  content: '';
-  position: absolute;
-  top: -50;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png");
-  background-size: 150px 150px;
-  background-repeat: repeat;
-  background-position:
-    0px 0px,
-    75px 75px,
-    150px 0px,
-    225px 75px;
-  opacity: 0.03;
-  transform: scale(1.2); 
-  transform-origin: center;
-  z-index: -1000;
-  pointer-events: none;
-}
-
-
 section.jobs {
+  position: relative; /* ← Necesario para contener el ::before */
+  min-height: 100dvh; /* ← Asegura que al menos cubra la pantalla */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +8,8 @@ section.jobs {
   font-size: 2.25rem;
   font-weight: 700;
   gap: 1.5rem;
-
+  padding-bottom: 5rem; /* ← Espacio para el footer */
+  overflow: hidden; /* ← Previene que el fondo se salga */
 
   header {
     h2.heading {
@@ -59,7 +35,6 @@ section.jobs {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    /* gap: 1rem; */
     padding: 0 2rem;
 
     figure {
@@ -71,12 +46,8 @@ section.jobs {
       gap: 0.5rem;
 
       img {
-        /* margin: 3rem; */
-        /* object-fit: cover; */
-        /* width: 30rem; */
         aspect-ratio: 17/9;
         width: 100%;
-        /* aspect-ratio: 16/9; */
         border-radius: 2.5rem;
         transition: transform 0.3s ease-in-out;
 
@@ -102,8 +73,33 @@ section.jobs {
   }
 }
 
-/* responsive design (mobile first) */
+section.jobs::before {
+  content: '';
+  position: absolute;
+  top: 0; /* ← Corregido: era top: -50 (inválido) */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position:
+    0px 0px,
+    75px 75px,
+    150px 0px,
+    225px 75px;
+  opacity: 0.03;
+  transform: scale(1.2); 
+  transform-origin: center;
+  z-index: -1; /* ← Ajustado para no cubrir el footer */
+  pointer-events: none;
+}
 
+/* responsive design (mobile first) */
 @media only screen and (min-width: 768px) {
   section.jobs {
     div.jobsContainer {
@@ -113,7 +109,6 @@ section.jobs {
       padding: 0rem;
 
       figure {
-
         img {
           width: 25rem;
           aspect-ratio: 6/3.5;

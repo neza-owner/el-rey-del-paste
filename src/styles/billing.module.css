@@ -1,32 +1,6 @@
-section.billing::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png");
-  background-size: 150px 150px;
-  background-repeat: repeat;
-  background-position:
-    0px 0px,
-    75px 75px,
-    150px 0px,
-    225px 75px;
-  opacity: 0.03;
-  transform: scale(1.2); 
-  transform-origin: center;
-  z-index: -1000;
-  pointer-events: none;
-}
-
 section.billing {
-  /* height: 100%; */
-  /* min-height: calc(100vh - 20vh); */
+  position: relative; /* ← Necesario para que ::before se posicione dentro de esta sección */
+  min-height: 100dvh; /* ← Asegura que la sección cubra al menos toda la pantalla visible */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +8,8 @@ section.billing {
   font-size: 2.25rem;
   font-weight: 700;
   gap: 1.5rem;
+  padding-bottom: 5rem; /* ← Espacio para que el footer no se tape */
+  overflow: hidden; /* ← Evita que ::before se desborde */
 
   header {
     h2.heading {
@@ -99,8 +75,33 @@ section.billing {
   }
 }
 
-/* responsive design (mobile first) */
+section.billing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position:
+    0px 0px,
+    75px 75px,
+    150px 0px,
+    225px 75px;
+  opacity: 0.03;
+  transform: scale(1.2); 
+  transform-origin: center;
+  z-index: -1; /* ← Esto evita que esté por encima del footer */
+  pointer-events: none;
+}
 
+/* responsive design (mobile first) */
 @media only screen and (min-width: 768px) {
   section.billing {
     div.billingContainer {
@@ -110,7 +111,6 @@ section.billing {
       padding: 0rem;
 
       figure {
-
         img {
           width: 25rem;
           aspect-ratio: 4/3;
