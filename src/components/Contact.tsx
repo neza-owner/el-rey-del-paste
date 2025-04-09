@@ -13,9 +13,7 @@ const Contact = () => {
         </h2>
         <h3 className={styles.subheading}>{t("Contact.subheading")}</h3>
       </header>
-
       <WhatsAppForm legend={t("Components.WhatsAppForm.legendMessage")} />
-
       <img src="trompeta.png" alt="Mi imagen" className={`${styles.trumpet} ${styles.variantA}`} />
       <img src="trompeta.png" alt="M" className={`${styles.trumpet} ${styles.variantB}`} />
     </section>
