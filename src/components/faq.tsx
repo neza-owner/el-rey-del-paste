@@ -12,7 +12,6 @@ const FAQ = () => {
 
   const [t] = useTranslation("global");
   const [faqs, setFAQs] = useState<FAQ[]>([]);
-  const [isOpen, setIsOpen] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchFAQs = async () => {
