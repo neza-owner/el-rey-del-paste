@@ -1,0 +1,65 @@
+form.form {
+  max-width: 24rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    color: #4b5563;
+  }
+
+  legend.legend {
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    font-weight: 600;
+  }
+
+  input.input,
+  textarea.textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #e4e4e7;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &:is(:hover, :focus) {
+      border-color: var(--accent-color);
+      outline: none;
+    }
+  }
+
+  button.btn {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #22c55e;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--accent-color);
+      font-weight: 600;
+    }
+  }
+}
+
+/* Responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  form.form {
+    min-width: 32rem;
+  }
+}

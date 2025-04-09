@@ -1,0 +1,116 @@
+@keyframes appear {
+  from {
+    opacity: 0.75;
+    transform: scale(0.75);
+    filter: brightness(150%);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}
+
+section.location {
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+section.location {
+  /*  height: 100vh; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  gap: 1rem;
+  /* max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 1.5rem; */
+
+  header {
+    h2.heading {
+      font-size: 1.5em;
+      font-weight: 600;
+
+      span,
+      svg.icon {
+        color: var(--primary-color);
+      }
+    }
+
+    h3.subheading {
+      font-size: 0.7em;
+      font-weight: 400;
+    }
+  }
+
+  div.locations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+
+    div.franchise {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 1rem;
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      div.frameContainer {
+        width: 100%;
+        border-radius: 0.5rem;
+        border-width: 1px;
+        border-color: #d1d5db;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+
+        iframe.map {
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: 0.5rem;
+        }
+      }
+
+      span {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #4B5563;
+      }
+    }
+  }
+}
+
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.location {
+    div.locations {
+      flex-direction: row;
+      width: 90%;
+
+      div.franchise {
+
+        h4 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

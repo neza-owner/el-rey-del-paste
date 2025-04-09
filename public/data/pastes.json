@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "name": "Papas con carne",
+    "type": "savory",
+    "image": "/pastes/03.jpg",
+    "isFavorite": true
+  },
+  {
+    "id": 1,
+    "name": "Hawaiano",
+    "type": "savory",
+    "image": "/pastes/01.jpg",
+    "isFavorite": true
+  },
+  {
+    "id": 2,
+    "name": "Frijol con chorizo",
+    "type": "savory",
+    "image": "/pastes/06.jpg",
+    "isFavorite": true
+  },
+  {
+    "id": 3,
+    "name": "Philadelphia con Zarzamora",
+    "type": "sweet",
+    "image": "/pastes/07.jpg",
+    "isFavorite": true
+  },
+  {
+    "id": 4,
+    "name": "Arroz Con Leche",
+    "type": "sweet",
+    "image": "/pastes/09.jpg",
+    "isFavorite": true
+  },
+  {
+    "id": 5,
+    "name": "Nutella",
+    "type": "sweet",
+    "image": "/pastes/05.jpg",
+    "isFavorite": true
+  },
+  {
+    "id": 6,
+    "name": "Chicharrón",
+    "type": "savory",
+    "image": "/pastes/04.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tinga de pollo",
+    "type": "savory",
+    "image": "/pastes/05.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Rajas Queso C/ Champiñon",
+    "type": "savory",
+    "image": "/pastes/05.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Piña",
+    "type": "sweet",
+    "image": "/pastes/08.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Mole verde",
+    "type": "savory",
+    "image": "/pastes/02.jpg"
+  }
+]

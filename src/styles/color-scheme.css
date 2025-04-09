@@ -1,0 +1,15 @@
+:root {
+  --primary-color: hsl(27, 96%, 61%);
+  --accent-color: hsl(142, 76%, 36%);
+  --alert-color: hsla(0, 100%, 50%, 0.847)
+    /* hsl(0, 91%, 71%) */
+  ;
+  ;
+  accent-color: var(--accent-color);
+  color-scheme: light dark;
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
+}

@@ -1,0 +1,22 @@
+button.langBtn {
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+/* button.langBtn {
+      padding: 0.5em 1em;
+      border-radius: 0.5em;
+      font-size: 1em;
+      font-weight: 500;
+      color: hsl(0, 0%, 100%);
+      background-color: var(--accent-color);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #f97316;
+      }
+    } */

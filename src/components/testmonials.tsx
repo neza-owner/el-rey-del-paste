@@ -1,47 +1,67 @@
-import React from "react";
-
-const testimonials = [
-  {
-    name: "@tony_aquinoo",
-    text: "No tenía idea de que eran los pastes, ahora es mi comida favorita",
-    image: "/images/tony.png", // Reemplazar con la ruta real
-  },
-  {
-    name: "@elvisscochito",
-    text: "Iba tarde a la escuela, pero gracias al Rey pude comer y llegar a tiempo",
-    image: "/images/elvis.png", // Reemplazar con la ruta real
-  },
-  {
-    name: "@joelconlentes",
-    text: "Ya faltaba comida diferente en Monterrey",
-    image: "/images/joel.png", // Reemplazar con la ruta real
-  },
-];
+import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
+import styles from "../styles/testimonials.module.css";
 
 const Testimonials = () => {
+  interface Testimonial {
+    username: string;
+    comment: string;
+    image: string;
+    profilelink: string;
+  }
+
+  const [t] = useTranslation("global");
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch("../data/testimonials.json");
+        const data = await response.json();
+        const translatedData = data.map((testimonial: Testimonial) => ({
+          ...testimonial,
+          comment: t(`Testimonials.${testimonial.comment}`),
+        }));
+        setTestimonials(translatedData);
+      } catch (error) {
+        console.error("Error fetching testimonials", error);
+      }
+    };
+
+    fetchTestimonials();
+  }, [t]);
+
   return (
-    <div className="max-w-5xl mx-auto text-center p-6">
-      <h2 className="text-3xl font-bold">
-        LO <span className="text-yellow-500">QUE DICEN</span> DEL REY
-      </h2>
-      <p className="text-gray-600 mb-6">Comentarios de nuestros más reales clientes</p>
+    <section className={styles.testimonials}>
+      <header>
+        <h2 className={styles.heading}>
+          {t("Testimonials.heading.part1")} <span className="text-yellow-500">{t("Testimonials.heading.part2")}</span> {t("Testimonials.heading.part3")}
+        </h2>
+        <h3 className={styles.subheading}>{t("Testimonials.subheading")}</h3>
+      </header>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             <img
               src={testimonial.image}
-              alt={testimonial.name}
-              className="w-24 h-24 object-cover rounded-full border-4 border-white shadow-lg"
+              alt={testimonial.username}
+              className={`${styles.profile} shadow-lg`}
             />
-            <p className="text-green-700 font-semibold text-lg mt-4">
-              “{testimonial.text}”
+            <p className={styles.caption}>
+              “{testimonial.comment}”
             </p>
-            <p className="text-yellow-500 font-medium mt-2">{testimonial.name}</p>
+            <a
+              href={testimonial.profilelink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.username}>
+              {testimonial.username}
+            </a>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

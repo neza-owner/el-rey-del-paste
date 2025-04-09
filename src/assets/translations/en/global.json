@@ -1,0 +1,252 @@
+{
+  "Hero": {
+    "heading": "The king just arrive to Monterrey",
+    "ctaBtn": "I Wanna Pastes!",
+    "auxCtaBtn": "See Menu",
+    "benefits": {
+      "benefit1": {
+        "title": "Ready to go",
+        "legend": "Your order in 2 minutes"
+      },
+      "benefit2": {
+        "title": "Different flavors",
+        "legend": "For every taste"
+      },
+      "benefit3": {
+        "title": "Traditional food",
+        "legend": "From Hidalgo to your mouth"
+      }
+    }
+  },
+  "Combos": {
+    "heading": {
+      "part1": "EAT LIKE A",
+      "part2": "KING"
+    },
+    "subheading": "Get to know our combos"
+  },
+  "Menu": {
+    "heading": {
+      "part1": "PASTES OF THE",
+      "part2": "KING"
+    },
+    "subheading": "Meet the complete royalty menu",
+    "pastes": {
+      "names": {
+        "Papas con carne": "Potatoes with meat",
+        "Hawaiano": "Hawaiian",
+        "Frijol con chorizo": "Beans with chorizo",
+        "Philadelphia con Zarzamora": "Philadelphia with blackberry",
+        "Arroz Con Leche": "Rice pudding",
+        "Chicharrón": "Pork cracklings",
+        "Tinga de pollo": "Chicken tinga",
+        "Rajas Queso C/ Champiñon": "Rajas Cheese & Mushroom",
+        "Piña": "Pineapple",
+        "Mole verde": "Green mole"
+      },
+      "types": {
+        "savory": "Savory",
+        "sweet": "Sweet"
+      }
+    },
+    "all": "All",
+    "ctaBtn": "I want to order now!"
+  },
+  "Coupons": {
+    "heading": {
+      "part1": "LOYALTY",
+      "part2": "COUPONS"
+    },
+    "subheading": "Fill it up and we'll give you a surprise!",
+    "coupon": {
+      "title": "COUPON BOOK",
+      "description": "Fill half (6 stamps) or the whole coupon book (12 stamps) and get your corresponding reward just for FREE, it's up to you!"
+    },
+    "rewards": {
+      "half": {
+        "title": "1 PASTE TO PICK",
+        "description": "Choose a sweet or savory paste of your choice"
+      },
+      "full": {
+        "title": "'CONQUISTADOR' COMBO",
+        "description": "1 full combo: includes 3 pastes and 1 drink of your choice"
+      }
+    },
+    "disclaimer": "*Valid only at stores with a physical coupon book on a minimum purchase of $50MXN*"
+  },
+  "Order": {
+    "heading": {
+      "part1": "READY TO",
+      "part2": "ORDER"
+    },
+    "subheading": "Send us a message and we'll take your order",
+    "ctaBtn": "Contact us via WhatsApp"
+  },
+  "AvailableOn": {
+    "heading": {
+      "part1": "ALSO",
+      "part2": "AVAILABLE",
+      "part3": "ON"
+    },
+    "subheading": "Order from your favorite delivery platform!",
+    "advice": "Our own app is coming soon"
+  },
+  "Palallax": {
+      "part1": "We are 2 brothers who moved to Monterrey, and miss so much...",
+      "part2": "The pastes, full of tradition, nostalgia, and Hidalgo pride."
+  },
+  "Stores": {
+    "heading": {
+      "part1": "THE KING, FROM PACHUCA TO",
+      "part2": "MONTERREY"
+    },
+    "subheading": "From the city of Pachuca to the mountains of Monterrey",
+    "store": "Store",
+    "store1": {
+      "legend": "The First Kingdom",
+      "schedule": "Monday to Friday from 7:00 AM to 9:00 PM. Saturdays from 8:00 AM to 2:00 PM."
+    },
+    "store2": {
+      "legend": "The Second Kingdom",
+      "schedule": "Monday to Friday from 7:00 AM to 9:00 PM. Saturdays from 8:00 AM to 2:00 PM."
+    }
+  },
+  "Location": {
+    "heading": {
+      "part1": "WHERE",
+      "part2": "WE ARE"
+    },
+    "subheading": "Find your nearest store",
+    "franchise": "Store"
+  },
+  "Testimonials": {
+    "heading": {
+      "part1": "WHAT",
+      "part2": "THEY SAY",
+      "part3": "ABOUT THE KING"
+    },
+    "subheading": "Comments from our most royal customers",
+    "testimonials": {
+      "comment1": "I had no idea what pastes were, now it's my favorite food",
+      "comment2": "I was late for school, but thanks to the King I could eat and arrive just on time",
+      "comment3": "Definitely, pastes are a food you must try in Monterrey"
+    }
+  },
+  "Kings": {
+    "heading": {
+      "part1": "MEET THE",
+      "part2": "KINGS"
+    },
+    "subheading": "From the kingdom of pastes",
+    "title": "The king of pastes"
+  },
+  "Contact": {
+    "heading": {
+      "part1": "THE KING WANNA",
+      "part2": "HEAR",
+      "part3": "YOU"
+    },
+    "subheading": "Your message will be heard on the throne"
+  },
+  "FAQ": {
+    "heading": {
+      "part1": "ANY",
+      "part2": "QUESTIONS",
+      "part3": "FOR THE KING?"
+    },
+    "subheading": "Check out the most frequently asked questions",
+    "questions": {
+      "question1": {
+        "question": "What is a paste?",
+        "answer": "Paste arrived in Mexico in the 19th century with English miners in Hidalgo. Gastronomically, it is a baked preparation of wheat dough, traditionally filled with potato and meat. Over time, it was Mexicanized with ingredients such as beans or mole. Today it is a culinary symbol of Hidalgo."
+      },
+      "question2": {
+        "question": "How can I get an invoice?",
+        "answer": "You can request your invoice by sending us a WhatsApp message with your purchase receipt or through our website."
+      },
+      "question3": {
+        "question": "What types and flavors do you offer?",
+        "answer": "We offer savory pastes such as potato with meat and green mole, as well as sweet options."
+      },
+      "question4": {
+        "question": "What are your business hours?",
+        "answer": "We are available Monday through Friday from 11:00 a.m. to 8:00 p.m. and weekends from 11:00 a.m. to 7:30 p.m. We look forward to seeing you!"
+      },
+      "question5": {
+        "question": "Where are you located?",
+        "answer": "We are located at Pasillo Tec, Tecnológico, 64700 Monterrey, N.L."
+      },
+      "question6": {
+        "question": "How can I become a distributor of El Rey del Paste?",
+        "answer": "Contact us via WhatsApp or social media to learn about the requirements and benefits of becoming a distributor."
+      }
+    }
+  },
+  "Components": {
+    "WhatsAppForm": {
+      "legendMessage": "Send a message to the king's personal number!",
+      "placeholderName": "Your name",
+      "placeholderMessage": "Write your message...",
+      "ctaBtn": "Send WhatsApp"
+    },
+    "Navbar": {
+      "menu": "Menu",
+      "order": "Order",
+      "stores": "Stores",
+      "aboutus": "About us",
+      "billing": "Billing",
+      "franchises": "Franchises",
+      "jobs": "Jobs",
+      "contact": "Contact"
+    }
+  },
+  "Billing": {
+    "meta": {
+      "title": "Billing",
+      "description": "Request your invoice of purchase from El Rey del Paste here"
+    },
+    "heading": {
+      "part1": "GET YOUR",
+      "part2": "INVOICE HERE"
+    },
+    "subheading": "Request it and we will send it to you",
+    "form": {
+      "legend": "Billing information",
+      "placeholderName": "Full name",
+      "placeholderEmail": "Email",
+      "placeholderPhone": "Phone",
+      "placeholderRFC": "RFC",
+      "placeholderAddress": "Address",
+      "ctaBtn": "Submit request"
+    }
+  },
+  "Franchises": {
+    "meta": {
+      "title": "Franchises",
+      "description": "Become a franchisee of El Rey del Paste by opening your own branch",
+      "keywords": "franchises, franchise, open franchise, open El Rey del Paste franchise, El Rey del Paste franchise"
+    },
+    "heading": {
+      "part1": "WANNA",
+      "part2": "OPEN YOUR OWN KINGDOM?"
+    },
+    "subheading": "Expand the kingdom with your own franchise, we will help you!"
+  },
+  "NotFound": {
+    "heading": "We're sorry, there are no pastes here",
+    "button": "Go back to the Kingdom"
+  },
+  "Jobs": {
+    "meta": {
+      "title": "Jobs",
+      "description": "Join the team of El Rey del Paste and work with us",
+      "keywords": "job, vacancies, employment, work at El Rey del Paste, El Rey del Paste jobs"
+    },
+    "heading": {
+      "part1": "WANNA",
+      "part2": "JOIN",
+      "part3": "OUR KINGDOM?"
+    },
+    "subheading": "The kingdom is growing and you can be part of it"
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "Hero": {
+    "heading": "El rey llegó a Monterrey",
+    "ctaBtn": "¡Quiero Pastes!",
+    "auxCtaBtn": "Ver Menú",
+    "benefits": {
+      "benefit1": {
+        "title": "Listo para llevar",
+        "legend": "Tu orden en 2 minutos"
+      },
+      "benefit2": {
+        "title": "Diferentes sabores",
+        "legend": "Para cada gusto"
+      },
+      "benefit3": {
+        "title": "Alimento tradicional",
+        "legend": "De Hidalgo a tu paladar"
+      }
+    }
+  },
+  "Combos": {
+    "heading": {
+      "part1": "COME COMO",
+      "part2": "REY"
+    },
+    "subheading": "Conoce nuestros combos"
+  },
+  "Menu": {
+    "heading": {
+      "part1": "PASTES DEL",
+      "part2": "REY"
+    },
+    "subheading": "Conoce el menú completo de la realeza",
+    "pastes": {
+      "names": {
+        "Papas con carne": "Papas con carne",
+        "Hawaiano": "Hawaiano",
+        "Frijol con chorizo": "Frijol con chorizo",
+        "Philadelphia con Zarzamora": "Philadelphia con Zarzamora",
+        "Arroz Con Leche": "Arroz Con Leche",
+        "Chicharrón": "Chicharrón",
+        "Tinga de pollo": "Tinga de pollo",
+        "Rajas Queso C/ Champiñon": "Rajas Queso C/ Champiñon",
+        "Piña": "Piña",
+        "Mole verde": "Mole verde"
+      },
+      "types": {
+        "savory": "Salados",
+        "sweet": "Dulces"
+      }
+    },
+    "all": "Todos",
+    "ctaBtn": "¡Quiero ordenar ya!"
+  },
+  "Coupons": {
+    "heading": {
+      "part1": "CUPONES DE",
+      "part2": "LEALTAD"
+    },
+    "subheading": "¡Llénalo y nosotros te damos una sorpresa!",
+    "coupon": {
+      "title": "CUPONERA",
+      "description": "Llena la mitad (6 estampas) o toda la cuponera (12 estampas) y llévate tu correspondiente recompensa GRATIS, ¡tú decides!"
+    },
+    "rewards": {
+      "half": {
+        "title": "1 PASTE A ELEGIR",
+        "description": "Elige el paste dulce o salado de tu elección"
+      },
+      "full": {
+        "title": "COMBO CONQUISTADOR",
+        "description": "1 combo completo: incluye 3 pastes y 1 refresco de tu elección"
+      }
+    },
+    "disclaimer": "*Valido únicamente en sucursales con cuponera física en la compra de minima de $50MXN*"
+  },
+  "Order": {
+    "heading": {
+      "part1": "¿LISTO PARA",
+      "part2": "PEDIR"
+    },
+    "subheading": "Mándanos un mensaje y nosotros tomamos tu orden",
+    "ctaBtn": "Contáctanos por whatsapp"
+  },
+  "AvailableOn": {
+    "heading": {
+      "part1": "TAMBIÉN",
+      "part2": "DISPONIBLES",
+      "part3": "EN"
+    },
+    "subheading": "¡Pide a domicilio desde tu plataforma favorita!",
+    "advice": "Próximamente nuestra gran applicación"
+  },
+  "Palallax": {
+      "part1": "Somos 2 hermanos, que al mudarnos a Monterrey, extrañamos mucho...",
+      "part2": "Los pastes, llenos de tradición, nostalgia y orgullo hidalguense."
+  },
+  "Stores": {
+    "heading": {
+      "part1": "EL REY, DE PACHUCA PARA",
+      "part2": "MONTERREY"
+    },
+    "subheading": "De la ciudad de Pachuca para todo Monterrey",
+    "store": "Sucursal",
+    "store1": {
+      "legend": "El Primer Reino",
+      "schedule": "Lunes a Viernes de 7:00 a 21:00 hrs. Sábados de 8:00 a 14:00 hrs."
+    },
+    "store2": {
+      "legend": "El Segundo Reino",
+      "schedule": "Lunes a Viernes de 7:00 a 21:00 hrs. Sábados de 8:00 a 14:00 hrs."
+    }
+  },
+  "Location": {
+    "heading": {
+      "part1": "DONDE",
+      "part2": "ESTAMOS"
+    },
+    "subheading": "Encuentra tu sucursal más cercana",
+    "franchise": "Sucursal"
+  },
+  "Testimonials": {
+    "heading": {
+      "part1": "LO",
+      "part2": "QUE DICEN",
+      "part3": "DEL REY"
+    },
+    "subheading": "Comentarios de nuestros más reales clientes",
+    "testimonials": {
+      "comment1": "No tenía idea de que eran los pastes, ahora es mi comida favorita",
+      "comment2": "Iba tarde a la escuela, pero gracias al Rey pude comer y llegar a tiempo",
+      "comment3": "Ya faltaba comida diferente en Monterrey"
+    }
+  },
+  "Kings": {
+    "heading": {
+      "part1": "CONOCE A",
+      "part2": "LOS REYES"
+    },
+    "subheading": "Del reino de los pastes",
+    "title": "El rey del paste"
+  },
+  "Contact": {
+    "heading": {
+      "part1": "¿QUIERES",
+      "part2": "DECIRLE",
+      "part3": "ALGO AL REY?"
+    },
+    "subheading": "Tu mensaje será escuchado en el trono."
+  },
+  "FAQ": {
+    "heading": {
+      "part1": "¿ALGUNA",
+      "part2": "PREGUNTA",
+      "part3": "PARA EL REY?"
+    },
+    "subheading": "Mira las preguntas más frecuentes que nos han hecho",
+    "questions": {
+      "question1": {
+        "question": "¿Qué es un paste?",
+        "answer": "El paste llegó a México en el siglo XIX con mineros ingleses en Hidalgo. Gastronómicamente, es una preparación horneada de masa de trigo, rellena tradicionalmente de papa con carne. Con el tiempo, se mexicanizó con ingredientes como frijol o mole. Hoy es símbolo culinario de Hidalgo."
+      },
+      "question2": {
+        "question": "¿Cómo puedo facturar?",
+        "answer": "Puedes solicitar tu factura enviándonos un mensaje por WhatsApp con tu ticket de compra o hacerlo mediante la página."
+      },
+      "question3": {
+        "question": "¿Cuáles son los tipos y sabores que tienen?",
+        "answer": "Ofrecemos pastes salados como carne con papa y mole verde, además de opciones dulces."
+      },
+      "question4": {
+        "question": "¿Horario de atención?",
+        "answer": "Estamos disponibles de lunes a viernes de 11:00 a.m. a 8:00 p.m. y los fines de semana de 11:00 a.m. a 7:30 p.m. ¡Te esperamos!"
+      },
+      "question5": {
+        "question": "¿Dónde están ubicados?",
+        "answer": "Nos encontramos en Pasillo Tec, Tecnológico, 64700 Monterrey, N.L."
+      },
+      "question6": {
+        "question": "¿Cómo me hago distribuidor de El Rey del Paste?",
+        "answer": "Contáctanos por WhatsApp o redes sociales para conocer los requisitos y beneficios de ser distribuidor."
+      }
+    }
+  },
+  "Components": {
+    "WhatsAppForm": {
+      "legendMessage": "¡Manda un mensaje al número personal del rey!",
+      "placeholderName": "Tu nombre",
+      "placeholderMessage": "Escribe tu mensaje...",
+      "ctaBtn": "Enviar WhatsApp"
+    },
+    "Navbar": {
+      "menu": "Menú",
+      "order": "Pedir",
+      "stores": "Sucursales",
+      "aboutus": "Nosotros",
+      "billing": "Facturación",
+      "franchises": "Franquicias",
+      "jobs": "Vacantes",
+      "contact": "Contacto"
+    }
+  },
+  "Billing": {
+    "meta": {
+      "title": "Facturación",
+      "description": "Solicita tu factura de compra del Rey del Paste aquí",
+      "keywords": "factura, facturación, factura del rey del paste, facturación del rey del paste, rey del paste factura, rey del paste facturación"
+    },
+    "heading": {
+      "part1": "OBTEN TU",
+      "part2": "FACTURA AQUÍ"
+    },
+    "subheading": "Solicítala y nosotros te la mandamos",
+    "form": {
+      "legend": "Datos de facturación",
+      "placeholderName": "Nombre completo",
+      "placeholderEmail": "Correo electrónico",
+      "placeholderPhone": "Teléfono",
+      "placeholderRFC": "RFC",
+      "placeholderAddress": "Dirección",
+      "ctaBtn": "Enviar solicitud"
+    }
+  },
+  "Franchises": {
+    "meta": {
+      "title": "Franquicias",
+      "description": "Conviértete en franquiciado del Rey del Paste abriendo tu propia sucursal",
+      "keywords": "franquicias, franquicia, abrir franquicia, abrir franquicia del rey del paste, franquicia del rey del paste"
+    },
+    "heading": {
+      "part1": "¿QUIERES",
+      "part2": "ABRIR TU PROPIO REINO?"
+    },
+    "subheading": "Expande el reino con tu propia sucursal, ¡nosotros te ayudamos!"
+  },
+  "NotFound": {
+    "heading": "Lo sentimos, no hay pastes aqui",
+    "button": "Regresar al Reino"
+  },
+  "Jobs": {
+    "meta": {
+      "title": "Vacantes",
+      "description": "Únete al equipo del Rey del Paste y trabaja con nosotros",
+      "keywords": "trabajo, vacantes, empleo, trabajar en el rey del paste, vacantes del rey del paste"
+    },
+    "heading": {
+      "part1": "¿QUIERES",
+      "part2": "UNIRTE",
+      "part3": "A NUESTRO REINO?"
+    },
+    "subheading": "El reino crece y tú puedes ser parte de él"
+  }
+}
