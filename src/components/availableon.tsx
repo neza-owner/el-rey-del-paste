@@ -31,7 +31,7 @@ const AvailableOn = () => {
             href={platform.link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.link} shadow-lg transition-transform transform hover:scale-105`}
+            className={`${styles.link} shadow-lg `}
           >
             <img
               src={platform.image}

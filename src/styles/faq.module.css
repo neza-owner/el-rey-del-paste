@@ -29,10 +29,12 @@ section.faq {
   animation-range: entry 0% cover 20%;
 
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
       font-size: 1.25em;
       font-weight: 600;
-      width: 100%;
 
       span,
       svg.icon {
