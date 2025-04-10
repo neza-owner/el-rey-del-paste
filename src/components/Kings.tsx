@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import crown from "../assets/crown.svg";
 import styles from "../styles/kings.module.css";
 
-const Kings = () => {
+const Kings2 = () => {
   interface King {
     name: string;
     title: string;
@@ -43,16 +43,18 @@ const Kings = () => {
       </header>
 
       {/* Kings List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className={styles.kingsList}>
         {kings.map((king, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
+          <div key={index} className={styles.king}>
             <img
               src={king.image}
               alt={king.name}
-              className={`${styles.profile} shadow-lg`}
+              className={styles.profile}
             />
-            <h3 className="font-bold text-lg mt-4">{king.name}</h3>
-            <span className={styles.title}>“{king.title}”</span>
+            <div className={styles.caption}>
+              <span className={styles.name}>{king.name}</span>
+              <span className={styles.title}>“{king.title}”</span>
+            </div>
           </div>
         ))}
       </div>
@@ -60,4 +62,4 @@ const Kings = () => {
   );
 };
 
-export default Kings;
+export default Kings2;

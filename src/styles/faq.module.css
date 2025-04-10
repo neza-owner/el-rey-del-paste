@@ -22,8 +22,6 @@ section.faq {
   gap: 1rem;
   padding: 1rem;
   background-color: white;
-  padding-top: 3%;
-  padding-bottom: 4%;
   border-radius: 2rem;
 
   animation: appear 3s linear;
@@ -84,8 +82,7 @@ section.faq {
           color: var(--primary-color);
         }
 
-        &:focus,
-        &:hover {
+        &:focus {
           color: var(--primary-color);
 
           /* &::after {
@@ -149,6 +146,14 @@ section.faq {
 
     details {
       min-width: 38ch;
+
+      summary {
+        @media(hover: hover) and (pointer: fine) {
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
     }
   }
 }

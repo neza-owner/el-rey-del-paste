@@ -35,29 +35,32 @@ const Testimonials = () => {
     <section className={styles.testimonials}>
       <header>
         <h2 className={styles.heading}>
-          {t("Testimonials.heading.part1")} <span className="text-yellow-500">{t("Testimonials.heading.part2")}</span> {t("Testimonials.heading.part3")}
+          {t("Testimonials.heading.part1")} <span>{t("Testimonials.heading.part2")}</span> {t("Testimonials.heading.part3")}
         </h2>
         <h3 className={styles.subheading}>{t("Testimonials.subheading")}</h3>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className={styles.testimonialsList}>
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
+          <div key={index} className={styles.testimonial}>
             <img
               src={testimonial.image}
               alt={testimonial.username}
-              className={`${styles.profile} shadow-lg`}
+              className={styles.profile}
             />
-            <p className={styles.caption}>
-              “{testimonial.comment}”
-            </p>
-            <a
-              href={testimonial.profilelink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.username}>
-              {testimonial.username}
-            </a>
+
+            <div className={styles.caption}>
+              <p className={styles.comment}>
+                “{testimonial.comment}”
+              </p>
+              <a
+                href={testimonial.profilelink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.username}>
+                {testimonial.username}
+              </a>
+            </div>
           </div>
         ))}
       </div>
