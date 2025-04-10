@@ -1,0 +1,126 @@
+section.jobs::before {
+  content: '';
+  position: absolute;
+  top: -50;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png"),
+    url("./marcaagua.png");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position:
+    0px 0px,
+    75px 75px,
+    150px 0px,
+    225px 75px;
+  opacity: 0.03;
+  transform: scale(1.2); 
+  transform-origin: center;
+  z-index: -1000;
+  pointer-events: none;
+}
+
+
+section.jobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  gap: 1.5rem;
+
+
+  header {
+    h2.heading {
+      font-size: 1.5em;
+      font-weight: 600;
+      width: 100%;
+
+      span,
+      svg.icon {
+        color: var(--primary-color);
+      }
+    }
+
+    h3.subheading {
+      font-size: 0.7em;
+      font-weight: 400;
+    }
+  }
+
+  div.jobsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1rem; */
+    padding: 0 2rem;
+
+    figure {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      img {
+        /* margin: 3rem; */
+        /* object-fit: cover; */
+        /* width: 30rem; */
+        aspect-ratio: 17/9;
+        width: 100%;
+        /* aspect-ratio: 16/9; */
+        border-radius: 2.5rem;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      figcaption {
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: var(--primary-color);
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 400;
+          color: #4b5563;
+        }
+      }
+    }
+  }
+}
+
+/* responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.jobs {
+    div.jobsContainer {
+      width: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0rem;
+
+      figure {
+
+        img {
+          width: 25rem;
+          aspect-ratio: 6/3.5;
+          border-radius: 0.5rem;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

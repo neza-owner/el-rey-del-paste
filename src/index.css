@@ -1,4 +1,6 @@
+@import url("styles/color-scheme.css");
+@import url("styles/manual-reset.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-

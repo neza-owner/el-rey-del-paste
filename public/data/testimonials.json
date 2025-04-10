@@ -1,0 +1,20 @@
+[
+  {
+    "username": "@tony_aquinoo",
+    "comment": "testimonials.comment1",
+    "image": "/testimonials/testimonial1.png",
+    "profilelink": "https://www.instagram.com/tony_aquinoo/"
+  },
+  {
+    "username": "@elvisscochito",
+    "comment": "testimonials.comment2",
+    "image": "/testimonials/testimonial2.png",
+    "profilelink": "https://www.instagram.com/elvisscochito/"
+  },
+  {
+    "username": "@joelconlentes",
+    "comment": "testimonials.comment3",
+    "image": "/testimonials/testimonial3.png",
+    "profilelink": "https://www.instagram.com/joelconlentes/"
+  }
+]

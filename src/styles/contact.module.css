@@ -1,0 +1,85 @@
+@keyframes appear {
+  from {
+    opacity: 0.75;
+    transform: scale(0.75);
+    filter: brightness(150%);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}
+
+section.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  gap: 1rem;
+
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+
+  header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
+    h2.heading {
+      font-size: 1.25em;
+      font-weight: 600;
+      width: 100%;
+
+      span {
+        color: var(--primary-color);
+      }
+    }
+
+    h3.subheading {
+      font-size: 0.6em;
+      font-weight: 400;
+    }
+  }
+
+  .trumpet {
+    position: absolute;
+    bottom: 0;
+    width: min(20%, calc(100% - 2rem));
+  }
+
+  .variantA {
+    left: 1rem;
+    transform: rotate(-45deg);
+  }
+
+  .variantB {
+    right: 1rem;
+    transform: scaleX(-1) rotate(-45deg);
+  }
+}
+
+/* Responsive design (mobile first) */
+
+@media only screen and (min-width: 768px) {
+  section.contact {
+    /* font-size: 2.25rem; */
+
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+  }
+}

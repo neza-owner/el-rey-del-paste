@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Combo Real",
+    "price": 79,
+    "description": "4 pastes",
+    "image": "/combos/cuatro.JPG"
+  },
+  {
+    "id": 2,
+    "name": "Combo Emperador",
+    "price": 599,
+    "description": "2 pastes y un refresco",
+    "image": "/combos/unaydos.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Combo Príncipe",
+    "price": 119,
+    "description": "3 pastes",
+    "image": "/combos/tres.JPG"
+  },
+  {
+    "id": 4,
+    "name": "Combo Monarca",
+    "price": 599,
+    "description": "3 pastes y un refresco",
+    "image": "/combos/unaytres.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Combo Noble",
+    "price": 599,
+    "description": "2 pastes y un frappé",
+    "image": "/combos/unfrap.JPG"
+  }
+]
