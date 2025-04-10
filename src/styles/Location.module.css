@@ -13,30 +13,25 @@
 }
 
 section.location {
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
-}
-
-section.location {
-  /*  height: 100vh; */
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
+  padding: 1rem;
   gap: 1rem;
-  /* max-width: 56rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 1.5rem; */
+
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
 
       span,
@@ -46,30 +41,31 @@ section.location {
     }
 
     h3.subheading {
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
 
   div.locations {
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 80%;
 
     div.franchise {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100%;
       gap: 1rem;
 
       h4 {
-        font-size: 1.2rem;
-        font-weight: 600;
+        font-size: 0.5em;
+        font-weight: 500;
+        color: #4B5563;
       }
 
       div.frameContainer {
@@ -87,12 +83,6 @@ section.location {
           border-radius: 0.5rem;
         }
       }
-
-      span {
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: #4B5563;
-      }
     }
   }
 }
@@ -101,6 +91,16 @@ section.location {
 
 @media only screen and (min-width: 768px) {
   section.location {
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.locations {
       flex-direction: row;
       width: 90%;
@@ -108,7 +108,7 @@ section.location {
       div.franchise {
 
         h4 {
-          font-size: 1.8rem;
+          font-size: 0.6em;
         }
       }
     }

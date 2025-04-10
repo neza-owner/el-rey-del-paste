@@ -49,10 +49,6 @@ section.contact {
     }
   }
 
-  .icon {
-    color: var(--primary-color);
-  }
-
   .trumpet {
     position: absolute;
     bottom: 0;

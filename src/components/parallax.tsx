@@ -33,7 +33,7 @@ const ParallaxSection = () => {
         </h2>
       </header>
       <ParallaxProvider>
-        <div className="relative w-full overflow-hidden h-[250vh]"> {/* Altura del viewport al 150% */}
+        <div className="relative w-full overflow-hidden"> {/* Altura del viewport al 150% */}
 
           {/* Primer párrafo con efecto Parallax */}
           <Parallax speed={-15}>
