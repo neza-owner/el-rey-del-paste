@@ -23,12 +23,9 @@ section.kings {
   gap: 1rem;
   padding: 1rem;
 
-  /* accessibility */
-  @media (prefers-reduced-motion: no-preference) {
-    animation: appear 3s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 20%;
-  }
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 
   header {
 

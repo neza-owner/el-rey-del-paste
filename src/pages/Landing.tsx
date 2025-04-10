@@ -29,9 +29,7 @@ function Landing() {
       <Location />
       <Testimonials />
       <Kings />
-      <div className={styles.hideOnMobile}>
-        <Parallax />
-      </div>
+      <Parallax />
       {/* <Social /> */}
       <Contact />
       {/* <Jobs /> */}

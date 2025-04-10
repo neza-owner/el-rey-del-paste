@@ -21,6 +21,7 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  /** @note open whatsApp on a new tab */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -33,7 +34,7 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
     const text = `Hola, soy ${name}. ${message}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
-    window.open(url, "_blank"); // Abre WhatsApp en una nueva pestaña
+    window.open(url, "_blank");
   };
 
   return (

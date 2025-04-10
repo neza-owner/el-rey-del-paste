@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* accessibility */
+/* accessibility: reduce motion for all animations */
 @media (prefers-reduced-motion: no-preference) {
   /* smooth scroll */
   @supports (scroll-behavior: smooth) {
@@ -10,9 +10,16 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 section {
   /*Para que todo el contenido esté por encima del fondo */
-  position: relative;
-  z-index: 1;
+  /* position: relative;
+  z-index: 1; */
   scroll-margin-top: 8vh;
 }
