@@ -6,7 +6,7 @@ import styles from "./hero2.module.css";
 export default function Hero2() {
   const [t] = useTranslation("global");
   return (
-    <section className={styles.hero}>
+    <section id='home' className={styles.hero}>
       {/* animated title */}
       <header className={styles.header}>
         <img src="./PastePersonaje.png" alt="Logo" className={styles.titleLogo} />

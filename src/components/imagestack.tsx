@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 
 interface ImageStackProps {
@@ -34,7 +32,7 @@ export function ImageStack({ images, selectedIndex, onImageClick }: ImageStackPr
             src={image}
             alt={`Stacked Image ${idx}`}
             className="rounded-lg object-cover flex-shrink-0
-              h-[6vh] w-[6vh] md:h-[10vh] md:w-[10vh] lg:h-[30vh] lg:w-[30vh]"
+              h-[15vh] w-[15vh] md:h-[10vh] md:w-[10vh] lg:h-[30vh] lg:w-[30vh]"
           />
         </motion.div>
       ))}
