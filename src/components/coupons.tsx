@@ -16,7 +16,8 @@ const Coupons = () => {
       </header>
       <div className={styles.couponsContainer}>
         <figure className={styles.coupon}>
-          <img src="/coupons/coupon-holder-back.jpg" alt="Coupon 1" className={styles.couponImage} />
+          <img src="/coupons/coupon-holder-front.png" alt="Coupon Front" className={styles.couponImage} />
+          <img src="/coupons/coupon-holder-back.png" alt="Coupon Back" className={styles.couponImage} />
           <figcaption className={styles.couponDescription}>
             <h4 className={styles.couponTitle}>{t("Coupons.coupon.title")}</h4>
             <p>{t("Coupons.coupon.description")}</p>
