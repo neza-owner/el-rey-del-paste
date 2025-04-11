@@ -1,6 +1,41 @@
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(testing) {
+  animation: fade-out 0.3s ease, slide-to-left 0.3s ease;
+}
+
+::view-transition-new(testing) {
+  animation: fade-in 0.3s ease, slide-from-right 0.3s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 section.franchises {
-  position: relative; /* ← Necesario para contener el ::before */
-  min-height: 100dvh; /* ← Asegura altura adecuada y adaptable */
+  view-transition-name: testing;
+  position: relative;
+  /* ← Necesario para contener el ::before */
+  min-height: 100dvh;
+  /* ← Asegura altura adecuada y adaptable */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,8 +43,10 @@ section.franchises {
   font-size: 2.25rem;
   font-weight: 700;
   gap: 1.5rem;
-  padding-bottom: 5rem; /* ← Espacio para el footer */
-  overflow: hidden; /* ← Previene desbordes visuales */
+  padding-bottom: 5rem;
+  /* ← Espacio para el footer */
+  overflow: hidden;
+  /* ← Previene desbordes visuales */
 
   img.fullWidthImage {
     width: 100vw;
@@ -19,6 +56,7 @@ section.franchises {
   }
 
   header {
+
     h2.heading {
       font-size: 1.5em;
       font-weight: 600;
@@ -102,9 +140,10 @@ section.franchises::before {
     150px 0px,
     225px 75px;
   opacity: 0.03;
-  transform: scale(1.2); 
+  transform: scale(1.2);
   transform-origin: center;
-  z-index: -1; /* ← Aquí el ajuste importante */
+  z-index: -1;
+  /* ← Aquí el ajuste importante */
   pointer-events: none;
 }
 

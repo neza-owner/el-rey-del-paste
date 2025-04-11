@@ -1,6 +1,7 @@
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLayoutEffect, useState } from "react";
+import { flushSync } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -88,12 +89,25 @@ const Navbar = () => {
             </HashLink>
           </li>
           <li>
-            <NavLink to="/billing" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="b" onClick={() => handleActiveHashLink('billing')}>
+            <NavLink to="/billing" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="b" onClick={() => {
+              document.startViewTransition(() => {
+                flushSync(() => {
+                  handleActiveHashLink('billing');
+                });
+              });
+            }}>
               {t("Components.Navbar.billing")}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/franchises" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="f" onClick={() => handleActiveHashLink('franchises')}>
+            <NavLink to="/franchises" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="f"
+              onClick={() => {
+                document.startViewTransition(() => {
+                  flushSync(() => {
+                    handleActiveHashLink('franchises');
+                  });
+                });
+              }}>
               {t("Components.Navbar.franchises")}
             </NavLink>
           </li>

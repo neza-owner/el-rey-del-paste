@@ -1,6 +1,41 @@
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(testing) {
+  animation: fade-out 0.3s ease, slide-to-left 0.3s ease;
+}
+
+::view-transition-new(testing) {
+  animation: fade-in 0.3s ease, slide-from-right 0.3s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 section.billing {
-  position: relative; /* ← Necesario para que ::before se posicione dentro de esta sección */
-  min-height: 100dvh; /* ← Asegura que la sección cubra al menos toda la pantalla visible */
+  view-transition-name: testing;
+  position: relative;
+  /* ← Necesario para que ::before se posicione dentro de esta sección */
+  min-height: 100dvh;
+  /* ← Asegura que la sección cubra al menos toda la pantalla visible */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,10 +43,13 @@ section.billing {
   font-size: 2.25rem;
   font-weight: 700;
   gap: 1.5rem;
-  padding-bottom: 5rem; /* ← Espacio para que el footer no se tape */
-  overflow: hidden; /* ← Evita que ::before se desborde */
+  padding-bottom: 5rem;
+  /* ← Espacio para que el footer no se tape */
+  overflow: hidden;
+  /* ← Evita que ::before se desborde */
 
   header {
+
     h2.heading {
       font-size: 1.5em;
       font-weight: 600;
@@ -95,9 +133,10 @@ section.billing::before {
     150px 0px,
     225px 75px;
   opacity: 0.03;
-  transform: scale(1.2); 
+  transform: scale(1.2);
   transform-origin: center;
-  z-index: -1; /* ← Esto evita que esté por encima del footer */
+  z-index: -1;
+  /* ← Esto evita que esté por encima del footer */
   pointer-events: none;
 }
 
