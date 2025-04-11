@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
-import crown from "../../assets/crown.svg";
-import styles from "./kings2.module.css";
+import crown from "../assets/crown.svg";
+import styles from "../styles/kings.module.css";
 
-const Kings2 = () => {
+const Kings = () => {
   interface King {
     name: string;
     title: string;
@@ -43,7 +43,7 @@ const Kings2 = () => {
       </header>
 
       {/* Kings List */}
-      <div className={styles.kingsList}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {kings.map((king, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             <img
@@ -60,4 +60,4 @@ const Kings2 = () => {
   );
 };
 
-export default Kings2;
+export default Kings;

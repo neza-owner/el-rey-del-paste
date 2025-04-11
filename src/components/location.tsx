@@ -46,6 +46,14 @@ const Location = () => {
         </h3>
       </header>
 
+      {/* decorative Cactus Images */}
+
+      {/* <img
+        src="/images/cactus1.png"
+        alt="Cactus Left"
+        className="absolute left-0 bottom-0 w-20 -ml-6"
+      /> */}
+
       <div className={styles.locations}>
         {
           franchises.map((franchise) => (
@@ -69,17 +77,11 @@ const Location = () => {
         }
       </div>
 
-      {/* Decorative Cactus Images */}
       {/* <img
-            src="/images/cactus1.png"
-            alt="Cactus Left"
-            className="absolute left-0 bottom-0 w-20 -ml-6"
-          />
-          <img
-            src="/images/cactus2.png"
-            alt="Cactus Right"
-            className="absolute right-0 bottom-0 w-24 -mr-6"
-          /> */}
+        src="/images/cactus2.png"
+        alt="Cactus Right"
+        className="absolute right-0 bottom-0 w-24 -mr-6"
+      /> */}
     </section >
   );
 };

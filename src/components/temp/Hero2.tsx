@@ -6,7 +6,7 @@ import styles from "./hero2.module.css";
 export default function Hero2() {
   const [t] = useTranslation("global");
   return (
-    <section className={styles.hero}>
+    <section id='home' className={styles.hero}>
       {/* animated title */}
       <header className={styles.header}>
         <img src="./PastePersonaje.png" alt="Logo" className={styles.titleLogo} />
@@ -23,10 +23,10 @@ export default function Hero2() {
 
       {/* cta buttons */}
       <div className={styles.ctaBtns}>
-        <a className={`${styles.ctaBtn} ${styles.main} shadow-md`} href="#order">
+        <a role='button' className={`${styles.ctaBtn} ${styles.main} shadow-md`} href="#order">
           {t("Hero.ctaBtn")}
         </a>
-        <a className={`${styles.ctaBtn} ${styles.secondary} shadow-md`} href="#menu">
+        <a role='button' className={`${styles.ctaBtn} ${styles.secondary} shadow-md`} href="#menu">
           {t("Hero.auxCtaBtn")}
         </a>
       </div>

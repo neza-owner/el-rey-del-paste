@@ -12,7 +12,6 @@ const FAQ = () => {
 
   const [t] = useTranslation("global");
   const [faqs, setFAQs] = useState<FAQ[]>([]);
-  const [isOpen, setIsOpen] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchFAQs = async () => {
@@ -33,15 +32,8 @@ const FAQ = () => {
     fetchFAQs();
   }, [t]);
 
-  const handleToggle = (index: number, e: React.MouseEvent<HTMLElement>) => {
-    /* prevent default behavior */
-    e.preventDefault();
-    setIsOpen(isOpen === index ? null : index);
-  };
-
   return (
     <section id="faq" className={styles.faq}>
-
       <header>
         <h2 className={styles.heading}>
           {t("FAQ.heading.part1")} <span>{t("FAQ.heading.part2")}</span> {t("FAQ.heading.part3")} <FontAwesomeIcon icon={faCircleQuestion} className={styles.icon} />
@@ -52,12 +44,11 @@ const FAQ = () => {
       </header>
 
       {/* faq list */}
-      <div className="space-y-4">
+      <div className={styles.faqList}>
         {faqs.map((faq, index) => (
           <details
             key={index}
-            open={isOpen === index}
-            onClick={(e) => handleToggle(index, e)}
+            name="accordion"
           >
             <summary>{faq.question}</summary>
             <p>{faq.answer}</p>

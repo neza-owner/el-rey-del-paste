@@ -13,26 +13,29 @@
 }
 
 section.coupons {
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
-}
-
-section.coupons {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
+  padding: 1rem;
   gap: 1rem;
 
+  align-self: center;
+  position: relative;
+
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
-      width: 100%;
 
       span,
       .icon {
@@ -41,7 +44,7 @@ section.coupons {
     }
 
     h3.subheading {
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
@@ -53,61 +56,28 @@ section.coupons {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    position: relative;
 
-    img.arrowLeft {
-      position: absolute;
-      top: 55%;
-      left: 15%;
-      transform: scaleX(-1) rotate(120deg);
-      width: 2rem;
-    }
-
-    img.equal {
-      width: 2rem;
-    }
-
+    img.equal,
+    img.arrowLeft,
     img.arrowRight {
-      position: absolute;
-      top: 65%;
-      right: 15%;
-      transform: scaleX(1) rotate(-230deg);
-      width: 2rem;
+      display: none;
     }
 
-    span {
-      font-size: 1rem;
-      font-weight: 400;
-      color: #4B5563;
-    }
-
-    img.couponImage {
-      transition: transform 0.6s ease-in-out;
-
-      &:hover {
-        transform: scale(1.05);
-        content: url('/coupons/coupon-holder-front.jpg');
-        transform: rotateY(180deg);
-      }
-    }
-
-    figure.coupon,
-    figure.reward {
+    figure.coupon {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      gap: 1rem;
 
       img {
-        width: 25rem;
+        width: min(23rem, 100%);
         aspect-ratio: 16/9;
+        object-fit: cover;
         border-radius: 2.5rem;
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.05);
-        }
+        filter: brightness(100%);
+        border: 4px solid #fff;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
       }
 
       figcaption {
@@ -120,8 +90,9 @@ section.coupons {
         }
 
         p {
-          width: 38ch;
+          max-width: 38ch;
           text-wrap: pretty;
+          overflow-wrap: break-word;
           font-weight: 500;
           color: #4b5563;
         }
@@ -129,18 +100,7 @@ section.coupons {
     }
 
     div.rowCouponsContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-
-      figcaption {
-
-        h4 {
-          color: var(--accent-color);
-        }
-      }
+      display: none;
     }
   }
 
@@ -148,8 +108,9 @@ section.coupons {
     font-size: 1rem;
     font-weight: 400;
     color: #4B5563;
-    width: 38ch;
+    max-width: 38ch;
     text-wrap: pretty;
+    overflow-wrap: break-word;
   }
 }
 
@@ -157,22 +118,72 @@ section.coupons {
 
 @media only screen and (min-width: 768px) {
   section.coupons {
+    max-width: 100vw;
+
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.couponsContainer {
+      position: relative;
+      overflow-x: hidden;
+
+      img.arrowLeft,
+      img.equal,
+      img.arrowRight {
+        display: inline;
+        bottom: 15rem;
+        position: absolute;
+        max-width: 100%;
+      }
+
+      span {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #4B5563;
+      }
 
       img.arrowLeft {
-        top: 20%;
-        left: 20%;
-        width: 4rem;
+        left: 10rem;
+        transform: scaleX(-1) rotate(120deg);
       }
 
       img.equal {
+        bottom: 10rem;
         width: 3rem;
       }
 
       img.arrowRight {
-        top: 20%;
-        right: 20%;
-        width: 4rem;
+        right: 10rem;
+        transform: scaleX(1) rotate(-230deg);
+      }
+
+      img.couponImage {
+        transition: transform 0.6s ease-in-out;
+
+        @media(hover: hover) and (pointer: fine) {
+          &:hover {
+            transform: scale(1.05);
+            content: url('/coupons/coupon-holder-back.png');
+            transform: rotateY(180deg);
+          }
+        }
+      }
+
+      figure.coupon {
+        img {
+          max-width: 25rem;
+        }
+
+        img:nth-of-type(2) {
+          display: none !important;
+        }
       }
 
       figure.coupon,
@@ -183,21 +194,59 @@ section.coupons {
         justify-content: center;
         gap: 0.5rem;
 
+        transition: transform 0.3s ease-in-out;
+
+        img {
+          width: min(23rem, 100%);
+          aspect-ratio: 16/9;
+          object-fit: cover;
+          border-radius: 2.5rem;
+          filter: brightness(100%);
+
+          @media(hover: hover) and (pointer: fine) {
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+
         figcaption {
+          font-size: 1rem;
 
           p {
-            width: 64ch;
+            min-width: 64ch;
+            text-wrap: pretty;
+            overflow-wrap: break-word;
+            font-weight: 500;
+            color: #4b5563;
           }
         }
       }
 
+
       div.rowCouponsContainer {
+        display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        figure.reward {
+          img {
+            max-width: 20rem;
+          }
+
+          figcaption {
+            h4 {
+              color: var(--accent-color);
+            }
+          }
+        }
       }
     }
   }
 
   span.disclaimer {
-    width: 48ch;
+    min-width: 48ch;
   }
 }

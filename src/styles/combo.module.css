@@ -19,15 +19,6 @@
 }
 
 section.combo {
-  animation: appear 3s linear;
-  /* animation: appear 5s linear; */
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
-  /*animation-range: entry 0% cover 40%;
-  */
-}
-
-section.combo {
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -40,9 +31,19 @@ section.combo {
   gap: 2rem;
   padding: 1rem;
 
+  animation: appear 3s linear;
+  /* animation: appear 5s linear; */
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+  /*animation-range: entry 0% cover 40%;
+  */
+
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
       display: flex;
       justify-content: center;
@@ -61,7 +62,7 @@ section.combo {
     }
 
     h3.subheading {
-      font-size: 1.2rem;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
@@ -104,6 +105,11 @@ section.combo {
     header {
       h2.heading {
         flex-direction: row;
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
       }
     }
   }

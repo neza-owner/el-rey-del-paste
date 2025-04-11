@@ -13,23 +13,23 @@
 }
 
 section.stores {
-
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
-}
-
-section.stores {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
+  padding: 1rem;
+  gap: 1rem;
+
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 
   header {
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
       width: 100%;
 
@@ -40,9 +40,8 @@ section.stores {
     }
 
     h3.subheading {
-      font-size: 1.2rem;
+      font-size: 0.6em;
       font-weight: 400;
-
     }
   }
 
@@ -55,9 +54,9 @@ section.stores {
     border: 3px solid var(--accent-color); */
     /* position: relative;
     overflow: hidden; */
+    /* width: 100%; */
     padding: 1.5rem;
     gap: 1rem;
-    /* width: 100%; */
 
     h4.title {
       /* position: absolute;
@@ -70,7 +69,6 @@ section.stores {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      min-width: 90%;
     }
 
     h4+h5 {
@@ -79,10 +77,10 @@ section.stores {
     }
 
     div.gallery {
-      border: solid 60px rgb(255, 200, 97);
       background-color: rgb(255, 200, 97);
+      padding: 2rem;
       border-radius: 0.5rem;
-      
+
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -91,7 +89,7 @@ section.stores {
       gap: 1rem;
 
       img.imgGallery {
-        width: 7rem;
+        max-width: 7rem;
         object-fit: cover;
         border-radius: 0.5rem;
         aspect-ratio: 9/16;
@@ -110,8 +108,10 @@ section.stores {
         font-size: 1rem;
         font-weight: 500;
         color: #4B5563;
-        width: 32ch;
+        max-width: 32ch;
         text-wrap: pretty;
+        overflow-wrap: break-word;
+
 
         .icon {
           color: var(--accent-color);
@@ -129,11 +129,21 @@ section.stores {
 
 @media only screen and (min-width: 768px) {
   section.stores {
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.stores {
 
       div.gallery {
         img.imgGallery {
-          width: 15rem;
+          min-width: 15rem;
         }
       }
 
@@ -142,7 +152,7 @@ section.stores {
         span,
         a {
           font-size: 1.2rem;
-          width: fit-content;
+          min-width: 64ch;
         }
       }
     }

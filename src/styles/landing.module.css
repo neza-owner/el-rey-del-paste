@@ -4,14 +4,36 @@ div.landing {
   /* align-items: center;
   justify-content: center; */
   gap: 2.5rem;
+
+  /* position: relative;
+    overflow-x: hidden; */
+  /* z-index: 1; */
+
+  background-color: rgb(247, 244, 235);
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: repeating-linear-gradient(45deg,
+        rgba(255, 228, 196, 0.05),
+        rgba(255, 228, 196, 0.05) 10px,
+        transparent 10px,
+        transparent 20px);
+    animation: moveDiagonal 30s linear infinite;
+    /* z-index: 0; */
+    pointer-events: none;
+  }
+
+  text-align: center;
 }
 
-.hideOnMobile {
-  display: block;
-}
+@keyframes moveDiagonal {
+  from {
+    transform: translate(0, 0);
+  }
 
-@media (max-width: 768px) {
-  .hideOnMobile {
-    display: none;
+  to {
+    transform: translate(100px, 100px);
   }
 }
