@@ -1,30 +1,8 @@
 import { faFileInvoice } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { flushSync } from 'react-dom';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import Form from "../components/Form";
 import styles from "../styles/billing.module.css";
-
-const AnimatedLink = ({ to, children }) => {
-  const navigate = useNavigate();
-
-  return (
-    <a
-      href={to}
-      onClick={(ev) => {
-        ev.preventDefault();
-        document.startViewTransition(() => {
-          flushSync(() => {
-            navigate(to);
-          });
-        });
-      }}
-    >
-      {children}
-    </a>
-  );
-};
 
 function Billing() {
   const [t] = useTranslation("global");
@@ -38,7 +16,6 @@ function Billing() {
 
       {/* factura, el rey del paste, Monterrey, Hidalgo, pastes, comida mexicana, comida típica, comida tradicional, comida de Monterrey, comida de Hidalgo, comida de la región */}
       <header>
-        <AnimatedLink to="/franchises">Details</AnimatedLink>
         <h2 className={styles.heading}>{t("Billing.heading.part1")} <span>{t("Billing.heading.part2")}</span> <FontAwesomeIcon icon={faFileInvoice} className={styles.icon} /></h2>
         <h3 className={styles.subheading}>{t("Billing.subheading")}</h3>
       </header>

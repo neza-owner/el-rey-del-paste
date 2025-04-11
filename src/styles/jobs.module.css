@@ -1,15 +1,20 @@
 section.jobs {
-  position: relative; /* ← Necesario para contener el ::before */
-  min-height: 100dvh; /* ← Asegura que al menos cubra la pantalla */
+  position: relative;
+  /* ← Necesario para contener el ::before */
+  min-height: 100dvh;
+  /* ← Asegura que al menos cubra la pantalla */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 2.25rem;
   font-weight: 700;
   gap: 1.5rem;
-  padding-bottom: 5rem; /* ← Espacio para el footer */
-  overflow: hidden; /* ← Previene que el fondo se salga */
+  padding-bottom: 5rem;
+  /* ← Espacio para el footer */
+  overflow: hidden;
+  /* ← Previene que el fondo se salga */
 
   header {
     h2.heading {
@@ -76,7 +81,8 @@ section.jobs {
 section.jobs::before {
   content: '';
   position: absolute;
-  top: 0; /* ← Corregido: era top: -50 (inválido) */
+  top: 0;
+  /* ← Corregido: era top: -50 (inválido) */
   left: 0;
   width: 100%;
   height: 100%;
@@ -93,9 +99,10 @@ section.jobs::before {
     150px 0px,
     225px 75px;
   opacity: 0.03;
-  transform: scale(1.2); 
+  transform: scale(1.2);
   transform-origin: center;
-  z-index: -1; /* ← Ajustado para no cubrir el footer */
+  z-index: -1;
+  /* ← Ajustado para no cubrir el footer */
   pointer-events: none;
 }
 

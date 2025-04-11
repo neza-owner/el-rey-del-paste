@@ -1,30 +1,8 @@
 import { faStore } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { flushSync } from 'react-dom';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import Form from "../components/Form";
 import styles from "../styles/franchises.module.css";
-
-const AnimatedLink = ({ to, children }) => {
-  const navigate = useNavigate();
-
-  return (
-    <a
-      href={to}
-      onClick={(ev) => {
-        ev.preventDefault();
-        document.startViewTransition(() => {
-          flushSync(() => {
-            navigate(to);
-          });
-        });
-      }}
-    >
-      {children}
-    </a>
-  );
-};
 
 function Franchises() {
   const [t] = useTranslation("global");
@@ -34,8 +12,10 @@ function Franchises() {
     <section className={styles.franchises}>
       <title>{`${title}`}</title>
       <meta name="description" content={t("Franchises.meta.description")} />
-      <AnimatedLink to="/billing">Details</AnimatedLink>
-
+      <header>
+        <h2 className={styles.heading}>{t("Franchises.heading.part1")} <span>{t("Franchises.heading.part2")}</span> <FontAwesomeIcon icon={faStore} className={styles.icon} /></h2>
+        <h3 className={styles.subheading}>{t("Franchises.subheading")}</h3>
+      </header>
 
       <div className={styles.franchisesContainer}>
         <Form /* legend={t("Billing.form.legend")} */ message={'Quiero más información sobre las franquicias'} />
@@ -47,12 +27,6 @@ function Franchises() {
           </figcaption>
         </figure>
       </div>
-
-      <header>
-
-        <h2 className={styles.heading}>{t("Franchises.heading.part1")} <span>{t("Franchises.heading.part2")}</span> <FontAwesomeIcon icon={faStore} className={styles.icon} /></h2>
-        <h3 className={styles.subheading}>{t("Franchises.subheading")}</h3>
-      </header>
     </section>
   );
 }

@@ -112,7 +112,14 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/jobs" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="j" onClick={() => handleActiveHashLink('franchises')}>
+            <NavLink to="/jobs" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="j"
+              onClick={() => {
+                document.startViewTransition(() => {
+                  flushSync(() => {
+                    handleActiveHashLink('franchises');
+                  });
+                });
+              }}>
               {t("Components.Navbar.jobs")}
             </NavLink>
           </li>
@@ -166,7 +173,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/jobs" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="j" onClick={() => handleActiveHashLink('franchises')}>
+            <NavLink to="/jobs" className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} accessKey="j" onClick={() => handleActiveHashLink('jobs')}>
               {t("Components.Navbar.jobs")}
             </NavLink>
           </li>
@@ -191,7 +198,7 @@ const Navbar = () => {
         </ul>
         <div className={styles.overlay} onClick={toggleSidebar}>
         </div>
-      </nav>
+      </nav >
 
     </>
   );
