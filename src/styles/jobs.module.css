@@ -1,7 +1,5 @@
 section.jobs {
   position: relative;
-  /* ← Necesario para contener el ::before */
-  min-height: 100dvh;
   /* ← Asegura que al menos cubra la pantalla */
   display: flex;
   flex-direction: column;
@@ -10,15 +8,17 @@ section.jobs {
   text-align: center;
   font-size: 2.25rem;
   font-weight: 700;
+  padding: 1rem;
   gap: 1.5rem;
-  padding-bottom: 5rem;
-  /* ← Espacio para el footer */
   overflow: hidden;
   /* ← Previene que el fondo se salga */
 
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
       width: 100%;
 
@@ -29,7 +29,7 @@ section.jobs {
     }
 
     h3.subheading {
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
@@ -40,7 +40,7 @@ section.jobs {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem 2rem;
 
     figure {
       width: 100%;
@@ -53,12 +53,8 @@ section.jobs {
       img {
         aspect-ratio: 17/9;
         width: 100%;
+        object-fit: cover;
         border-radius: 2.5rem;
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.05);
-        }
       }
 
       figcaption {
@@ -109,6 +105,16 @@ section.jobs::before {
 /* responsive design (mobile first) */
 @media only screen and (min-width: 768px) {
   section.jobs {
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.jobsContainer {
       width: auto;
       flex-direction: row;
@@ -120,7 +126,13 @@ section.jobs::before {
           width: 25rem;
           aspect-ratio: 6/3.5;
           border-radius: 0.5rem;
-          object-fit: cover;
+          transition: transform 0.3s ease-in-out;
+
+          @media(hover: hover) and (pointer: fine) {
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
         }
       }
     }

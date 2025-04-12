@@ -1,8 +1,6 @@
 section.franchises {
   position: relative;
   /* ← Necesario para contener el ::before */
-  min-height: 100dvh;
-  /* ← Asegura altura adecuada y adaptable */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,24 +8,25 @@ section.franchises {
   text-align: center;
   font-size: 2.25rem;
   font-weight: 700;
+  padding: 1rem;
   gap: 1.5rem;
-  padding-bottom: 5rem;
-  /* ← Espacio para el footer */
   overflow: hidden;
   /* ← Previene desbordes visuales */
 
-  img.fullWidthImage {
+  /*   img.fullWidthImage {
     width: 100vw;
     height: 20vh;
     object-fit: cover;
     display: block;
-  }
+  } */
 
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
-      width: 100%;
 
       span,
       svg.icon {
@@ -36,7 +35,7 @@ section.franchises {
     }
 
     h3.subheading {
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
@@ -48,7 +47,7 @@ section.franchises {
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem 2rem;
 
     figure {
       width: 100%;
@@ -61,13 +60,8 @@ section.franchises {
       img {
         width: 100%;
         aspect-ratio: 16/9;
-        border-radius: 2.5rem;
-        transition: transform 0.3s ease-in-out;
         object-fit: cover;
-
-        &:hover {
-          transform: scale(1.05);
-        }
+        border-radius: 2.5rem;
       }
 
       figcaption {
@@ -117,6 +111,17 @@ section.franchises::before {
 /* responsive design (mobile first) */
 @media only screen and (min-width: 768px) {
   section.franchises {
+
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.franchisesContainer {
       width: auto;
       flex-direction: row;
@@ -128,7 +133,13 @@ section.franchises::before {
           width: 25rem;
           aspect-ratio: 4/3;
           border-radius: 0.5rem;
-          object-fit: cover;
+          transition: transform 0.3s ease-in-out;
+
+          @media(hover: hover) and (pointer: fine) {
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
         }
       }
     }

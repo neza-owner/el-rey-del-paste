@@ -1,8 +1,8 @@
 section.billing {
+  /* ← necesario para que ::before se posicione dentro de esta sección */
   position: relative;
-  /* ← Necesario para que ::before se posicione dentro de esta sección */
-  min-height: 100dvh;
-  /* ← Asegura que la sección cubra al menos toda la pantalla visible */
+  /* asegura que la sección cubra al menos toda la pantalla visible */
+  /* max-height: 100dvh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,18 +10,18 @@ section.billing {
   text-align: center;
   font-size: 2.25rem;
   font-weight: 700;
+  padding: 1rem;
   gap: 1.5rem;
-  padding-bottom: 5rem;
-  /* ← Espacio para que el footer no se tape */
   overflow: hidden;
   /* ← Evita que ::before se desborde */
 
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
 
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
-      width: 100%;
 
       span,
       svg.icon {
@@ -30,7 +30,7 @@ section.billing {
     }
 
     h3.subheading {
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
@@ -42,7 +42,7 @@ section.billing {
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem 2rem;
 
     figure {
       width: 100%;
@@ -57,11 +57,6 @@ section.billing {
         aspect-ratio: 16/9;
         object-fit: cover;
         border-radius: 2.5rem;
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.05);
-        }
       }
 
       figcaption {
@@ -111,18 +106,34 @@ section.billing::before {
 /* responsive design (mobile first) */
 @media only screen and (min-width: 768px) {
   section.billing {
+
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.billingContainer {
       width: auto;
       flex-direction: row;
       justify-content: space-between;
-      padding: 0rem;
 
       figure {
         img {
           width: 25rem;
           aspect-ratio: 4/3;
           border-radius: 0.5rem;
-          object-fit: cover;
+          transition: transform 0.3s ease-in-out;
+
+          @media(hover: hover) and (pointer: fine) {
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
         }
       }
     }
