@@ -152,10 +152,10 @@ section.hero::before {
   left: 0;
   width: 200%;
   height: 200%;
-  background-image: url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png");
+  background-image: url("/marcaagua.webp"),
+    url("/marcaagua.png"),
+    url("/marcaagua.png"),
+    url("/marcaagua.png");
   background-size: 150px 150px;
   background-repeat: repeat;
   background-position: 0px 0px,
