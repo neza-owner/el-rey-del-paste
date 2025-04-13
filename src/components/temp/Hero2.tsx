@@ -6,14 +6,11 @@ import styles from "./hero2.module.css";
 export default function Hero2() {
   const [t] = useTranslation("global");
   return (
-    <section className={styles.hero}>
+    <section id='home' className={styles.hero}>
       {/* animated title */}
       <header className={styles.header}>
         <img src="./PastePersonaje.png" alt="Logo" className={styles.titleLogo} />
-        <img src="./font.svg" alt="Logo" className={styles.fontTitle} />
-        {/* <h1 className={styles.heading}>
-          <TextGenerateEffect words="EL REY DEL PASTE" />
-        </h1> */}
+        <img src="./rrr.png" alt="Logo" className={styles.fontTitle} />
       </header>
 
       {/* hero image */}

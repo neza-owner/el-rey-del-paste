@@ -66,6 +66,8 @@ section.location {
         font-size: 0.5em;
         font-weight: 500;
         color: #4B5563;
+        text-wrap: pretty;
+        overflow-wrap: break-word;
       }
 
       div.frameContainer {

@@ -13,27 +13,27 @@
 }
 
 section.availableOn {
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
-}
-
-section.availableOn {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
-  gap: 1.5rem;
   margin-top: 8rem;
+  padding: 1rem;
+  gap: 1rem;
+
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
-      width: 100%;
 
       span {
         color: var(--primary-color);
@@ -41,16 +41,12 @@ section.availableOn {
     }
 
     h3.subheading {
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
 
   div.platforms {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
@@ -58,12 +54,18 @@ section.availableOn {
     a.link {
       padding: 1rem;
       border-radius: 0.5rem;
-      width: 10rem;
-      height: 10rem;
-      aspect-ratio: 1/1;
+      transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
       img.imgLink {
-        object-fit: fill;
+        max-width: 8rem;
+        max-height: 8rem;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+
+      &:focus {
+        transform: scale(1.05);
       }
     }
   }
@@ -76,7 +78,9 @@ section.availableOn {
     color: #4B5563;
 
     span {
-      font-size: 1.4rem;
+      text-wrap: pretty;
+      overflow-wrap: break-word;
+      font-size: 0.5em;
       font-weight: 500;
     }
   }
@@ -88,13 +92,38 @@ section.availableOn {
   section.availableOn {
     margin-top: 0rem;
 
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.platforms {
       gap: 1.5rem;
       grid-template-columns: repeat(4, minmax(0, 1fr));
 
       a.link {
-        width: 15rem;
-        height: 15rem;
+
+        img.imgLink {
+          min-width: 13rem;
+          min-height: 13rem;
+        }
+
+        @media(hover: hover) and (pointer: fine) {
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    div.app {
+      span {
+        font-size: 0.6em;
       }
     }
   }

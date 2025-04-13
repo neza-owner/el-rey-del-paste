@@ -34,10 +34,9 @@ section.order {
 section.order div.footerCard {
   position: absolute;
   bottom: 2%;
-  left: 25%;
-  width: 50%;
+  width: 100%;
   height: 75%;
-  background-color: #ffc44f; /* morado */
+  background-color: #ffc44f; 
   z-index: -3;
   border-radius: 2rem;
 }
@@ -115,4 +114,16 @@ section.order img.arrowRight {
     transform: scaleX(-1) rotate(100deg);
     width: 4rem;
   }
+  
+  section.order div.footerCard {
+    position: absolute;
+    bottom: 2%;
+    left: 25%;
+    width: 50%;
+    height: 75%;
+    background-color: #ffc44f; 
+    z-index: -3;
+    border-radius: 2rem;
+  }
+
 }

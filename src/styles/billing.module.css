@@ -1,45 +1,27 @@
-section.billing::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png");
-  background-size: 150px 150px;
-  background-repeat: repeat;
-  background-position:
-    0px 0px,
-    75px 75px,
-    150px 0px,
-    225px 75px;
-  opacity: 0.03;
-  transform: scale(1.2); 
-  transform-origin: center;
-  z-index: -1000;
-  pointer-events: none;
-}
-
 section.billing {
-  /* height: 100%; */
-  /* min-height: calc(100vh - 20vh); */
+  /* ← necesario para que ::before se posicione dentro de esta sección */
+  position: relative;
+  /* asegura que la sección cubra al menos toda la pantalla visible */
+  /* max-height: 100dvh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 2.25rem;
   font-weight: 700;
+  padding: 1rem;
   gap: 1.5rem;
+  overflow: hidden;
+  /* ← Evita que ::before se desborde */
 
   header {
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+
     h2.heading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 600;
-      width: 100%;
 
       span,
       svg.icon {
@@ -48,7 +30,7 @@ section.billing {
     }
 
     h3.subheading {
-      font-size: 0.7em;
+      font-size: 0.6em;
       font-weight: 400;
     }
   }
@@ -60,7 +42,7 @@ section.billing {
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem 2rem;
 
     figure {
       width: 100%;
@@ -75,11 +57,6 @@ section.billing {
         aspect-ratio: 16/9;
         object-fit: cover;
         border-radius: 2.5rem;
-        transition: transform 0.3s ease-in-out;
-
-        &:hover {
-          transform: scale(1.05);
-        }
       }
 
       figcaption {
@@ -99,23 +76,64 @@ section.billing {
   }
 }
 
-/* responsive design (mobile first) */
+section.billing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("/marcaagua.webp"),
+    url("/marcaagua.webp"),
+    url("/marcaagua.webp"),
+    url("/marcaagua.webp");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-position:
+    0px 0px,
+    75px 75px,
+    150px 0px,
+    225px 75px;
+  opacity: 0.03;
+  transform: scale(1.2);
+  transform-origin: center;
+  z-index: -1;
+  /* ← Esto evita que esté por encima del footer */
+  pointer-events: none;
+}
 
+/* responsive design (mobile first) */
 @media only screen and (min-width: 768px) {
   section.billing {
+
+    header {
+      h2.heading {
+        font-size: 1.5em;
+      }
+
+      h3.subheading {
+        font-size: 0.7em;
+      }
+    }
+
     div.billingContainer {
       width: auto;
       flex-direction: row;
       justify-content: space-between;
-      padding: 0rem;
 
       figure {
-
         img {
           width: 25rem;
           aspect-ratio: 4/3;
           border-radius: 0.5rem;
-          object-fit: cover;
+          transition: transform 0.3s ease-in-out;
+
+          @media(hover: hover) and (pointer: fine) {
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
         }
       }
     }
