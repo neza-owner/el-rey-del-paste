@@ -19,6 +19,7 @@ function Billing() {
         <h2 className={styles.heading}>{t("Billing.heading.part1")} <span>{t("Billing.heading.part2")}</span> <FontAwesomeIcon icon={faFileInvoice} className={styles.icon} /></h2>
         <h3 className={styles.subheading}>{t("Billing.subheading")}</h3>
       </header>
+      
       <div className={styles.billingContainer}>
         <Form /* legend={t("Billing.form.legend")} */ showRFC={true} message={'Requiero facturar mi compra'} />
         <figure>

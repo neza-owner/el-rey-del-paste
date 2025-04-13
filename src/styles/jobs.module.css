@@ -83,10 +83,10 @@ section.jobs::before {
   width: 100%;
   height: 100%;
   background-image:
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png"),
-    url("./marcaagua.png");
+    url("/marcaagua.webp"),
+    url("/marcaagua.webp"),
+    url("/marcaagua.webp"),
+    url("/marcaagua.webp");
   background-size: 150px 150px;
   background-repeat: repeat;
   background-position:
