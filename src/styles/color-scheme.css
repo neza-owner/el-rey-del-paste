@@ -10,6 +10,7 @@
     --alert-color: hsla(0, 100%, 50%, 0.847);
     --font-color: hsl(0, 0%, 10%);
     --font-aux-color: hsl(215, 14%, 34%);
+    --background-color: hsl(0, 0%, 100%);
     accent-color: var(--accent-color);
     color: var(--font-color);
   }
@@ -27,6 +28,7 @@
     --alert-color: hsla(0, 84%, 40%, 0.847);
     --font-color: black;
     --font-aux-color: hsl(215, 14%, 36%);
+    --background-color: hsl(0, 0%, 10%);
     accent-color: var(--accent-color);
     color: var(--font-color);
   }
