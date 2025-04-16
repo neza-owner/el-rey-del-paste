@@ -75,6 +75,11 @@ section.coupons {
         aspect-ratio: 16/9;
         object-fit: cover;
         border-radius: 2.5rem;
+        -webkit-border-radius: 2.5rem;
+        -moz-border-radius: 2.5rem;
+        -ms-border-radius: 2.5rem;
+        -o-border-radius: 2.5rem;
+
         filter: brightness(100%);
         border: 4px solid #fff;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -94,7 +99,7 @@ section.coupons {
           text-wrap: pretty;
           overflow-wrap: break-word;
           font-weight: 500;
-          color: #4b5563;
+          color: var(--font-aux-color);
         }
       }
     }
@@ -218,7 +223,7 @@ section.coupons {
             text-wrap: pretty;
             overflow-wrap: break-word;
             font-weight: 500;
-            color: #4b5563;
+            color: var(--font-aux-color);
           }
         }
       }

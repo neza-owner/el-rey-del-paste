@@ -64,6 +64,10 @@ section.menu {
       padding: 0.25em;
       border: none;
       border-radius: 1.5em;
+      -webkit-border-radius: 1.5em;
+      -moz-border-radius: 1.5em;
+      -ms-border-radius: 1.5em;
+      -o-border-radius: 1.5em;
       font-size: 0.8em;
       font-weight: 400;
       cursor: pointer;

@@ -54,7 +54,7 @@ nav.nav {
       }
 
       .inactiveLink {
-        color: #4b5563;
+        color: var(--font-aux-color);
       }
 
       /* should not be used because it's inside an outlet and cause ui bugs */

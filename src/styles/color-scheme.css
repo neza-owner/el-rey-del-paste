@@ -7,10 +7,11 @@
   :root {
     --primary-color: hsl(27, 96%, 61%);
     --accent-color: hsl(142, 76%, 36%);
-    --alert-color: hsla(0, 100%, 50%, 0.847)
-      /* hsl(0, 91%, 71%) */
-    ;
+    --alert-color: hsla(0, 100%, 50%, 0.847);
+    --font-color: hsl(0, 0%, 10%);
+    --font-aux-color: hsl(215, 14%, 34%);
     accent-color: var(--accent-color);
+    color: var(--font-color);
   }
 
   ::selection {
@@ -24,7 +25,10 @@
     --primary-color: hsl(27, 64%, 53%);
     --accent-color: hsl(142, 81%, 30%);
     --alert-color: hsla(0, 84%, 40%, 0.847);
+    --font-color: hsl(0, 0%, 100%);
+    --font-aux-color: hsl(215, 14%, 36%);
     accent-color: var(--accent-color);
+    color: var(--font-color);
   }
 
   ::selection {

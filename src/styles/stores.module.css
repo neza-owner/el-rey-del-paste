@@ -80,6 +80,10 @@ section.stores {
       background-color: rgb(255, 200, 97);
       padding: 2rem;
       border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
 
       display: flex;
       flex-direction: row;

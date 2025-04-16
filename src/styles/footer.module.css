@@ -3,7 +3,7 @@ footer.footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--font-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,7 +19,7 @@ footer.footer {
     /* width: 32ch;
     text-wrap: pretty;
     text-align: left;
-    color: #4b5563; */
+    color: var(--font-aux-color); */
   }
 
   div.navigation {
@@ -98,7 +98,7 @@ footer.footer {
         transition: color 0.3s ease;
 
         &:hover {
-          color: #4b5563;
+          color: var(--font-aux-color);
         }
       }
     }

@@ -63,6 +63,10 @@ section.hero {
         /* #e5e7eb */
       ;
       border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,6 +93,10 @@ section.hero {
       font-weight: 700;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
       color: #fff;
       font-size: 0.7em;
       width: 14ch;
@@ -134,7 +142,7 @@ section.hero {
       span+p {
         font-size: 0.5em;
         font-weight: 400;
-        color: #4b5563;
+        color: var(--font-aux-color);
       }
     }
   }
@@ -213,7 +221,7 @@ section.hero::after {
         span+p {
           font-size: 0.6em;
           font-weight: 400;
-          color: #4b5563;
+          color: var(--font-aux-color);
         }
       }
     }
