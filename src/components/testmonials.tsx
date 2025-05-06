@@ -7,7 +7,7 @@ const Testimonials = () => {
     username: string;
     comment: string;
     image: string;
-    profilelink: string;
+    profileLink: string;
   }
 
   const [t] = useTranslation("global");
@@ -50,11 +50,11 @@ const Testimonials = () => {
             />
 
             <div className={styles.caption}>
-              <p className={styles.comment}>
-                “{testimonial.comment}”
+              <p className={styles.comment} data-end='"'>
+                “{testimonial.comment}
               </p>
               <a
-                href={testimonial.profilelink}
+                href={testimonial.profileLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.username}>

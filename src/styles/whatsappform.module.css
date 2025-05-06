@@ -2,7 +2,8 @@ form.form {
   max-width: 24rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--background-color);
+  background-color: var(--background-aux-color);
+  box-shadow: 0 4px 6px -1px var(--shadow-md), 0 2px 4px -2px var(--shadow-md);
 
   fieldset {
     display: flex;
@@ -25,7 +26,7 @@ form.form {
     width: 100%;
     padding: 0.5rem;
     border-radius: 0.25rem;
-    border: 1px solid #e4e4e7;
+    border: 1px solid var(--details-color);
     font-size: 1rem;
     font-weight: 400;
 
@@ -46,7 +47,7 @@ form.form {
     border: none;
     font-size: 1rem;
     font-weight: 500;
-    background-color: #22c55e;
+    background-color: var(--whatsapp-color);
     color: hsl(0, 0%, 100%);
     cursor: pointer;
     transition: all 0.3s ease;

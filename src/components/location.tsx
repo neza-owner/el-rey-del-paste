@@ -60,7 +60,7 @@ const Location = () => {
             <div className={styles.franchise} key={franchise.id}>
 
               {/* google maps iframe */}
-              <div className={`${styles.frameContainer} shadow-lg`}>
+              <div className={styles.frameContainer}>
 
                 {/* window frame container */}
                 <iframe

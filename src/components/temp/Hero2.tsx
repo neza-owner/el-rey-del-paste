@@ -23,10 +23,10 @@ export default function Hero2() {
 
       {/* cta buttons */}
       <div className={styles.ctaBtns}>
-        <a role='button' className={`${styles.ctaBtn} ${styles.main} shadow-md`} href="#order">
+        <a role='button' className={`${styles.ctaBtn} ${styles.main}`} href="#order">
           {t("Hero.ctaBtn")}
         </a>
-        <a role='button' className={`${styles.ctaBtn} ${styles.secondary} shadow-md`} href="#menu">
+        <a role='button' className={`${styles.ctaBtn} ${styles.secondary}`} href="#menu">
           {t("Hero.auxCtaBtn")}
         </a>
       </div>

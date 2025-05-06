@@ -1,7 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import styles from '../styles/parallax.module.css';
-import { useTranslation } from 'react-i18next';
-
 
 const images = [
   "/team.jpg", "/local1.jpg", "/paste.jpg"];
@@ -31,28 +30,24 @@ const ParallaxSection = () => {
   return (
     <section className={styles.parallax}>
       <ParallaxProvider>
-        <div className="relative w-full overflow-hidden pb-[10rem]"> {/* Altura del viewport al 150% */}
+        <div className={styles.container}>
 
           {/* Primer párrafo con efecto Parallax */}
           <Parallax speed={-15}>
-            <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8 items-center my-20 px-4">
+            <div className={styles.firstParagraph}>
               {/* Primera columna: Título y texto */}
 
               {/* Segunda columna: Imagen o espacio vacío (puedes personalizarlo) */}
-              <div className="flex justify-center">
-                <p className=" w-full  text-eg text-gray-700 mt-4 line-clamp-3 text-center">
+              <div className={styles.secondColumn}>
+                <p className={styles.paragraph}>
                   {t("Palallax.part1")}
-                  
                 </p>
               </div>
             </div>
           </Parallax>
 
-
           {/* Sección Parallax con imágenes */}
-          <div className="relative w-full h-[130vh]"> {/* Contenedor relative */}
-
-
+          <div className="relative w-full h-[130vh]">
 
             {images.map((img, index) => (
               <Parallax key={`img-${index}`} speed={speeds[index]}>
@@ -83,7 +78,6 @@ const ParallaxSection = () => {
               />
             </Parallax>
 
-
             {pastes.map((img, index) => (
               <Parallax key={`paste-${index}`} speed={speedspastes[index]}>
                 <img
@@ -100,7 +94,6 @@ const ParallaxSection = () => {
 
           </div>
 
-
           {/* Segundo párrafo con efecto Parallax */}
           <Parallax speed={10}>
             <div className="relative flex justify-center mt-[-10rem]">
@@ -113,7 +106,6 @@ const ParallaxSection = () => {
             </div>
           </Parallax>
 
-
           {/* Texto con un efecto Parallax más lento */}
           <Parallax speed={3}>
             <div className="max-w-3xl text-center mt-[6rem] px-4 relative z-10">
@@ -122,12 +114,6 @@ const ParallaxSection = () => {
               </p>
             </div>
           </Parallax>
-
-
-
-
-
-
         </div>
       </ParallaxProvider>
     </section>

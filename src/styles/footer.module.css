@@ -3,7 +3,7 @@ footer.footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: var(--font-color);
+  color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: row;
   align-items: center;

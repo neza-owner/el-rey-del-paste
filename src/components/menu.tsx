@@ -65,7 +65,7 @@ export default function Menu() {
 
       <div className={styles.pastesCardsContainer}>
         {filteredPastes.map((paste) => (
-          <div key={paste.id} className={`${styles.pasteCard} shadow-md`}>
+          <div key={paste.id} className={styles.pasteCard}>
             <img src={paste.image} alt={paste.name} className={styles.paste} />
             {paste.isFavorite && (
               <img src={crown} className={styles.crown} alt="Logo" />

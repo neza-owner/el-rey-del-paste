@@ -38,7 +38,7 @@ const WhatsAppForm = ({ legend }: WhatsAppFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={`${styles.form} shadow-md`}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <fieldset>
         <legend className={styles.legend}>{legend}</legend>
         <input

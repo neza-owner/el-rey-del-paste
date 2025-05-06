@@ -9,20 +9,21 @@ div.landing {
     overflow-x: hidden; */
   /* z-index: 1; */
 
-  background-color: rgb(247, 244, 235);
+  /* background-color: rgb(247, 244, 235); */
+  background-color: var(--background-color);
+  color: var(--font-color);
 
   &::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: repeating-linear-gradient(45deg,
-        rgba(255, 228, 196, 0.05),
-        rgba(255, 228, 196, 0.05) 10px,
-        transparent 10px,
-        transparent 20px);
+    /*background-image: repeating-linear-gradient(45deg,        rgba(255, 228, 196, 0.05),        rgba(255, 228, 196, 0.05) 10px,        transparent 10px,        transparent 20px);
+    */
     animation: moveDiagonal 30s linear infinite;
-    /* z-index: 0; */
+    /*z-index: 0;
+    */
     pointer-events: none;
+    -webkit-animation: moveDiagonal 30s linear infinite;
   }
 
   text-align: center;

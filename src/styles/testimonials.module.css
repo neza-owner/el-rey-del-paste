@@ -93,7 +93,8 @@ section.testimonials {
             color: var(--accent-color)
           }
 
-          &::last-letter {
+          &::after {
+            content: attr(data-end);
             color: var(--accent-color)
           }
         }

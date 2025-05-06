@@ -35,11 +35,8 @@ section.hero {
       width: 10em;
       height: 5em;
       object-fit: contain;
-      filter: drop-shadow(15px 15px 15px rgba(255, 255, 255, 0.9));
-      /*mask-image: url('./font.svg');
-      mask-size: contain;
-      mask-repeat: no-repeat;
-      */
+      filter: drop-shadow(15px 15px 15px var(--shadow));
+      -webkit-filter: drop-shadow(15px 15px 15px var);
     }
 
     /* h1.heading {
@@ -59,9 +56,6 @@ section.hero {
 
     img.heroImg {
       height: 10rem;
-      background-color: rgb(229 231 235 / 1, 1)
-        /* #e5e7eb */
-      ;
       border-radius: 0.5rem;
       -webkit-border-radius: 0.5rem;
       -moz-border-radius: 0.5rem;
@@ -97,9 +91,9 @@ section.hero {
       -moz-border-radius: 0.5rem;
       -ms-border-radius: 0.5rem;
       -o-border-radius: 0.5rem;
-      color: #fff;
       font-size: 0.7em;
       width: 14ch;
+      box-shadow: 0 4px 6px -1px var(--shadow-md), 0 2px 4px -2px var(--shadow-md);
     }
 
     a.main {
@@ -187,7 +181,7 @@ section.hero::after {
   height: 100%;
   background: linear-gradient(to bottom,
       rgba(255, 255, 255, 0) 60%,
-      rgb(247, 241, 218) 100%);
+      var(--background-color) 100%);
   z-index: 1;
   pointer-events: none;
 }

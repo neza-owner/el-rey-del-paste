@@ -1,24 +1,24 @@
 :root {
   color-scheme: light dark;
   interpolate-size: allow-keywords;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --primary-color: hsl(27, 96%, 61%);
-    --accent-color: hsl(142, 76%, 36%);
-    --alert-color: hsla(0, 100%, 50%, 0.847);
-    --font-color: hsl(0, 0%, 10%);
-    --font-aux-color: hsl(215, 14%, 34%);
-    --background-color: hsl(0, 0%, 100%);
-    accent-color: var(--accent-color);
-    color: var(--font-color);
-  }
-
-  ::selection {
-    background-color: var(--accent-color);
-    color: hsl(0, 0%, 100%);
-  }
+  --primary-color: hsl(27, 96%, 61%);
+  --accent-color: hsl(142, 76%, 36%);
+  --alert-color: hsla(0, 100%, 50%, 0.847);
+  --font-color: hsl(0, 0%, 10%);
+  --font-aux-color: hsl(215, 14%, 35%);
+  --background-color: hsl(45, 43%, 95%);
+  --background-aux-color: hsl(0, 0%, 100%);
+  --details-color: hsl(240, 6%, 90%);
+  --shadow: rgba(255, 255, 255, 0.9);
+  --shadow-hero: hsl(48, 64%, 91%);
+  --shadow-md: hsla(0, 0%, 0%, 0.1);
+  --disclaimer: hsl(215, 14%, 25%);
+  --bg-box: hsl(40, 100%, 65%);
+  --bg-box-border: hsl(40, 100%, 85%);
+  --whatsapp-color: hsl(142, 71%, 45%);
+  --parallax: hsl(217, 19%, 27%);
+  accent-color: var(--accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,15 +26,27 @@
     --primary-color: hsl(27, 64%, 53%);
     --accent-color: hsl(142, 81%, 30%);
     --alert-color: hsla(0, 84%, 40%, 0.847);
-    --font-color: black;
-    --font-aux-color: hsl(215, 14%, 36%);
-    --background-color: hsl(0, 0%, 10%);
+    --font-color: hsl(0, 0%, 100%);
+    --font-aux-color: hsl(215, 14%, 35%);
+    --background-color: hsl(45, 43%, 10%);
+    --background-aux-color: hsl(200, 6%, 10%);
+    --details-color: hsl(0, 0%, 20%);
+    --shadow: rgba(0, 0, 0, 0.9);
+    --shadow-hero: hsl(48, 64%, 10%);
+    --shadow-md: hsla(0, 0%, 100%, 0.1);
+    --bg-box: hsl(40, 100%, 45%);
+    --bg-box-border: hsl(40, 100%, 35%);
+    --parallax: hsl(34, 10%, 71%);
     accent-color: var(--accent-color);
-    color: var(--font-color);
   }
+}
 
-  ::selection {
-    background-color: var(--accent-color);
-    color: hsl(0, 0%, 100%);
-  }
+/* body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+} */
+
+::selection {
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
 }

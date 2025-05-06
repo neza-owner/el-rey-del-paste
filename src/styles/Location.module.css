@@ -13,6 +13,10 @@
 }
 
 section.location {
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,10 +25,6 @@ section.location {
   font-weight: 700;
   padding: 1rem;
   gap: 1rem;
-
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
 
   header {
     text-wrap: pretty;
@@ -65,7 +65,7 @@ section.location {
       h4 {
         font-size: 0.5em;
         font-weight: 500;
-        color: #4B5563;
+        color: var(--font-aux-color);
         text-wrap: pretty;
         overflow-wrap: break-word;
       }
@@ -79,9 +79,11 @@ section.location {
         -o-border-radius: 0.5rem;
 
         border-width: 1px;
-        border-color: #d1d5db;
+        border-color: var(--details-color);
         aspect-ratio: 16 / 9;
         overflow: hidden;
+
+        box-shadow: 0 10px 15px -3px var(--shadow-md), 0 4px 6px -4px var(--shadow-md);
 
         iframe.map {
           width: 100%;
