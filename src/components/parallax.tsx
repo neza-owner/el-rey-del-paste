@@ -32,12 +32,12 @@ const ParallaxSection = () => {
       <ParallaxProvider>
         <div className={styles.container}>
 
-          {/* Primer párrafo con efecto Parallax */}
+          {/* first paragraph with Parallax effect */}
           <Parallax speed={-15}>
             <div className={styles.firstParagraph}>
-              {/* Primera columna: Título y texto */}
+              {/* first column: Title and text */}
 
-              {/* Segunda columna: Imagen o espacio vacío (puedes personalizarlo) */}
+              {/* second column: Image or empty space (you can customize it) */}
               <div className={styles.secondColumn}>
                 <p className={styles.paragraph}>
                   {t("Palallax.part1")}
@@ -46,25 +46,25 @@ const ParallaxSection = () => {
             </div>
           </Parallax>
 
-          {/* Sección Parallax con imágenes */}
-          <div className="relative w-full h-[130vh]">
+          {/* parallax section with images */}
+          <div className={styles.parallaxImages}>
 
             {images.map((img, index) => (
               <Parallax key={`img-${index}`} speed={speeds[index]}>
                 <img
                   src={img}
                   alt={`Imagen ${index + 1}`}
-                  className={`absolute ${positions[index]} rounded-lg shadow-lg`}
+                  className={`${styles.firstImage} ${positions[index]} `}
                   style={{ transform: scales[index], transformOrigin: "center" }}
                 />
               </Parallax>
             ))}
-            <Parallax key={`paste-3`} speed={-20}>
 
+            <Parallax key={`paste-3`} speed={-20}>
               <img
                 src={"/paste1.png"}
                 alt={`Paste 1`}
-                className={"absolute top-10 right-10"}
+                className={styles.secondImage}
                 style={{ transform: "scale(0.6)", transformOrigin: "center" }}
               />
             </Parallax>
@@ -73,7 +73,7 @@ const ParallaxSection = () => {
               <img
                 src={"/puesto.jpg"}
                 alt={`puesto`}
-                className="absolute top-60 right-0 rounded-lg shadow-lg "
+                className={styles.thirdImage}
                 style={{ transform: "scale(0.2)", transformOrigin: "center" }}
               />
             </Parallax>
@@ -83,7 +83,7 @@ const ParallaxSection = () => {
                 <img
                   src={img}
                   alt={`Paste ${index + 1}`}
-                  className={`absolute ${positionspastes[index]}`}
+                  className={`${styles.fourthImage} ${positionspastes[index]}`}
                   style={{
                     transform: "scale(0.6)",
                     transformOrigin: "center"
@@ -91,25 +91,24 @@ const ParallaxSection = () => {
                 />
               </Parallax>
             ))}
-
           </div>
 
-          {/* Segundo párrafo con efecto Parallax */}
+          {/* second paragraph with Parallax effect */}
           <Parallax speed={10}>
-            <div className="relative flex justify-center mt-[-10rem]">
+            <div className={styles.secondParagraph}>
               <img
                 src={"/paste3.png"}
                 alt={`Paste3`}
-                className="w-auto absolute top-[-5rem] right-1/3 transform -translate-x-1/2 z-[-1]"
+                className={`${styles.illustrations}`}
                 style={{ transform: "scale(0.8)", transformOrigin: "center" }}
               />
             </div>
           </Parallax>
 
-          {/* Texto con un efecto Parallax más lento */}
+          {/* text with a slower Parallax effect */}
           <Parallax speed={3}>
-            <div className="max-w-3xl text-center mt-[6rem] px-4 relative z-10">
-              <p className="text-eg text-gray-700 mt-2 p-4">
+            <div className={styles.textParallax}>
+              <p className={styles.paragraph}>
                 {t("Palallax.part2")}
               </p>
             </div>

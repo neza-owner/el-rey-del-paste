@@ -94,6 +94,7 @@ section.hero {
       font-size: 0.7em;
       width: 14ch;
       box-shadow: 0 4px 6px -1px var(--shadow-md), 0 2px 4px -2px var(--shadow-md);
+      color: hsl(0, 0%, 100%);
     }
 
     a.main {

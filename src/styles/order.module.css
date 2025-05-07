@@ -50,7 +50,6 @@ section.order {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
     padding: 1rem;
     background-color: var(--bg-box);
     border-radius: 2rem;
