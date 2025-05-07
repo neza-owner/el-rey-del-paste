@@ -19,6 +19,12 @@
 }
 
 section.combo {
+  animation: appear 3s linear;
+  /* animation: appear 5s linear; */
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+  /*animation-range: entry 0% cover 40%;*/
+
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -30,13 +36,6 @@ section.combo {
   font-weight: 700;
   gap: 2rem;
   padding: 1rem;
-
-  animation: appear 3s linear;
-  /* animation: appear 5s linear; */
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
-  /*animation-range: entry 0% cover 40%;
-  */
 
   header {
     text-wrap: pretty;
@@ -89,6 +88,7 @@ section.combo {
       font-weight: 600;
       cursor: pointer;
       color: var(--primary-color);
+      background-color: transparent;
     }
 
     span.name {

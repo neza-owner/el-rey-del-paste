@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 /* accessibility: reduce motion for all animations */
 @media (prefers-reduced-motion: no-preference) {
   /* smooth scroll */
@@ -22,4 +20,9 @@ section {
   /* position: relative;
   z-index: 1; */
   scroll-margin-top: 8vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
 }

@@ -17,12 +17,15 @@ const scales = [
 ]
 
 const positions = [
-  "top-5 left-70", "top-0 right-20", "top-40 left-5"
+  { top: '1.25rem', right: '50rem' },
+  { top: '0rem', right: '5rem' },
+  { top: '10rem', left: '1.25rem' }
 ];
 
 const positionspastes = [
-  "top-20 left-72", "top-40 right-10",
-  "top-40 left-5"
+  { top: "5rem", left: "18rem" },
+  { top: "10rem", right: "2.5rem" },
+  { top: "10rem", left: "1.25rem" }
 ];
 
 const ParallaxSection = () => {
@@ -54,8 +57,12 @@ const ParallaxSection = () => {
                 <img
                   src={img}
                   alt={`Imagen ${index + 1}`}
-                  className={`${styles.firstImage} ${positions[index]} `}
-                  style={{ transform: scales[index], transformOrigin: "center" }}
+                  className={styles.firstImage}
+                  style={{
+                    transform: scales[index],
+                    transformOrigin: "center",
+                    ...positions[index]
+                  }}
                 />
               </Parallax>
             ))}
@@ -83,10 +90,11 @@ const ParallaxSection = () => {
                 <img
                   src={img}
                   alt={`Paste ${index + 1}`}
-                  className={`${styles.fourthImage} ${positionspastes[index]}`}
+                  className={styles.fourthImage}
                   style={{
                     transform: "scale(0.6)",
-                    transformOrigin: "center"
+                    transformOrigin: "center",
+                    ...positionspastes[index]
                   }}
                 />
               </Parallax>

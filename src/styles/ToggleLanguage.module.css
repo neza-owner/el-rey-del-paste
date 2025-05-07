@@ -3,6 +3,7 @@ button.langBtn {
   border: none;
   cursor: pointer;
   color: var(--font-aux-color);
+  background-color: transparent;
 }
 
 /* button.langBtn {
