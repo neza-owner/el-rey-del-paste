@@ -26,7 +26,7 @@
     --primary-color: hsl(27, 64%, 53%);
     --accent-color: hsl(142, 81%, 30%);
     --alert-color: hsla(0, 84%, 40%, 0.847);
-    --font-color: hsl(0, 0%, 100%);
+    --font-color: hsl(0, 0%, 90%);
     --font-aux-color: hsl(215, 14%, 35%);
     --background-color: hsl(45, 43%, 10%);
     --background-aux-color: hsl(200, 6%, 10%);
@@ -38,6 +38,11 @@
     --bg-box-border: hsl(40, 100%, 35%);
     --parallax: hsl(34, 10%, 71%);
     accent-color: var(--accent-color);
+  }
+
+  img {
+    filter: brightness(90%) contrast(110%);
+    -webkit-filter: brightness(90%) contrast(110%);
   }
 }
 

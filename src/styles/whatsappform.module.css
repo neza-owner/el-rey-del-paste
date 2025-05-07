@@ -30,6 +30,7 @@ form.form {
     border: 1px solid var(--details-color);
     font-size: 1rem;
     font-weight: 400;
+    font-family: "Oswald", sans-serif;
 
     &:is(:hover, :focus) {
       border-color: var(--accent-color);

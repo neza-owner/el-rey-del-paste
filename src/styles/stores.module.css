@@ -27,7 +27,6 @@ section.stores {
   gap: 1rem;
 
   header {
-
     h2.heading {
       font-size: 1.25em;
       font-weight: 600;
@@ -45,7 +44,7 @@ section.stores {
     }
   }
 
-  div.stores {
+  div.storesContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,7 +92,7 @@ section.stores {
       gap: 1rem;
 
       img.imgGallery {
-        max-width: 7rem;
+        max-width: 15rem;
         object-fit: cover;
         border-radius: 0.5rem;
         aspect-ratio: 9/16;
@@ -143,7 +142,7 @@ section.stores {
       }
     }
 
-    div.stores {
+    div.storesContainer {
 
       div.gallery {
         img.imgGallery {

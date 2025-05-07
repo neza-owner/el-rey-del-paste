@@ -51,7 +51,7 @@ function Stores() {
 
       {
         stores.map((stores) => (
-          <div key={stores.id} className={styles.stores}>
+          <div key={stores.id} className={styles.storesContainer}>
             <h4 className={styles.title}><img src={pin} alt="icon" className={styles.img} />&nbsp;{t("Stores.store")} {stores.id}: {stores.name}</h4>
             <h5>{stores.legend}</h5>
 

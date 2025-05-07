@@ -54,7 +54,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.leftContainer}>
+      <div className={styles.rightContainer}>
         <ul>
           <li>
             <Link to="/billing" className={styles.footerHashLink}>

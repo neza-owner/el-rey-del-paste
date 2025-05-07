@@ -71,6 +71,7 @@ nav.nav {
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: transparent;
 
       svg {
         width: 100%;

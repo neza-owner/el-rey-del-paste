@@ -79,6 +79,10 @@ section.menu {
       color: hsl(0, 0%, 100%);
       font-weight: 600;
     }
+
+    button.switchBtn\:inactive {
+      background-color: transparent;
+    }
   }
 
   div.pastesCardsContainer {
@@ -163,7 +167,6 @@ section.menu {
       }
 
       button.switchBtn\:inactive {
-        background-color: transparent;
 
         @media(hover: hover) and (pointer: fine) {
 
