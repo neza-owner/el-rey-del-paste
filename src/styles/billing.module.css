@@ -14,6 +14,7 @@ section.billing {
   gap: 1.5rem;
   overflow: hidden;
   /* ← Evita que ::before se desborde */
+  z-index: 0;
 
   header {
     text-wrap: pretty;
@@ -78,33 +79,33 @@ section.billing {
       }
     }
   }
-}
 
-section.billing::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    url("/marcaagua.webp"),
-    url("/marcaagua.webp"),
-    url("/marcaagua.webp"),
-    url("/marcaagua.webp");
-  background-size: 150px 150px;
-  background-repeat: repeat;
-  background-position:
-    0px 0px,
-    75px 75px,
-    150px 0px,
-    225px 75px;
-  opacity: 0.03;
-  transform: scale(1.2);
-  transform-origin: center;
-  z-index: -1;
-  /* ← Esto evita que esté por encima del footer */
-  pointer-events: none;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      url("/marcaagua.webp"),
+      url("/marcaagua.webp"),
+      url("/marcaagua.webp"),
+      url("/marcaagua.webp");
+    background-size: 150px 150px;
+    background-repeat: repeat;
+    background-position:
+      0px 0px,
+      75px 75px,
+      150px 0px,
+      225px 75px;
+    opacity: 0.03;
+    transform: scale(1.2);
+    transform-origin: center;
+    z-index: -1;
+    /* ← Esto evita que esté por encima del footer */
+    pointer-events: none;
+  }
 }
 
 /* responsive design (mobile first) */

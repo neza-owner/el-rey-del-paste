@@ -14,6 +14,7 @@ form.form {
     align-items: center;
     justify-content: center;
     width: 100%;
+    border: none;
   }
 
   /* legend {
@@ -40,8 +41,9 @@ form.form {
     -moz-border-radius: 0.25rem;
     -ms-border-radius: 0.25rem;
     -o-border-radius: 0.25rem;
+    font-family: "Oswald", sans-serif;
 
-    border: 1px solid #e4e4e7;
+    border: 1px solid var(--details-color);
     font-size: 1rem;
     font-weight: 400;
 
