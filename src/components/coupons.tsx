@@ -45,7 +45,7 @@ const Coupons = () => {
               {/* <p className={styles.couponExpiration}>Vigencia: 31 de diciembre de 2021</p> */}
             </figcaption>
           </figure>
-          <span>&Oacute;</span>
+          <span className={styles.or}>&Oacute;</span>
           <figure className={styles.reward}>
             <h4 className={styles.couponTitle}>{t("Coupons.rewards.full.title")}</h4>
             <img src="/coupons/reward2.JPG" alt="Coupon 1" className={styles.rewardImage} />
