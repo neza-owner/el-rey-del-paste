@@ -187,36 +187,6 @@ section.coupons {
         }
       }
 
-      figure.reward {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-
-        transition: transform 0.3s ease-in-out;
-
-        img {
-          width: min(23rem, 100%);
-          aspect-ratio: 16/9;
-          object-fit: cover;
-          border-radius: 2.5rem;
-          filter: brightness(120%);
-        }
-
-        figcaption {
-          font-size: 1rem;
-
-          p {
-            /* min-width: 64ch; */
-            text-wrap: pretty;
-            overflow-wrap: break-word;
-            font-weight: 500;
-            color: var(--font-aux-color);
-          }
-        }
-      }
-
       img.arrowLeft,
       img.equal,
       img.arrowRight {
@@ -233,7 +203,7 @@ section.coupons {
       }
 
       img.arrowLeft {
-        left: 6rem;
+        left: 7rem;
         transform: scaleX(-1) rotate(130deg);
       }
 
@@ -243,7 +213,7 @@ section.coupons {
       } */
 
       img.arrowRight {
-        right: 7rem;
+        right: 8rem;
         transform: scaleX(1) rotate(-220deg);
       }
 
@@ -255,9 +225,15 @@ section.coupons {
         gap: 1rem;
 
         figure.reward {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
           background-color: var(--background-aux-color);
           border-radius: 1rem;
           padding: 0.5rem 1rem;
+          transition: transform 0.3s ease-in-out;
 
           h4.couponTitle {
             text-wrap: pretty;
@@ -269,6 +245,22 @@ section.coupons {
 
           img {
             max-width: 20rem;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 2.5rem;
+            filter: brightness(120%);
+          }
+
+          figcaption {
+            font-size: 1rem;
+
+            p {
+              /* min-width: 64ch; */
+              text-wrap: pretty;
+              overflow-wrap: break-word;
+              font-weight: 500;
+              color: var(--font-aux-color);
+            }
           }
 
           @media(hover: hover) and (pointer: fine) {
