@@ -23,7 +23,8 @@
       "part1": "COME COMO",
       "part2": "REY"
     },
-    "subheading": "Conoce nuestros combos"
+    "subheading": "Conoce nuestros combos",
+    "ctaBtn": "¡Quiero este!"
   },
   "Menu": {
     "heading": {
@@ -92,8 +93,8 @@
     "advice": "Próximamente nuestra gran applicación"
   },
   "Palallax": {
-      "part1": "Somos 2 hermanos, que al mudarnos a Monterrey, extrañamos mucho...",
-      "part2": "Los pastes, llenos de tradición, nostalgia y orgullo hidalguense."
+    "part1": "Somos 2 hermanos, que al mudarnos a Monterrey, extrañamos mucho...",
+    "part2": "Los pastes, llenos de tradición, nostalgia y orgullo hidalguense."
   },
   "Stores": {
     "heading": {

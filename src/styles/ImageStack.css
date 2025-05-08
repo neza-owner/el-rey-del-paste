@@ -16,6 +16,9 @@ div.imagesStack {
     flex-shrink: 0;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px var(--shadow-md), 0 2px 4px -2px var(--shadow-md);
+    position: relative;
+
+
 
     &.active {
       border: 4px solid var(--primary-color);
@@ -23,6 +26,38 @@ div.imagesStack {
 
     &.inactive {
       border: 1px solid var(--details-color);
+      opacity: 0.9;
+    }
+
+    &::before {
+      content: attr(data-name);
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      background-color: var(--details-color);
+      color: var(--font-combo);
+      padding: 0.2rem 0.4rem;
+      border-bottom-right-radius: 0.25rem;
+      font-size: 0.5em;
+      font-weight: bold;
+      pointer-events: none;
+      z-index: 11;
+    }
+
+    &::after {
+      content: attr(data-price);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.6em;
+      pointer-events: none;
+      z-index: 10;
     }
 
     img.imgCombo {
@@ -37,6 +72,47 @@ div.imagesStack {
       width: 15vh;
       display: block;
     }
+
+    span.description::before {
+      content: attr(data-description);
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0.5rem;
+      background-color: var(--details-color);
+      color: var(--font-combo);
+      padding: 0.2rem 0.4rem;
+      border-top-right-radius: 0.25rem;
+      font-size: 0.4em;
+      font-weight: bold;
+      pointer-events: none;
+      z-index: 11;
+    }
+  }
+
+  .imageStack:is(.active) {
+
+    &::after {
+      background-color: var(--primary-color);
+      font-size: 0.7em;
+    }
+
+    &::before,
+    span.description::before {
+      display: none;
+    }
+  }
+
+  .orderBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 1.5em;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: var(--accent-color);
   }
 }
 
@@ -45,6 +121,17 @@ div.imagesStack {
 @media only screen and (min-width: 768px) {
   div.imagesStack {
     .imageStack {
+      &.inactive {
+
+        @media(hover: hover) and (pointer: fine) {
+          &:hover {
+            cursor: pointer;
+            box-shadow: 0 8px 12px -1px var(--shadow-lg), 0 4px 6px -2px var(--shadow-lg);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+
       img.imgCombo {
         height: 10vh;
         width: 10vh;

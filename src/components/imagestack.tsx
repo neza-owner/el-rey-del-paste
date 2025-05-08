@@ -1,16 +1,24 @@
 import { motion } from "framer-motion";
 import "../styles/ImageStack.css";
 
+interface Combo {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+}
+
 interface ImageStackProps {
-  images: string[];
+  combos: Combo[];
   selectedIndex: number;
   onImageClick: (index: number) => void;
 }
 
-export function ImageStack({ images, selectedIndex, onImageClick }: ImageStackProps) {
+export function ImageStack({ combos, selectedIndex, onImageClick }: ImageStackProps) {
   return (
     <div className="imagesStack">
-      {images.map((image, idx) => (
+      {combos.map((combo, idx) => (
         <motion.div
           key={"images" + idx}
           style={{
@@ -28,12 +36,15 @@ export function ImageStack({ images, selectedIndex, onImageClick }: ImageStackPr
           }}
           className={`imageStack ${selectedIndex === idx ? 'active' : 'inactive'}`}
           onClick={() => onImageClick(idx)}
+          data-price={`$${combo.price.toFixed(2)}`}
+          data-name={combo.name}
         >
           <img
-            src={image}
-            alt={`Stacked Image ${idx}`}
+            src={combo.image}
+            alt={`Combo ${combo.name}`}
             className="imgCombo"
           />
+          <span data-description={combo.description} className="description"></span>
         </motion.div>
       ))}
     </div>

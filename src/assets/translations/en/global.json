@@ -23,7 +23,8 @@
       "part1": "EAT LIKE A",
       "part2": "KING"
     },
-    "subheading": "Get to know our combos"
+    "subheading": "Get to know our combos",
+    "ctaBtn": "I want this one!"
   },
   "Menu": {
     "heading": {
@@ -92,8 +93,8 @@
     "advice": "Our own app is coming soon"
   },
   "Palallax": {
-      "part1": "We are 2 brothers who moved to Monterrey, and miss so much...",
-      "part2": "The pastes, full of tradition, nostalgia, and Hidalgo pride."
+    "part1": "We are 2 brothers who moved to Monterrey, and miss so much...",
+    "part2": "The pastes, full of tradition, nostalgia, and Hidalgo pride."
   },
   "Stores": {
     "heading": {

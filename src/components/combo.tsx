@@ -2,6 +2,7 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { HashLink } from 'react-router-hash-link';
 import crown from "../assets/crown.svg";
 import styles from "../styles/combo.module.css";
 import { ImageStack } from "./imagestack";
@@ -40,8 +41,6 @@ export default function Combo() {
     setCurrentCombo((currentCombo - 1 + combos.length) % combos.length);
   };
 
-  const combosImages = combos.length > 0 ? combos.map(combo => combo.image) : [];
-
   const handleImageClick = (index: number) => {
     setCurrentCombo(index);
   };
@@ -56,20 +55,23 @@ export default function Combo() {
       </header>
 
       <ImageStack
-        images={combosImages}
+        combos={combos}
         selectedIndex={currentCombo}
         onImageClick={handleImageClick}
       />
 
       <div className={styles.comboDetails}>
-        {/* <span>${combos[currentCombo]?.price}MXN</span>
-        <span>{combos[currentCombo]?.description}</span> */}
+        <span className={styles.comboDescription}>&#40;{combos[currentCombo]?.description}&#41;</span>
         <div className={styles.comboNav}>
           <button onClick={handlePreviousCombo}><FontAwesomeIcon icon={faAngleLeft} /></button>
           <span className={styles.name}>{combos[currentCombo]?.name}</span>
           <button onClick={handleNextCombo}><FontAwesomeIcon icon={faAngleRight} /></button>
         </div>
       </div>
+
+      <HashLink to="/#order" className={styles.orderBtn}>
+        {t("Combos.ctaBtn")}
+      </HashLink>
     </section>
   );
 }
