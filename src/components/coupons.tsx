@@ -2,7 +2,6 @@ import { faTicketSimple } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
 import { default as arrowleft, default as arrowright } from "../assets/arrow-deco.svg";
-import equal from '../assets/equal.svg';
 import styles from '../styles/Coupons.module.css';
 
 const Coupons = () => {
@@ -16,8 +15,10 @@ const Coupons = () => {
       </header>
       <div className={styles.couponsContainer}>
         <figure className={styles.coupon}>
-          <img src="/coupons/coupon-holder-front.png" alt="Coupon Front" className={styles.couponImage} />
-          <img src="/coupons/coupon-holder-back.png" alt="Coupon Back" className={styles.couponImage} />
+          <div className={styles.cardContainer}>
+            <img src="/coupons/coupon-holder-front.png" alt="Coupon Front" className={styles.couponImage} />
+            <img src="/coupons/coupon-holder-back.png" alt="Coupon Back" className={styles.couponImage} />
+          </div>
           <figcaption className={styles.couponDescription}>
             <h4 className={styles.couponTitle}>{t("Coupons.coupon.title")}</h4>
             <p>{t("Coupons.coupon.description")}</p>
@@ -29,7 +30,7 @@ const Coupons = () => {
           className={styles.arrowLeft}
           alt="arrow"
         />
-        <img src={equal} alt="equal" className={styles.equal} />
+        {/* <img src={equal} alt="equal" className={styles.equal} /> */}
         <img
           src={arrowright}
           className={styles.arrowRight}
@@ -37,18 +38,19 @@ const Coupons = () => {
         />
         <div className={styles.rowCouponsContainer}>
           <figure className={styles.reward}>
+            <h4 className={styles.couponTitle}>{t("Coupons.rewards.half.title")}</h4>
             <img src="/coupons/reward1.JPG" alt="Coupon 1" className={styles.rewardImage} />
             <figcaption className={styles.couponDescription}>
-              <h4 className={styles.couponTitle}>{t("Coupons.rewards.half.title")}</h4>
               <p>{t("Coupons.rewards.half.description")}</p>
               {/* <p className={styles.couponExpiration}>Vigencia: 31 de diciembre de 2021</p> */}
             </figcaption>
           </figure>
           <span>&Oacute;</span>
           <figure className={styles.reward}>
+            <h4 className={styles.couponTitle}>{t("Coupons.rewards.full.title")}</h4>
             <img src="/coupons/reward2.JPG" alt="Coupon 1" className={styles.rewardImage} />
             <figcaption className={styles.couponDescription}>
-              <h4 className={styles.couponTitle}>{t("Coupons.rewards.full.title")}</h4>
+
               <p>{t("Coupons.rewards.full.description")}</p>
               {/* <p className={styles.couponExpiration}>Vigencia: 31 de diciembre de 2021</p> */}
             </figcaption>

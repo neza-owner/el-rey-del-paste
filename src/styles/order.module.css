@@ -77,7 +77,7 @@ section.order {
       padding: 0.75rem 1.5rem;
       border-radius: 0.8rem;
       font-size: 1.2rem;
-      color: hsl(0, 0%, 100%);
+      color: var(--white-text);
       text-decoration: none;
       transition: all 0.3s ease;
 

@@ -3,7 +3,7 @@ footer.footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: hsl(0, 0%, 100%);
+  color: var(--white-text);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,7 +41,7 @@ footer.footer {
       gap: 1em;
 
       a {
-        color: hsl(0, 0%, 100%) !important;
+        color: var(--white-text) !important;
       }
 
       li:first-of-type span {
@@ -95,7 +95,7 @@ footer.footer {
     ul {
       li {
         a {
-          color: hsl(0, 0%, 100%);
+          color: var(--white-text);
         }
       }
     }
@@ -111,7 +111,7 @@ footer.footer {
       gap: 1rem;
 
       svg.icon {
-        color: hsl(0, 0%, 100%);
+        color: var(--white-text);
         font-size: 1.5em;
         transition: color 0.3s ease;
 

@@ -50,7 +50,7 @@ form.form {
     font-size: 1rem;
     font-weight: 500;
     background-color: var(--whatsapp-color);
-    color: hsl(0, 0%, 100%);
+    color: var(--white-text);
     cursor: pointer;
     transition: all 0.3s ease;
 

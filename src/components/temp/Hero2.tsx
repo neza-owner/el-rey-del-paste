@@ -14,9 +14,9 @@ export default function Hero2() {
       </header>
 
       {/* hero image */}
-      <div className={styles.visual}>
+      {/* <div className={styles.visual}>
         <img src="./Uber_cover.jpg" className={styles.heroImg} />
-      </div>
+      </div> */}
 
       {/* subtitle */}
       <h2 className={styles.heading}>“{t("Hero.heading")}”</h2>

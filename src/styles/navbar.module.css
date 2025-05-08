@@ -158,6 +158,7 @@ nav.nav {
       &:last-child a {
         display: inline;
         background-color: var(--accent-color);
+        color: var(--white-text);
         padding: 0.25em 0.5em;
         border-radius: 0.25em;
         font-weight: 500;
@@ -226,7 +227,7 @@ body:has(nav.nav ul.sidebar.active) div.overlay {
         &:nth-last-child(2) a {
           display: inline;
           background-color: var(--accent-color);
-          color: hsl(0, 0%, 100%);
+          color: var(--white-text);
           padding: 0.5em;
           border-radius: 0.25em;
           font-weight: 500;

@@ -19,6 +19,7 @@
   --whatsapp-color: hsl(142, 71%, 45%);
   --parallax: hsl(217, 19%, 27%);
   --font-combo: hsl(215, 14%, 35%);
+  --white-text: hsl(0, 0%, 100%);
   accent-color: var(--accent-color);
 }
 
@@ -55,5 +56,5 @@
 
 ::selection {
   background-color: var(--accent-color);
-  color: hsl(0, 0%, 100%);
+  color: var(--white-text);
 }

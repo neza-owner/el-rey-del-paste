@@ -108,7 +108,7 @@ section.combo {
     padding: 0.5em 1em;
     border-radius: 1.5em;
     font-size: 1.2rem;
-    color: hsl(0, 0%, 100%);
+    color: var(--white-text);
     font-weight: 600;
     transition: all 0.3s ease;
     background-color: var(--accent-color);
