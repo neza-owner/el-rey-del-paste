@@ -31,6 +31,7 @@ section.faq {
   -moz-border-radius: 2rem 2rem 0 0;
   -ms-border-radius: 2rem 2rem 0 0;
   -o-border-radius: 2rem 2rem 0 0;
+  z-index: 1;
 
   header {
     text-wrap: pretty;

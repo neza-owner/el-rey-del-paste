@@ -36,6 +36,7 @@ section.combo {
   font-weight: 700;
   gap: 2rem;
   padding: 1rem;
+  z-index: 1;
 
   header {
     text-wrap: pretty;

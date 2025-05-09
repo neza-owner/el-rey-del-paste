@@ -25,6 +25,7 @@ section.location {
   font-weight: 700;
   padding: 1rem;
   gap: 1rem;
+  z-index: 1;
 
   header {
     text-wrap: pretty;

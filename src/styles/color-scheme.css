@@ -20,6 +20,7 @@
   --parallax: hsl(217, 19%, 27%);
   --font-combo: hsl(215, 14%, 35%);
   --white-text: hsl(0, 0%, 100%);
+  --bg-deco: hsla(33, 100%, 88%, 0.1);
   accent-color: var(--accent-color);
 }
 
@@ -40,6 +41,7 @@
     --bg-box-border: hsl(40, 100%, 35%);
     --parallax: hsl(34, 10%, 71%);
     --font-combo: hsl(0, 0%, 90%);
+    --bg-deco: hsla(32, 56%, 38%, 0.05);
     accent-color: var(--accent-color);
   }
 

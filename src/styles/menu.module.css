@@ -27,6 +27,7 @@ section.menu {
   border-radius: 1rem;
   padding: 1rem 1rem 2rem 1rem;
   gap: 1rem;
+  z-index: 1;
 
   max-width: 100vw;
   overflow: hidden;
@@ -104,8 +105,9 @@ section.menu {
       border: 1px solid var(--details-color);
 
       img.paste {
-        width: 4em;
-        height: 4em;
+        width: 100%;
+        max-width: 4em;
+        max-height: 4em;
         aspect-ratio: 1/1;
         object-fit: cover;
         border-radius: 0.5rem;
@@ -185,8 +187,8 @@ section.menu {
 
       div.pasteCard {
         img.paste {
-          width: 8em;
-          height: 8em;
+          max-width: 7em;
+          max-height: 7em;
         }
 
         @media(hover: hover) and (pointer: fine) {
