@@ -13,18 +13,18 @@ div.landing {
   background-color: var(--background-color);
   color: var(--font-color);
 
-  &::before {
+  /* &::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: repeating-linear-gradient(45deg, var(--bg-deco), var(--bg-deco) 10px, transparent 10px, transparent 20px);
+    background-image: repeating-linear-gradient(45deg, var(--bg-deco), var(--bg-deco) 10px, transparent 10px, transparent 20px); */
 
-    /* animation: moveDiagonal 30s linear infinite; */
-    z-index: 0;
+  /* animation: moveDiagonal 30s linear infinite; */
+  /* z-index: 0; */
 
-    pointer-events: none;
-    /* -webkit-animation: moveDiagonal 30s linear infinite; */
-  }
+  /*  pointer-events: none; */
+  /* -webkit-animation: moveDiagonal 30s linear infinite; */
+  /* } */
 
   text-align: center;
 }
